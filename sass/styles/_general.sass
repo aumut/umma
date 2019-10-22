@@ -1,3 +1,6 @@
+
+/*** GENERAL STYLES ***/
+
 *
   &:focus, &:active
     outline: none !important
@@ -5,17 +8,17 @@ html
   overflow: hidden
 
 body
+  height: $h_body
+  min-width: $w_minBody
+  margin: 0
+  padding: 0
   font:
     family: $ff_body
     size: $fs_body
     weight: $fw_body
   color: $col_font_main
   line-height: 1
-  min-width: $w_minBody
-  margin: 0
-  padding: 0
-  height: $h_body
-  background: $col_bg
+  background-color: $col_bg_main
   overflow-y: scroll
 
 a
@@ -23,3 +26,125 @@ a
   &:hover
     text-decoration: unset
     color: inherit
+.btn
+  display: inline-block
+  +border-radius($rad_btn)
+  font-family: $ff_btn
+  font-size: $fs_btn
+  color: $col_font_btn
+  letter-spacing: 0
+  line-height: 2
+  padding: $pTB_btn $pLR_btn
+  border: none
+  text-align: center
+  cursor: pointer
+  +phone_max
+    font-size: 13px
+  &:hover
+    opacity: 0.9
+
+  //&-gamburg
+    background-color: #FFFFFF
+    width: 60px
+    height: auto
+    padding: 34px 0px 0px 0px
+    margin: 0px
+    +border-radius(0)
+    background:
+      image: url(../images/ic/ic_gamburg.svg)
+      position: 20px 20px
+      size: 35%
+      repeat: no-repeat
+
+
+//.menu-nav
+  list-style: none
+  +flexbox
+  &__li
+    padding: 0px 14px
+    font-family: $ff_nav
+    font-size: $fs_nav
+    line-height: 1.5
+    letter-spacing: 1px
+    border-right: 1px solid white
+    +phone_max
+      line-height: 2.5
+      border-right: 0px
+    &:first-letter
+      text-transform: capitalize
+    &:last-child
+      border-right: none
+    a
+      color: inherit
+      +phone_max
+        color: $col_acsent
+        line-height: 2
+      &:hover
+        text-decoration: none
+//.btn-close
+  padding: 0px
+  width: 18px
+  height: 18px
+  +border_radius(0)
+  opacity: 0.8
+  background:
+    color: transparent
+    image: url(../images/ic/ic_close.svg)
+    repeat: no-repeat
+    size: cover
+
+//.logo
+  +flexbox
+  +justify-content(space-between)
+  +align-items(center)
+  &__ic
+    min-width: $w_logo_ic
+    width: $w_logo_ic
+    height: $h_logo_ic
+    img
+      width: 100%
+      height: 100%
+  &__text
+    display: inline-block
+    font-size: $fs_logo_text
+    line-height: 1.5
+    color: $col_logo_text
+
+.w100
+  width: 100% 
+
+.btn-wrap
+  +flexbox
+  +justify-content(center)
+  +align-items(center)
+
+.uppercase
+  text-transform: uppercase
+
+.title
+  font-size: $fs_title
+  font-weight: $fw_title
+  //font-family: $ff_submit_appl_info__title
+  line-height: 1.1
+  text-align: center
+  letter-spacing: 1px
+  &_color-white
+    color: #ffffff
+
+.subtitle
+  font-size: 1rem
+  font-weight: normal
+  line-height: 2    
+  text-align: center
+
+.break
+  flex-basis: 100%
+  height: 0
+    
+b
+  font-family: $ff_bold
+
+.bl
+  &__inner
+    padding-top: $pTB_bl_in2
+    padding-bottom: $pTB_bl_in2
