@@ -38,62 +38,18 @@ a
   border: none
   text-align: center
   cursor: pointer
-  +phone_max
-    font-size: 13px
+
+  background: rgb(247,133,0)
+  background: linear-gradient(165deg, rgba(247,133,0,1) 0%, rgba(243,31,21,1) 100%)
+
+  -webkit-box-shadow: 0px 9px 18px 0px rgba(128,128,128,0.23)
+  -moz-box-shadow: 0px 9px 18px 0px rgba(128,128,128,0.23)
+  box-shadow: 0px 9px 18px 0px rgba(128,128,128,0.23)
   &:hover
     opacity: 0.9
 
-  //&-gamburg
-    background-color: #FFFFFF
-    width: 60px
-    height: auto
-    padding: 34px 0px 0px 0px
-    margin: 0px
-    +border-radius(0)
-    background:
-      image: url(../images/ic/ic_gamburg.svg)
-      position: 20px 20px
-      size: 35%
-      repeat: no-repeat
 
-
-//.menu-nav
-  list-style: none
-  +flexbox
-  &__li
-    padding: 0px 14px
-    font-family: $ff_nav
-    font-size: $fs_nav
-    line-height: 1.5
-    letter-spacing: 1px
-    border-right: 1px solid white
-    +phone_max
-      line-height: 2.5
-      border-right: 0px
-    &:first-letter
-      text-transform: capitalize
-    &:last-child
-      border-right: none
-    a
-      color: inherit
-      +phone_max
-        color: $col_acsent
-        line-height: 2
-      &:hover
-        text-decoration: none
-//.btn-close
-  padding: 0px
-  width: 18px
-  height: 18px
-  +border_radius(0)
-  opacity: 0.8
-  background:
-    color: transparent
-    image: url(../images/ic/ic_close.svg)
-    repeat: no-repeat
-    size: cover
-
-//.logo
+.logo
   +flexbox
   +justify-content(space-between)
   +align-items(center)
@@ -107,15 +63,19 @@ a
   &__text
     display: inline-block
     font-size: $fs_logo_text
+    color: $col_font_main
     line-height: 1.5
-    color: $col_logo_text
+    margin-left: 15px
+    padding: 15px
+    border-left: 1px solid $grey
+
 
 .w100
   width: 100% 
 
 .btn-wrap
   +flexbox
-  +justify-content(center)
+  +justify-content(flex-start)
   +align-items(center)
 
 .uppercase
@@ -146,5 +106,59 @@ b
 
 .bl
   &__inner
-    padding-top: $pTB_bl_in2
-    padding-bottom: $pTB_bl_in2
+    padding-top: $pTB_bl_in
+    padding-bottom: $pTB_bl_in
+
+.whatsapp
+  display: inline-block
+  width: 30px
+  height: 30px
+  padding: 0px
+  margin: 0px
+  +border_radius(0)
+  background:
+    image: url('../images/ic/ic_wapp_num.png')
+    size: contain
+    repeat: no-repeat
+
+.ic_smile
+  position: relative
+  &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 6px
+    right: calc(-#{$w_ic_smile} - 3px)
+    width: $w_ic_smile
+    height: $w_ic_smile
+    background:
+      image: url('../images/ic/ic_wink.svg')
+      size: contain
+      repeat: no-repeat
+
+.ic_present
+  display: inline-block
+  width: 35px
+  height: 35px
+  +border_radius(0)
+  padding: 0px
+  margin: 0px
+  background:
+    image: url('../images/ic/ic_box.png')
+    size: contain
+    repeat: no-repeat
+
+.form-control
+  font-size: 14px
+  font-family: $ff_roboto
+  padding: 10px 45px 10px 30px
+  line-height: 2
+  height: auto
+  color: #838383
+  background-color: #E2E2E2
+  +border_radius(4px)
+  border: none
+  background-color: #ffffff
+  -webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  -moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)

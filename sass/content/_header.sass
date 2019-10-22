@@ -5,90 +5,87 @@
 	width: 100%
 	height: 900px
 	background:
-		color: rgb(192,192,188)
-		color: linear-gradient(90deg, rgba(192,192,188,1) 0%, rgba(219,219,217,1) 100%)
-		image: url(../images/content/header_bg.png)
+		color: #C6D9D0
+		image: url(../images/content/banner_bg_1.jpg)
 		repeat: no-repeat
-		size: 650px
-		position: 84% 47px
+		size: cover
+		//size: 650px
+		//position: 84% 47px
 	+flexbox
 	+flex-direction(column)
 	position: relative
-	+phone_max
-		background-size: 60%
-		background-image: url(../images/content/header_bg_mob.png)
-		background-position: right bottom
-
-.ic_mouse
-	display: inline-block
-	width: $w_ic_round
-	height: $h_ic_round
-	+border-radius(50%)
-	border: 0px
-	padding: 0px
-	background-color: $col_acsent
-	position: relative
-	position: absolute
-	left: 50%
-	bottom:  0px
-	margin-bottom: calc(#{$h_ic_round}/(-2))
-	&:before
-		content: ''
-		position: absolute
-		width: 21px
-		height: 21px
-		left: 0px
-		top: 0px
-		margin-left: 13.5px
-		margin-top: 13.5px
-		background-image: url(../images/ic/ic_mouse.svg)
-		background-size: cover
-		background-repeat: no-repeat
-
 
 .header
 	width: 100%
-	color: $col_header_text
+	color: $col_font_main
 	position: relative
-	.bl__inner
-		+justify-content(space-between)
-		+align-items(center)
-		padding: 2.1rem 0px
-		height: 190px
 	&__logo
 		width: $w_header_logo
 		+align-self(flex-start)
-		+tablet_max
-			+flex-direction(column)
-		+phone_max
-			width: 190px
-			+flex-direction(column)
-			+align-items(flex-start)
-		.logo__text
-			margin-left: $ml_logo_text
-			+tablet_max
-				margin-left: 0px
-				margin-top: $ml_logo_text
-			+phone_max
-				margin-left: 0px
-				margin-top: $ml_logo_text
-	&__nav
-		+align-self(flex-end)
-		z-index: 999
-		+phone_max
-			position: absolute
-			right: 15px
-			bottom: 0px
-		.btn-gamburg
-			display: none
-			+phone_max
-				display: block
-	&__contacts
+	.logo__text
 		+align-self(flex-start)
-		padding-top: $pT_contact_header
-	.btn-close
-		position: absolute
-		right: 15px
+	.quest
+		margin-left: auto
+		margin-top: 10px
+		+align-self(flex-start)
+	.ic_present
+		margin-right: 7%
+		margin-left: 6%
+		margin-top: 1.5%
+		+align-self(flex-start)
+	.menu-nav
+		margin-top: -30px
+
+.header
+	.bl__inner
+		padding: $pTB_bl_in_header 0px
+		+flexbox
+		+justify-content(space-between)
+		+align-items(center)
+
+.contacts
+	+flexbox
+	+flex-direction(column)
+	+align-self(end)
+	&__text
+		font-family: $ff_roboto
+		font-size: 12px
+		line-height: 2
+	&__phone
+		font-family: $ff_body
+		font-size: 20px
+		line-height: 1.2
+
+.quest
+	font-family: $ff_roboto
+	font-size: 14px
+	line-height: 2
+	text-align: right
+	.whatsapp
+		margin-right: 3px
+
+.menu-nav
+	+flexbox
+	padding: 0px 65px
+	background-color: $col_menu_nav_bg
+	+border_radius(4px)
+	&-item
+		display: inline-block
+		font-family: $ff_nav
+		font-size: 14px
+		line-height: 2
+		letter-spacing: 1px
+		text-transform: uppercase
+		color: $col_nav_menu
+		border-top: 3px solid transparent
+		padding: 12px 0px
+		margin: 0px 20px
+	&-li
+		background-color: $col_menu_nav_bg
+		&:hover
+			.menu-nav-item
+				border-top-color: $green
+				color: $col_font_main
 
 .main-banner
 	height: 100%
@@ -103,16 +100,33 @@
 		+justify-content(center)
 	&__title
 		font-size: $fs_main_banner_title
+		font-family: $ff_bold
 		letter-spacing: 1px
-		line-height: 1.2
-		text-align: center
-		margin-bottom: calc(#{$mB_main_banner} + 5px)
+		line-height: 1.5
+		text-align: left
+		text-transform: uppercase
+		margin-bottom: $mB_main_banner
 	&__subtitle
 		font-size: $fs_main_banner_subtitle
+		font-family: $ff_roboto
 		letter-spacing: 1px
-		line-height: 1.4
-		text-align: center
-		padding: 0 60px
-		margin-bottom: $mB_main_banner
-	.btn-wrap
-		margin-bottom: $mB_main_banner
+		line-height: 1.5
+		text-align: left
+		margin-bottom: 15px
+	.form-group
+		margin-right: 10px
+
+.advantage
+	+flexbox
+	+flex-wrap(wrap)
+	+justify-content(space-between)
+	width: 500px
+	&-item
+		font-size: 16px
+		line-height: 3
+		font-family: $ff_roboto
+		margin-top: 60px
+		width: $w_adv_it
+		background-color: aqua
+		//&:nth-child(2n + 2)
+			margin-right: calc(100% - #{$w_adv_it * 2} - 40px)
