@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
 html, body, div, span, applet, object, iframe,
@@ -107,7 +107,7 @@ body {
   min-width: 450px;
   margin: 0;
   padding: 0;
-  font-family: "Museo Cyrl Reg", "Arial", sans-serif;
+  font-family: "Museo Cyrl Light", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #3c3c3c;
@@ -188,6 +188,12 @@ a:hover {
   width: 100%;
 }
 
+.text-colored {
+  font-size: 25px;
+  padding: 5px 15px;
+  margin-bottom: 3px;
+}
+
 .btn-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -234,12 +240,16 @@ a:hover {
 }
 
 b {
-  font-family: "Museo Cyrl Bold", "Arial", sans-serif;
+  font-weight: 700;
 }
 
 .bl__inner {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+.bl--dark {
+  background-color: #313131;
+  color: #FFFFFF;
 }
 
 .whatsapp {
@@ -304,7 +314,60 @@ b {
   box-shadow: 0px 12px 32px 0px rgba(39, 39, 39, 0.06);
 }
 
-/*** CONTAINER BLOCK ***/
+.msg {
+  font-size: 16px;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #FFFFFF;
+  color: #3c3c3c;
+  padding: 30px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+  position: relative;
+}
+.msg::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  line-height: 0px;
+  border-color: transparent;
+}
+.msg--left::before {
+  right: -12px;
+  border-width: 16px 0 16px 17.3px;
+  border-left-color: #FFFFFF;
+}
+.msg--right::before {
+  left: -12px;
+  border-width: 16px 17.3px 16px 0;
+  border-right-color: #FFFFFF;
+}
+.msg.msg--left.bg--green::before {
+  border-left-color: #1FAA67;
+}
+.msg.msg--right.bg--green::before {
+  border-right-color: #1FAA67;
+}
+
+.red {
+  color: #D72D10;
+}
+
+.bg--green {
+  background-color: #1FAA67;
+  color: #FFFFFF;
+}
+
+.bg--yellow {
+  background-color: #E2BF00;
+  color: #3c3c3c;
+}
+
+/*** CONTAINER BLOCK ** */
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1230px;
@@ -317,7 +380,7 @@ b {
   width: 100%;
 }
 
-/*** HEADER BLOCK ***/
+/*** HEADER BLOCK ** */
 .wrap-header {
   width: 100%;
   height: 900px;
@@ -378,7 +441,7 @@ b {
   margin-top: -30px;
 }
 
-.header .bl__inner {
+.header .bl__inner, .footer .bl__inner {
   padding: 23px 0px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -420,7 +483,7 @@ b {
   line-height: 2;
 }
 .contacts__phone {
-  font-family: "Museo Cyrl Reg", "Arial", sans-serif;
+  font-family: "Museo Cyrl Light", "Arial", sans-serif;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -480,6 +543,7 @@ b {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
+  position: relative;
 }
 .main-banner .bl__inner {
   max-width: 700px;
@@ -525,6 +589,9 @@ b {
 .main-banner .form-group {
   margin-right: 10px;
 }
+.main-banner .btn-wrap {
+  margin-bottom: 30px;
+}
 
 .advantage {
   display: -webkit-box;
@@ -541,15 +608,16 @@ b {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
-  width: 500px;
+  width: 540px;
 }
 .advantage-item {
   font-size: 16px;
   line-height: 3;
   font-family: "Roboto", "Arial", sans-serif;
-  margin-top: 60px;
-  width: 220px;
-  background-color: aqua;
+  margin-top: 100px;
+  width: 250px;
+  text-align: center;
+  position: relative;
 }
 
 .assortment {
