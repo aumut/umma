@@ -184,6 +184,8 @@ a:hover {
 
 .text-colored {
   font-size: 25px;
+  padding: 5px 15px;
+  margin-bottom: 3px;
 }
 
 .btn-wrap {
