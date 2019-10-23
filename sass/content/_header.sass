@@ -36,7 +36,7 @@
 	.menu-nav
 		margin-top: -30px
 
-.header
+.header, .footer
 	.bl__inner
 		padding: $pTB_bl_in_header 0px
 		+flexbox
@@ -92,6 +92,7 @@
 	+flexbox
 	flex: 1
 	+align-items(center)
+	position: relative
 	.bl__inner
 		max-width: 700px
 		+flexbox
@@ -115,18 +116,106 @@
 		margin-bottom: 15px
 	.form-group
 		margin-right: 10px
+	.btn-wrap
+		margin-bottom: 30px
 
 .advantage
 	+flexbox
 	+flex-wrap(wrap)
 	+justify-content(space-between)
-	width: 500px
+	width: $w_adv
 	&-item
 		font-size: 16px
 		line-height: 3
 		font-family: $ff_roboto
-		margin-top: 60px
+		margin-top: 100px
 		width: $w_adv_it
+		text-align: center
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: -#{$h_ellips}
+			left: 50%
+			width: $w_ellips
+			height: $h_ellips
+			margin-left: calc(-#{$w_ellips}/2)
+			margin-top: -20px
+			background:
+				color: transparent
+				image: url('../images/content/ellipse.png')
+				size: contain
+				repeat: no-repeat
+		&::before
+			content: ''
+			position: absolute
+			top: -#{$h_adv_ic}
+			left: 50%
+			width: $w_adv_ic
+			height: $h_adv_ic
+			margin-left: calc(-#{$w_adv_ic}/2)
+			z-index: 1
+			background:
+				color: transparent
+				image: url('../images/content/quarantee.png')
+				size: contain
+				repeat: no-repeat
+	.mount
+		&::before
+			background-position: 16px 0px
+			background-image: url('../images/content/clock.png')
+	.guarant
+		&::before
+			background-position: 16px 0px
+			background-image: url('../images/content/guarantee.png')
+	.depart
+		&::before
+			background-image: url('../images/content/tape_measure.png')
+			background-position: 0px 16px
+	.prepayment
+		&::before
+			background-image: url('../images/content/wallet.png')
+
+.guarant-label
+	position: absolute
+	width: 120px
+	height: 120px
+	top: 50%
+	left: 50%
+	color: $green_text
+	font-size: 14px
+	line-height: 2
+	background:
+		color: #FFFFFF
+		image: url('../images/content/date_bg.png')
+		size: 210%
+		position: 50% -12px
+		repeat: no-repeat
+
+.footer
+	font-size: 14px
+	&__logo
+		width: 300px
+	.logo__ic
+		min-width: $w_logo_ic_white
+		width: $w_logo_ic_white
+		height: $h_logo_ic_white
+	.logo__text
+		color: #FFFFFF
+		border-left: 0px
+		font-size: 12px
+	&__copyright
+		width: 500px
+		text-align: center
+		line-height: 1.5
+
+.introduce
+	background-color: #CCD0D2
+	.bl__inner
+		+flexbox
+		+justify-content(space-between)
+	&__side
+		width: 50%
 		background-color: aqua
-		//&:nth-child(2n + 2)
-			margin-right: calc(100% - #{$w_adv_it * 2} - 40px)
+		+flexbox
+		+flex-direction(column)

@@ -73,6 +73,9 @@ a
 .w100
   width: 100% 
 
+.text-colored
+  font-size: 25px
+
 .btn-wrap
   +flexbox
   +justify-content(flex-start)
@@ -102,12 +105,16 @@ a
   height: 0
     
 b
-  font-family: $ff_bold
+  font-weight: 700
 
 .bl
   &__inner
     padding-top: $pTB_bl_in
     padding-bottom: $pTB_bl_in
+  &--dark
+    background-color: $col_bg_dark
+    color: $col_font_darkBg
+
 
 .whatsapp
   display: inline-block
@@ -162,3 +169,53 @@ b
   -webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
   -moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
   box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+
+.msg
+  font-size: 16px
+  font-family: $ff_roboto
+  background-color: #FFFFFF
+  color: $col_font_main
+  padding: $p_msg
+  +border_radius($rad_msg)
+  min-width: 100px
+  //margin: 10px 0px
+  position: relative
+  &::before
+    position: absolute
+    content: ''
+    top: 20px
+    width: 0
+    height: 0
+    border-style: solid
+    line-height: 0px
+    border-color: transparent
+  &--left
+    &::before
+      right: -12px
+      border-width: $w_msg_triangle 0 $w_msg_triangle 17.3px
+      border-left-color: #FFFFFF
+  &--right
+    &::before
+      left: -12px
+      border-width: $w_msg_triangle 17.3px $w_msg_triangle 0
+      border-right-color: #FFFFFF
+  &.msg--left.bg--green
+    &::before
+      border-left-color: $col_bg_green
+  &.msg--right.bg--green
+    &::before
+      border-right-color: $col_bg_green
+
+
+//colors
+.red
+  color: $red
+
+.bg--green
+  background-color: $col_bg_green
+  color: $col_green
+
+.bg--yellow
+  background-color: #E2BF00
+  color: $col_font_main
+
