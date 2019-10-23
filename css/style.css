@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
  * v2.0 | 20110126
  * License: none (public domain) */
 html, body, div, span, applet, object, iframe,
@@ -81,7 +81,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-/*** GENERAL STYLES ** */
+/*** GENERAL STYLES ***/
 *:focus, *:active {
   outline: none !important;
 }
@@ -122,7 +122,7 @@ a:hover {
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 2;
-  padding: 5px 50px;
+  padding: 5px 5px;
   border: none;
   text-align: center;
   cursor: pointer;
@@ -193,3 +193,199 @@ b {
   padding-top: 75px;
   padding-bottom: 75px;
 }
+
+.assortment {
+  background: #e7ecee;
+}
+
+.cells {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.cells__row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 30px;
+}
+.cells__row:last-child {
+  margin-bottom: 0;
+}
+
+.cells__card {
+  width: 32%;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+.cell__slider {
+  border-radius: 5px;
+  margin-bottom: 52px;
+}
+
+.cell__slider .item {
+  border-radius: 5px;
+}
+
+.cell_img, .carousel-inner {
+  border-radius: 5px;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.carousel-arrow {
+  width: 25px;
+  height: 25px;
+  background: #ffd800;
+  display: inline-block;
+  position: absolute;
+  top: 46%;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.carousel-arrow:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/ic/ic_arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transform: rotate(270deg);
+}
+
+.carousel-arrow.arrow-left:before {
+  transform: rotate(90deg);
+}
+
+.cells__desc {
+  padding: 0 35px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 278px;
+}
+
+.cells__title {
+  font-size: 18px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.cells__text {
+  font-size: 14px;
+  color: #868686;
+  line-height: 1.5;
+}
+
+.cells__footer {
+  display: flex;
+  border: 4px solid #ffea80;
+  border-radius: 2px 2px 10px 10px;
+  margin-top: auto;
+}
+
+.cells_price {
+  font-weight: 900;
+  padding: 15px;
+}
+
+.cells_order-btn {
+  border-radius: 0;
+  flex-grow: 1;
+}
+
+.upperText {
+  vertical-align: super;
+  font-size: 12px;
+}
+
+.steps {
+  background: #e7ecee;
+}
+
+.steps__inner {
+  padding-top: 28px;
+}
+
+.steps__quest--wrapper {
+  display: flex;
+  padding-left: 55px;
+}
+
+.steps__circle {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.steps__quest {
+  padding: 25px 45px;
+  background: #fff;
+  border-radius: 10px;
+  margin-left: 35px;
+}
+
+.steps__nums {
+  display: flex;
+  padding-top: 53px;
+}
+
+.step {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step__img--wrapper {
+  width: 65px;
+  margin-bottom: 18px;
+  position: relative;
+  min-height: 71px;
+}
+.step__img--wrapper:after {
+  content: attr(data-stepNum);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.step__img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.step__title {
+  font-size: 15px;
+  margin-bottom: 17px;
+}
+
+.step__desc {
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

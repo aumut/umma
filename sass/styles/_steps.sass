@@ -1,0 +1,59 @@
+.steps
+	background: $col_bg_grey
+
+.steps__inner
+	padding-top: 28px
+
+.steps__quest--wrapper
+	display: flex
+	padding-left: 55px
+
+.steps__circle
+	width: 70px
+	height: 70px
+	background: #fff
+	border-radius: 50%
+
+.steps__quest
+	padding: 25px 45px
+	background: #fff
+	border-radius: 10px
+	margin-left: 35px
+
+.steps__nums
+	display: flex
+	padding-top: 53px
+
+.step
+	width: 25%
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.step__img--wrapper
+	width: 65px
+	margin-bottom: 18px
+	position: relative
+	min-height: 71px
+	&:after
+		content: attr(data-stepNum)
+		position: absolute
+		top: -10px
+		right: -10px
+		font-size: 50px
+		color: #ffffff
+
+.step__img
+	width: 100%
+	height: auto
+	position: relative
+	z-index: 100
+
+.step__title
+	font-size: 15px
+	margin-bottom: 17px
+
+.step__desc
+	font-size: 15px
+	line-height: 1.5
+	text-align: center
