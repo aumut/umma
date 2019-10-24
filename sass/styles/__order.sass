@@ -1,0 +1,97 @@
+.order
+	//background: $col_bg_grey url("/images/content/ruler.jpg") no-repeat 0 0
+	background:
+		color: $col_bg_grey
+		image: url(../images/content/ruler.jpg)
+		repeat: no-repeat
+		size: cover
+
+.order__bl--inner
+	display: flex
+	justify-content: flex-start
+
+.order__questions
+	flex: 1
+	padding: 40px 53px 25px 60px
+	background: #ffffff
+	border-radius: 5px
+	position: relative
+	right: -40px
+	top: -392px
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(198,198,198,1)
+	-moz-box-shadow: 5px 5px 5px 0px rgba(198,198,198,1)
+	box-shadow: 5px 5px 5px 0px rgba(198,198,198,1)
+	&:after
+		content: ""
+		display: inline-block
+		width: 13px
+		height: 13px
+		position: absolute
+		background: url("../images/ic/ic_close.svg")
+		right: 20px
+		top: 25px
+
+
+.order__wrapper
+	flex: 3
+	display: flex
+	border: 3px solid #ffd800
+	border-radius: 5px
+	padding: 60px 70px
+	background: #ffffff
+
+.order__title
+	font-size: 20px
+	line-height: 29px
+	text-align: left
+	font-weight: 500
+
+.extraBold
+	font-family: $ff_extraBold
+
+.uppercase
+	text-transform: uppercase
+
+.order__questions-title
+	font-weight: 100
+	text-align: left
+	font-size: 20px
+	line-height: 25px
+
+.lines
+	display: block
+
+.form-control
+	background: transparent
+	border-bottom: 1px solid #c6c6c6
+	box-shadow: none
+	padding: 10px 32px 5px 10px
+
+.order__btn--send
+	margin-bottom: 30px
+	width: 100%
+
+.order__btn--whatsapp
+	background: #43c32e
+	margin-right: 26px
+
+.order__btn--telegram
+	background: #44abe6
+
+.btn--colored
+	font-size: 14px
+	line-height: 38px
+	font-weight: 100
+	font-family: $ff_body
+	padding: 0 15px
+
+.order__btn-social
+	margin-bottom: 15px
+
+.order__ps
+	font-weight: 100
+	font-style: italic
+	font-size: 14px
+	line-height: 38px
+	text-align: center
+
