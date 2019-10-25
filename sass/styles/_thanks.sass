@@ -1,0 +1,51 @@
+.thanks
+	background: $col_bg_grey
+
+.thanks__text-colored
+	width: 42%
+	line-height: 28px
+	margin-bottom: 50px
+
+.thanks__text-colored .bg--light-yellow
+	font-size: 20px
+
+.thanks__carousel .card
+	background: transparent
+	border: transparent
+
+.thanks__wrapper
+	display: flex
+	justify-content: space-between
+
+.thanks__text-wrapper
+	width: 25%
+
+.thanks__text
+	font-family: $ff_roboto_thin_i
+	font-size: 16px
+	line-height: 25px
+	color: #3c3c3c
+	padding: 40px 30px 50px 30px
+	border: 1px solid #FFFFFF
+	border-radius: 9px
+	position: relative
+	&:after
+		position: absolute
+		display: inline-block
+		content: ''
+		width: 55px
+		height: 65px
+		bottom: -6px
+		right: -9px
+		background:
+			color: $col_bg_grey
+			image: url("../images/ic/ic_like.svg")
+			repeat: no-repeat
+			size: cover
+
+
+.thanks__carousel
+	width: 70%
+
+.thanks__carousel .carousel-indicators
+	bottom: -15px

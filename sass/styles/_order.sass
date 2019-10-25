@@ -8,19 +8,22 @@
 
 .order__bl--inner
 	display: flex
-	justify-content: flex-start
+	justify-content: flex-end
+	position: relative
+
 
 .order__questions
-	flex: 1
-	padding: 40px 53px 25px 58px
+	//flex:
+	width: 30%
+	padding: 30px 53px 5px 58px
 	background: #ffffff
 	border-radius: 5px
-	position: relative
-	right: -40px
-	top: -392px
-	-webkit-box-shadow: 5px 5px 5px 0px rgba(198,198,198,1)
-	-moz-box-shadow: 5px 5px 5px 0px rgba(198,198,198,1)
-	box-shadow: 5px 5px 5px 0px rgba(198,198,198,1)
+	position: absolute
+	top: -255px
+	left: -180px
+	-webkit-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
+	-moz-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
+	box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
 	&:after
 		content: ""
 		display: inline-block
@@ -28,17 +31,19 @@
 		height: 13px
 		position: absolute
 		background: url("../images/ic/ic_close.svg")
-		right: 20px
-		top: 25px
+		top: 20px
+		right: 30px
 
 
 .order__wrapper
-	flex: 3
+	//flex: 3
+	width: 86%
 	display: flex
 	border: 3px solid #ffd800
 	border-radius: 5px
-	padding: 60px 70px
+	padding: 60px
 	background: #ffffff
+	margin-right: 55px
 
 .order__title
 	font-size: 20px
@@ -46,6 +51,7 @@
 	text-align: left
 	font-weight: 500
 	border-left: 3px solid #ffd800
+	padding-left: 10px
 
 .extraBold
 	font-family: $ff_extraBold
@@ -88,6 +94,8 @@
 
 .order__btn-social
 	margin-bottom: 15px
+	display: flex
+	justify-content: space-between
 
 .order__ps
 	font-weight: 100
@@ -96,3 +104,67 @@
 	line-height: 38px
 	text-align: center
 
+.horizontal-line
+	display: inline-block
+	width: 370px
+	height: 20px
+	background: transparent
+	border-bottom: 1px solid #c6c6c6
+	position: relative
+	left: 15px
+	margin-bottom: 15px
+
+.order__col-left
+	//flex: 2
+	border-right: 1px solid #c6c6c6
+	padding-right: 15px
+	width: 72%
+
+.order__col-right
+	//flex: 1
+	width: 48%
+	padding-left: 55px
+
+.order__col-right .order__btn--whatsapp
+	margin-right: 5px
+
+.order__title--light
+	font-size: 20px
+	line-height: 25px
+	text-align: center
+	border: none
+
+.order__task-item
+	padding-left: 30px
+	font-size: 14px
+	line-height: 1.8
+	color: #8e8e8e
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		display: inline-block
+		width: 21px
+		height: 16px
+		left: 0
+		top: 5px
+		background:
+			color: transparent
+			image: url('../images/ic/ic_check.png')
+			size: contain
+			repeat: no-repeat
+
+.order__text-colored
+	font-size: 14px
+	line-height: 23px
+
+.order__phones
+	padding: 20px 30px
+	display: flex
+	justify-content: space-between
+
+.order__phones span
+	font-family: $ff_bold
+
+.order .form-control
+	line-height: 1.5
