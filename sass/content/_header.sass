@@ -3,7 +3,7 @@
 
 .wrap-header
 	width: 100%
-	height: 900px
+	min-height: 900px
 	background:
 		color: #C6D9D0
 		image: url(../images/content/banner_bg_1.jpg)
@@ -22,19 +22,36 @@
 	&__logo
 		width: $w_header_logo
 		+align-self(flex-start)
+		+phone_max
+			width: 180px
 	.logo__text
 		+align-self(flex-start)
 	.quest
 		margin-left: auto
 		margin-top: 10px
 		+align-self(flex-start)
+		+phone_max
+			position: absolute
+			bottom: 0px
+			right: 20px
 	.ic_present
 		margin-right: 7%
 		margin-left: 6%
 		margin-top: 1.5%
 		+align-self(flex-start)
+		+phone_max
+			position: absolute
+			bottom: 0px
+			left: 0px
+	&__nav
+		margin-top: -20px
+		padding: 0
+		z-index: 999
+		+medium_max
+			margin-top: 0px
 	.menu-nav
 		//margin-top: -30px
+
 	&::before
 		content: ''
 		position: absolute
@@ -69,7 +86,17 @@
 				left: 70px
 				width: 70px
 				height: 50px
+		+phone_max
+			height: 170px
 
+	.btn-gamburg
+		display: none
+		+phone_max
+			display: block
+	.btn-close
+		position: absolute
+		right: 25px
+		top: 25px
 .footer
 	.bl__inner
 		padding: $pTB_bl_in_header 0px
@@ -105,6 +132,13 @@
 	+border_radius(4px)
 	+tablet_max
 		padding: 0px 20px
+	+phone_max
+		+flex-direction(column)
+		+justify-content(center)
+		+align-items(flex-start)
+		background-color: #FFFFFF
+		padding: 0px 20px
+		margin: 20px 0px
 	&-item
 		display: inline-block
 		font-family: $ff_nav
@@ -119,17 +153,51 @@
 		+tablet_max
 			font-size: 12px
 			margin: 0px 10px
+		+phone_max
+			font-size: 14px
+			line-height: 1
+			padding: 8px 0px 3px
+			border-top: none
+			border-bottom: 3px solid transparent
 	&-li
 		background-color: $col_menu_nav_bg
+		+phone_max
+			background-color: #FFFFFF
 		&:hover
 			.menu-nav-item
 				border-top-color: $green
 				color: $col_font_main
+				+phone_max
+
+					border-bottom-color: $green
+					color: $col_font_main
+
 .menu-nav-wrap
-	margin-top: -20px
-	padding: 0
-	+medium_max
-		margin-top: 0px
+	+flexbox
+	+justify-content(center)
+	+phone_max
+		position: absolute
+		top: 115px
+		right: 0px
+		width: calc(244px - 15px)
+		height: calc(344px - 10px)
+		padding: 15px
+		background-color: #FFFFFF
+		width: 100%
+		z-index: 1
+		+flexbox
+		+flex-direction(column)
+		display: none
+		text-align: center
+		+border_radius(4px)
+		-webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+		-moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+		box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+	.btn-close
+		display: none
+		+phone_max
+			display: block
+			+align-self(flex-end)
 
 .main-banner
 	height: 100%
@@ -154,7 +222,7 @@
 		position: relative
 		+phone_max
 			font-size: 20px
-			width: 250px
+			width: 270px
 	&__subtitle
 		font-size: $fs_main_banner_subtitle
 		font-family: $ff_roboto
@@ -166,6 +234,8 @@
 			font-size: 16px
 	.form-group
 		margin-right: 10px
+		+phone_max
+			flex: 1
 	.btn-wrap
 		margin-bottom: 30px
 
@@ -175,7 +245,7 @@
 	+justify-content(space-between)
 	width: $w_adv
 	+phone_max
-		width: 80%
+		width: 100%
 	&-item
 		font-size: 16px
 		line-height: 3
@@ -296,6 +366,9 @@
 		+flex-direction(column)
 	&__side--l
 		width: 610px
+		+phone_max
+			+align-items(center)
+			width: 100%
 	&__side--r
 		flex: 1
 		+align-items(flex-end)
@@ -305,6 +378,7 @@
 		margin-bottom: 70px
 		+phone_max
 			margin-bottom: 40px
+			+align-self(flex-start)
 	.msg-wrap
 		margin-bottom: 50px
 		+phone_max
@@ -312,10 +386,33 @@
 			+flex-direction(column)
 	.text-lt-wrap
 		margin-left: 50px
+		+phone_max
+			margin-left: 0px
 	.text-logo
 		margin-bottom: 20px
 	.msg-ava
 		min-width: 110px
+		+phone_max
+			+align-self(flex-end)
+	.msg-ava__pict
+		+phone_max
+			+align-self(flex-end)
+	.msg--left
+		+phone_max
+			width: 100%
+			margin-bottom: 30px
+			margin-left: 0px
+			&::before
+				top: unset
+				bottom: -12px
+				right: 30px
+				border-width: 17.3px $w_msg_triangle 0 $w_msg_triangle
+				border-top-color: #FFFFFF
+	.msg--left.bg--green
+		+phone_max
+			&::before
+				border-color: transparent
+				border-top-color: $col_bg_green
 
 .quality
 	background-color: #FFFFFF
@@ -342,6 +439,9 @@
 				image: url('../images/content/light.png')
 				size: contain
 				repeat: no-repeat
+		+phone_max
+			&::before
+				display: none
 	&-item
 		width: 370px
 		padding: 50px 55px 30px
@@ -369,7 +469,7 @@
 				size: contain
 				repeat: no-repeat
 		+tablet_max
-			width: 90%
+			width: 100%
 			margin-bottom: 40px
 	&-list
 		margin-left: 25px
@@ -388,6 +488,10 @@
 			+rotate(-45)
 			background:
 				image: url("../images/content/hands.png")
+	.hard
+		&::before
+			background:
+				image: url("../images/content/ic_like.png")
 
 .property
 	background-color: $col_bg_grey
@@ -409,6 +513,9 @@
 		+large_max
 			&::after
 				margin-right: 0px
+		+phone_max
+			&::after
+				display: none
 	&-side
 		+flexbox
 	&-side--left
@@ -417,10 +524,16 @@
 		margin-left: 20px
 		+medium_max
 			margin-bottom: 50px
+		+phone_max
+			margin-left: 0px
 	&-list
 		+flex-wrap(wrap)
 		width: 630px
 		margin-left: 30px
+		+phone_max
+			width: 100%
+			margin-left: 0px
+			+justify-content(center)
 	&-item
 		font-size: 16px
 		width: 315px
@@ -460,6 +573,8 @@
 			height: 100%
 		+tablet_max
 			margin-top: 0px
+		+phone_max
+			width: 100%
 
 	.quote-box--danger
 		width: 670px
@@ -467,6 +582,9 @@
 			width: 55%
 		+tablet_max
 			width: 90%
+		+phone_max
+			margin-left: 20px
+			width: calc(100% - 20px)
 		&--ic
 			&::before
 				background-color: $col_bg_grey
@@ -480,6 +598,9 @@
 		+tablet_max
 			margin-top: 50px
 			width: 90%
+		+phone_max
+			width: 100%
+			margin-left: 0px
 		.quote-box__in
 			padding: 20px 35px
 	&-item
@@ -500,6 +621,10 @@
 		margin-bottom: 95px
 	&-item-3
 		margin-bottom: 95px
+	&-item-4
+		.msg-wrap
+			margin-left: 0px
+			margin-right: 0px
 
 .room-img
 	min-width: 600px
@@ -512,3 +637,7 @@
 	+tablet_max
 		margin-right: 0px
 		margin-bottom: 50px
+	+phone_max
+		min-width: 100%
+		width: 100%
+		height: auto
