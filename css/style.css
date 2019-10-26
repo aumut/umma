@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
 html, body, div, span, applet, object, iframe,
@@ -105,7 +105,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-/*** GENERAL STYLES ***/
+/*** GENERAL STYLES ** */
 *:focus, *:active {
   outline: none !important;
 }
@@ -205,6 +205,12 @@ a:hover {
   -moz-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .btn-call {
+    display: block;
+  }
 }
 
 .logo {
@@ -731,7 +737,7 @@ b {
   -webkit-transform-transform: rotate(180deg);
 }
 
-/*** CONTAINER BLOCK ***/
+/*** CONTAINER BLOCK ** */
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1230px;
@@ -744,7 +750,7 @@ b {
   width: 100%;
 }
 
-/*** HEADER BLOCK ***/
+/*** HEADER BLOCK ** */
 .wrap-header {
   width: 100%;
   min-height: 900px;
@@ -2293,7 +2299,7 @@ tr.tr {
   display: block;
 }
 
-.form-control {
+.order .form-control {
   background: transparent;
   border-bottom: 1px solid #c6c6c6;
   box-shadow: none;
@@ -2468,5 +2474,3 @@ tr.tr {
 .thanks__carousel .carousel-indicators {
   bottom: -15px;
 }
-
-/*# sourceMappingURL=style.css.map */
