@@ -309,6 +309,11 @@ a:hover {
 @media screen and (max-width: 576px) {
   .btn-wrap {
     width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
   }
 }
 
