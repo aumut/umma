@@ -5,6 +5,8 @@ $(function() {
     const cells = assortment.querySelector('.cells');
     const cellsTypes = assortment.querySelectorAll('.cells__card');
 
+    const thanks = document.querySelector('#thanks__carousel');
+
 
     const mql = window.matchMedia("(max-width: 700px)");
     function handlerForMediaQueries(x) {
@@ -12,22 +14,47 @@ $(function() {
             makeStepNumsSlider();
             makeWorksSlider();
             makeAssortmentSlider();
+            makeThanksSlider();
         } else {
             removeStepNumsSlider();
             removeWorksSlider();
             removeAssortmentSlider();
+            removeThanksSlider();
         }
     }
 
+    function makeThanksSlider() {
+        const thanksList = thanks.querySelectorAll('.thanks-item');
+        let carouselItems = thanks.querySelectorAll('.carousel-item');
+        let indicatorWrapper = thanks.querySelector('.carousel-indicators');
+        let indicators = indicatorWrapper.querySelectorAll('li');
+
+        removeItems(carouselItems);
+        removeItems(indicators);
+
+        createCarouselRow(thanksList, thanks, 'thanks__carousel');
+    }
+
+    function removeThanksSlider() {
+        const thanksList = thanks.querySelectorAll('.thanks-item');
+        let carouselItems = thanks.querySelectorAll('.carousel-item');
+        let indicatorWrapper = thanks.querySelector('.carousel-indicators');
+        let indicators = indicatorWrapper.querySelectorAll('li');
+
+        removeItems(carouselItems);
+        removeItems(indicators);
+
+        let rowList = divideArrayForRow(thanksList, 4);
+        createCarouselRow(rowList, thanks, 'thanks__carousel');
+    }
+
     function removeAssortmentSlider() {
-        console.log('removeAssortmentSlider');
         assortment.classList.remove('slider');
         cellsTypes.forEach(function (cell) {
             cell.style.width = `32%`;
         });
         cells.style.width = `100%`;
         let indicators = assortment.querySelector('.indicators');
-        console.log(indicators);
         if (indicators)  indicators.remove();
     }
 
@@ -136,9 +163,9 @@ $(function() {
         const inner = mainWrapper.querySelector('.carousel-inner');
         let indicatorWrapper = mainWrapper.querySelector('.carousel-indicators');
 
-        list.forEach(function (work, index) {
-            work.classList.remove('d-none');
-            let div = createCarouselItem(work);
+        list.forEach(function (item, index) {
+            item.classList.remove('d-none');
+            let div = createCarouselItem(item);
             let indicator = createIndicatorForMultiSlider(mainId, index);
 
             if (index === 0) {
