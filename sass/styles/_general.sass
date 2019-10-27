@@ -50,6 +50,48 @@ a
     padding: $pTB_btn_medium $pLR_btn_medium
   &:hover
     opacity: 0.9
+  &:active
+    box-shadow: none
+  &-gamburg
+    position: absolute
+    top: 0px
+    left: 50%
+    margin: 0px
+    margin-top: calc(62px/2)
+    margin-left: -20px
+    background-color: #FFFFFF
+    width: 60px
+    height: auto
+    padding: 34px 0px 0px 0px
+    +border-radius(0)
+    box-shadow: none
+    color: $col_font_main
+    background:
+      image: url(../images/ic/ic_gamburg.svg)
+      position: 20px 20px
+      size: 35%
+      repeat: no-repeat
+
+
+.btn-close
+  padding: 0px
+  width: 13px
+  height: 13px
+  +border_radius(0)
+  opacity: 0.8
+  box-shadow: none
+  background:
+    color: transparent
+    image: url(../images/ic/ic_close.svg)
+    repeat: no-repeat
+    size: cover
+
+.btn-call
+  width: 200px
+  +align-self(center)
+  display: none
+  +phone_max
+    display: block
 
 
 .logo
@@ -63,6 +105,10 @@ a
     img
       width: 100%
       height: 100%
+    +phone_max
+      min-width: 50px
+      height: 70px
+      margin-right: 5px
   &__text
     display: inline-block
     font-size: $fs_logo_text
@@ -73,6 +119,9 @@ a
     border-left: 1px solid $grey
     +tablet_max
       margin-left: 0px
+    +phone_max
+      font-size: 10px
+      padding: 5px
 
 
 .w100
@@ -92,6 +141,9 @@ a
   +flexbox
   +justify-content(flex-start)
   +align-items(center)
+  +phone_max
+    width: 100%
+    +justify-content(center)
 
 .uppercase
   text-transform: uppercase
@@ -142,6 +194,7 @@ b
   padding: 0px
   margin: 0px
   +border_radius(0)
+  box-shadow: none
   background:
     image: url('../images/ic/ic_wapp_num.png')
     size: contain
@@ -190,6 +243,7 @@ b
   box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
 
 .msg
+  width: 100%
   font-size: 16px
   font-family: $ff_roboto
   line-height: 1.5
@@ -204,6 +258,8 @@ b
   +flex-direction(column)
   //margin: 10px 0px
   position: relative
+  +phone_max
+    padding: 20px
   &::before
     position: absolute
     content: ''
@@ -215,9 +271,6 @@ b
     border-color: transparent
   &--left
     margin-right: 30px
-    +phone_max
-      width: 345px
-      margin-right: 0px
     &::before
       right: -12px
       border-width: $w_msg_triangle 0 $w_msg_triangle 17.3px
@@ -228,12 +281,24 @@ b
       left: -12px
       border-width: $w_msg_triangle 17.3px $w_msg_triangle 0
       border-right-color: #FFFFFF
+  &--down
+    margin-bottom: 30px
+    &::before
+      top: unset
+      bottom: -12px
+      right: 30px
+      border-width: 17.3px $w_msg_triangle 0 $w_msg_triangle
+      border-top-color: #FFFFFF
+
   &.msg--left.bg--green
     &::before
       border-left-color: $col_bg_green
   &.msg--right.bg--green
     &::before
       border-right-color: $col_bg_green
+  &.msg--down.bg--green
+    &::before
+      border-top-color: $col_bg_green
 
 .msg-ava
   +inline-flex
@@ -298,6 +363,8 @@ b
   &--m
     font-size: 50px
     font-family: $ff_bold
+    +phone_max
+      font-size: 30px
   &--l
     font-size: 60px
     font-family: $ff_bold
@@ -309,9 +376,12 @@ b
     font-family: $ff_bold
     font-weight: 700
 
+
 .text-logo
   font-size: 162px
   font-family: $ff_bold
+  +phone_max
+    font-size: 85px
 
 .fs20
   font-size: 20px
@@ -324,6 +394,10 @@ b
 
 .ml70
   margin-left: 70px
+
+.flow-img
+  +phone_max
+    margin-bottom: 40px
 
 .quote-box
   font-size: 16px
@@ -347,6 +421,10 @@ b
       color: transparent
       repeat: no-repeat
       size: contain
+  +phone_max
+    &::after
+      top: 0px
+      right: 60px
   &--danger
     &::after
       +rotate(25)
@@ -389,3 +467,5 @@ b
       margin-right: 28%
       margin-bottom: calc(-#{$w_quote_ic}/2)
       +rotate(180)
+
+      
