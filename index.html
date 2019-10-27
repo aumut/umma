@@ -16,7 +16,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/multislider.min.js"></script>
+    <script src="js/js_mediaqueries.js"></script>
 
     <script src="js/index.js"></script>
 
@@ -294,7 +294,7 @@
     <div class="container">
         <div class="bl__inner">
                 <div class="cells">
-                    <div class="cells__row">
+                    <!--<div class="cells__row">-->
                         <div class="cells__card">
                             <!-- Wrapper for slides -->
                             <!--Carousel Wrapper-->
@@ -472,7 +472,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="card mb-2">
-                                                    <img class="card-img-top" src="images/content/cellTypes/cell4.jpg"  alt="Матовые натяжные потолки">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell3.jpg"  alt="Матовые натяжные потолки">
                                                 </div>
                                             </div>
 
@@ -488,7 +488,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="card mb-12">
-                                                    <img class="card-img-top" src="images/content/cellTypes/cell4.jpg"  alt="Матовые натяжные потолки">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell3.jpg"  alt="Матовые натяжные потолки">
                                                 </div>
                                             </div>
                                         </div>
@@ -502,7 +502,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="card mb-2">
-                                                    <img class="card-img-top" src="images/content/cellTypes/cell4.jpg"  alt="Матовые натяжные потолки">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell3.jpg"  alt="Матовые натяжные потолки">
                                                 </div>
                                             </div>
                                         </div>
@@ -527,10 +527,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!--</div>-->
 
 
-                    <div class="cells__row">
+                    <!--<div class="cells__row">-->
                         <div class="cells__card">
                             <!-- Wrapper for slides -->
                             <!--Carousel Wrapper-->
@@ -762,7 +762,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!--</div>-->
 
                 </div>
         </div>
@@ -776,47 +776,150 @@
                 <div class="steps__circle"></div>
                 <div class="steps__quest msg msg--right">Что будет после того как вызову мастера?</div>
             </div>
-            <div class="steps__nums">
-                <div class="step steps__01">
-                    <div class="step__img--wrapper" data-stepNum="01">
-                        <img src="images/content/tape_measure.png" alt="БЕСПЛАТНЫЙ ЗАМЕР" class="step__img">
-                    </div>
-                    <h3 class="step__title title">БЕСПЛАТНЫЙ ЗАМЕР</h3>
-                    <div class="step__desc">
-                        Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
-                    </div>
-                </div>
+           <!-- <div id="stepsNums" class="steps__nums">-->
+            <!-- Wrapper for slides -->
+            <!--Carousel Wrapper-->
+            <div id="stepsNums" class="steps__nums " > <!--carousel slide carousel-multi-item cell__slider--> <!--data-ride="carousel"-->
 
-                <div class="step steps__02">
-                    <div class="step__img--wrapper" data-stepNum="02">
-                        <img src="images/content/contract.png" alt="ЗАКЛЮЧЕНИЕ ДОГОВОРА" class="step__img">
-                    </div>
-                    <h3 class="step__title title">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
-                    <div class="step__desc">
-                        После принятого Вами решения заключается договор. Оплата осуществляется удобным для Вас способом
-                    </div>
-                </div>
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#stepsNums" data-slide-to="0" class="active"></li>
+                    <li data-target="#stepsNums" data-slide-to="1"></li>
+                    <li data-target="#stepsNums" data-slide-to="2"></li>
+                    <li data-target="#stepsNums" data-slide-to="3"></li>
+                </ol>
+                <!--/.Indicators-->
 
-                <div class="step steps__03">
-                    <div class="step__img--wrapper" data-stepNum="03">
-                        <img src="images/content/helmet.png" alt="ДОСТАВКА И МОНТАЖ" class="step__img">
-                    </div>
-                    <h3 class="step__title title">ДОСТАВКА И МОНТАЖ</h3>
-                    <div class="step__desc">
-                        Приезжает монтажная бригада, устанавливает натяжные потолки и элементы освещения
-                    </div>
-                </div>
+                <!--Slides-->
+                <div class="steps-inner" > <!--carousel-inner--> <!--role="listbox"-->
 
-                <div class="step steps__04">
-                    <div class="step__img--wrapper" data-stepNum="04">
-                        <img src="images/content/like-hands.png" alt="Счастливые хозяева" class="step__img">
+                    <!--First slide-->
+                    <div class="item w-25"> <!--carousel-item active-->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class=" step steps__01">
+                                    <div class="step__img--wrapper" data-stepNum="01">
+                                        <img src="images/content/tape_measure.png" alt="БЕСПЛАТНЫЙ ЗАМЕР" class="step__img">
+                                    </div>
+                                    <h3 class="step__title title">БЕСПЛАТНЫЙ ЗАМЕР</h3>
+                                    <div class="step__desc">
+                                        Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <h3 class="step__title title">Счастливые хозяева</h3>
-                    <div class="step__desc">
-                        Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="item w-25"> <!--carousel-item-->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class=" step steps__02">
+                                    <div class="step__img--wrapper" data-stepNum="02">
+                                        <img src="images/content/contract.png" alt="ЗАКЛЮЧЕНИЕ ДОГОВОРА" class="step__img">
+                                    </div>
+                                    <h3 class="step__title title">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
+                                    <div class="step__desc">
+                                        После принятого Вами решения заключается договор. Оплата осуществляется удобным для Вас способом
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                    <!--/.Second slide-->
+
+                    <!--Third slide-->
+                    <div class="item w-25">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="step steps__03">
+                                    <div class=" step__img--wrapper" data-stepNum="03">
+                                        <img src="images/content/helmet.png" alt="ДОСТАВКА И МОНТАЖ" class="step__img">
+                                    </div>
+                                    <h3 class="step__title title">ДОСТАВКА И МОНТАЖ</h3>
+                                    <div class="step__desc">
+                                        Приезжает монтажная бригада, устанавливает натяжные потолки и элементы освещения
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Third slide-->
+
+                    <!--4th slide-->
+                    <div class="item w-25">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class=" step steps__04">
+                                <div class="step__img--wrapper" data-stepNum="04">
+                                    <img src="images/content/like-hands.png" alt="Счастливые хозяева" class="step__img">
+                                </div>
+                                <h3 class="step__title title">Счастливые хозяева</h3>
+                                <div class="step__desc">
+                                    Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                    <!--/.4th slide-->
+
+                </div>
+                <!--/.Slides-->
+
             </div>
+            <!--/.Carousel Wrapper-->
+
+                   <!-- <div class="step steps__01">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="01">
+                            <img src="images/content/tape_measure.png" alt="БЕСПЛАТНЫЙ ЗАМЕР" class="step__img">
+                        </div>
+                        <h3 class="step__title title">БЕСПЛАТНЫЙ ЗАМЕР</h3>
+                        <div class="step__desc">
+                            Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                        </div>
+                    </div>
+
+                    <div class="step steps__02">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="02">
+                            <img src="images/content/contract.png" alt="ЗАКЛЮЧЕНИЕ ДОГОВОРА" class="step__img">
+                        </div>
+                        <h3 class="step__title title">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
+                        <div class="step__desc">
+                            После принятого Вами решения заключается договор. Оплата осуществляется удобным для Вас способом
+                        </div>
+                    </div>
+
+                    <div class="step steps__03">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="03">
+                            <img src="images/content/helmet.png" alt="ДОСТАВКА И МОНТАЖ" class="step__img">
+                        </div>
+                        <h3 class="step__title title">ДОСТАВКА И МОНТАЖ</h3>
+                        <div class="step__desc">
+                            Приезжает монтажная бригада, устанавливает натяжные потолки и элементы освещения
+                        </div>
+                    </div>
+
+                    <div class="step steps__04">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="04">
+                            <img src="images/content/like-hands.png" alt="Счастливые хозяева" class="step__img">
+                        </div>
+                        <h3 class="step__title title">Счастливые хозяева</h3>
+                        <div class="step__desc">
+                            Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                        </div>
+                    </div>-->
+
+         <!--   </div>-->
         </div>
     </div>
 </div>
@@ -826,14 +929,14 @@
         <div class="bl__inner">
             <div class="works__info">
                 <div class="works__col works__col--left">
-                    <div class="text-colored w-100">
-                        <span class="w-100 text-colored__in bg--light-yellow">Давайте покажем вам наши</span>
+                    <div class="text-colored ">
+                        <span class=" text-colored__in bg--light-yellow">Давайте покажем вам наши</span>
                     </div>
-                    <div class="text-colored w-100">
-                        <span class="w-100 text-colored__in bg--light-yellow">работы. <b> Вот так может</b></span>
+                    <div class="text-colored ">
+                        <span class=" text-colored__in bg--light-yellow">работы. <b> Вот так может</b></span>
                     </div>
-                    <div class="text-colored w-100">
-                        <span class="w-100 text-colored__in bg--light-yellow"><b>преобразиться ваша дом.</b></span>
+                    <div class="text-colored ">
+                        <span class=" text-colored__in bg--light-yellow"><b>преобразиться ваша дом.</b></span>
                     </div>
                 </div>
                 <div class="works__col works__col--right">

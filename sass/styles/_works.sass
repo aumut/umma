@@ -6,13 +6,28 @@
 	justify-content: flex-start
 	padding: 0 70px
 	margin-bottom: 61px
+	+medium_max
+		flex-direction: column
 
 .works__col
 	width: 45%
 
+.our_works .text-colored__in
+	+medium_max
+		font-size: 20px
+	+phone_max
+		font-size: 18px
+
 .works__col--left
-	width: 39%
-	margin-right: 188px
+	width: 53%
+	margin-right: 15%
+	margin-bottom: 0
+	+medium_max
+		width: 100%
+		margin-right: 0
+		margin-bottom: 20px
+	+phone_max
+		margin-right: 0
 
 .works__col--right
 	border: 1px solid #ffffff
@@ -66,38 +81,8 @@ tr.tr
 	&:last-child
 		margin-right: 0
 
-
-#exampleSlider 
-	position: relative      //* recommended */
-	padding: 10px
-
-#exampleSlider .MS-content 
-	white-space: nowrap     //* required */
-	overflow: hidden        //* required */
-	margin: 0 5%            //* makes room for L/R arrows */
-
-#exampleSlider .MS-content .item 
-	display: inline-block   //* required */
-	width: 20%              //* required * Determines number of visible slides */
-	position: relative      //* required */
-	vertical-align: top     //* required */
-	overflow: hidden        //* required */
-	height: 100%            //* recommended */
-	white-space: normal     //* recommended */
-	margin-right: 25px
-
-#exampleSlider .MS-controls button 
-	position: absolute      //* recommended */
-	top: 35px
-
-#exampleSlider .MS-controls .MS-left 
-	left: 10px
-
-#exampleSlider .MS-controls .MS-right 
-	right: 10px
-
-.MS-buttons
-	border-color: transparent
+.works__slider .carousel-arrow
+	top: 30%
 
 .works__slider_item
 	width: 31%!important
