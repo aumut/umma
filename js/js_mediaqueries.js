@@ -1,16 +1,64 @@
 $(function() {
     const stepsNums = document.querySelector("#stepsNums");
     const works = document.querySelector("#works__multi-item");
+    const assortment = document.querySelector(".cells-wrapper");
+    const cells = assortment.querySelector('.cells');
+    const cellsTypes = assortment.querySelectorAll('.cells__card');
+
 
     const mql = window.matchMedia("(max-width: 700px)");
     function handlerForMediaQueries(x) {
         if (x.matches) { // If media query matches
             makeStepNumsSlider();
             makeWorksSlider();
+            makeAssortmentSlider();
         } else {
             removeStepNumsSlider();
             removeWorksSlider();
+            removeAssortmentSlider();
         }
+    }
+
+    function removeAssortmentSlider() {
+        console.log('removeAssortmentSlider');
+        assortment.classList.remove('slider');
+        cellsTypes.forEach(function (cell) {
+            cell.style.width = `32%`;
+        });
+        cells.style.width = `100%`;
+        let indicators = assortment.querySelector('.indicators');
+        console.log(indicators);
+        if (indicators)  indicators.remove();
+    }
+
+    function makeAssortmentSlider() {
+        assortment.classList.add('slider');
+        let box = assortment.getBoundingClientRect();
+        cellsTypes.forEach(function (cell) {
+            cell.style.width = `${box.width}px`;
+        });
+
+        let cellsWidth = box.width * cellsTypes.length;
+        cells.style.width = `${cellsWidth}px`;
+
+        let indicators = createIndicatorsForSimpleSlider(cellsTypes.length);
+
+        assortment.insertBefore(indicators, cells);
+        indicators.addEventListener('click', slideToHandler)
+
+    }
+    
+    function slideToHandler(event) {
+        let target = event.target;
+        let li = target.closest('li');
+        let  activeIndicator = assortment.querySelector('.indicators .active');
+        activeIndicator.className = "";
+
+        let slideNum = li.dataset.slideTo;
+        let step = assortment.getBoundingClientRect().width;
+        let left = step * slideNum;
+        cells.style.left = `-${left}px`;
+        li.className = 'active';
     }
 
     function makeStepNumsSlider() {
@@ -69,7 +117,6 @@ $(function() {
         removeItems(indicators);
 
         createCarouselRow(workList, works, 'works__multi-item');
-
     }
 
     function removeWorksSlider() {
@@ -83,8 +130,6 @@ $(function() {
 
         let rowList = divideArrayForRow(workList, 3);
         createCarouselRow(rowList, works, 'works__multi-item');
-
-
     }
 
     function createCarouselRow(list, mainWrapper, mainId) {
@@ -94,7 +139,7 @@ $(function() {
         list.forEach(function (work, index) {
             work.classList.remove('d-none');
             let div = createCarouselItem(work);
-            let indicator = createIndicator(mainId, index);
+            let indicator = createIndicatorForMultiSlider(mainId, index);
 
             if (index === 0) {
                 div.classList.add('active');
@@ -118,7 +163,7 @@ $(function() {
         });
     }
 
-    function createIndicator(mainId, index) {
+    function createIndicatorForMultiSlider(mainId, index) {
         let li = document.createElement('li');
         li.dataset.target = "#" + mainId;
         li.dataset.slideTo = index;
@@ -138,6 +183,20 @@ $(function() {
             rowsList.push(row);
         }
         return rowsList;
+    }
+
+    function createIndicatorsForSimpleSlider(num) {
+        let ol = document.createElement('ol');
+        ol.className = 'indicators';
+        for (i = 0; i<num; i++) {
+            let li = document.createElement('li');
+            li.dataset.slideTo = i;
+            if( i === 0 ) li.className="active";
+
+            ol.appendChild(li);
+        };
+
+        return ol;
     }
 
     handlerForMediaQueries(mql);
