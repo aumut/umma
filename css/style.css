@@ -1910,6 +1910,11 @@ b {
   background: #FFFFFF;
   border-radius: 5px;
 }
+@media screen and (max-width: 992px) {
+  .cells__card {
+    width: 45%;
+  }
+}
 
 .cell__slider {
   border-radius: 5px;
@@ -1995,6 +2000,11 @@ b {
   border-radius: 2px 2px 0 10px;
   border-right-color: transparent;
   border-right-width: 0;
+}
+@media screen and (max-width: 1200px) {
+  .cells_price {
+    padding: 10px;
+  }
 }
 @media screen and (max-width: 992px) {
   .cells_price {
@@ -2192,6 +2202,11 @@ b {
 .works__col {
   width: 45%;
 }
+@media screen and (max-width: 992px) {
+  .works__col {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .our_works .text-colored__in {
@@ -2230,6 +2245,11 @@ b {
   line-height: 22px;
   position: relative;
   max-height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .works__col--right {
+    font-size: 15px;
+  }
 }
 .works__col--right:after {
   content: "";
@@ -2312,8 +2332,8 @@ tr.tr {
   background: #ffffff;
   border-radius: 5px;
   position: absolute;
-  top: -255px;
-  left: -180px;
+  top: -270px;
+  left: -130px;
   -webkit-box-shadow: 5px 5px 5px 0 #c6c6c6;
   -moz-box-shadow: 5px 5px 5px 0 #c6c6c6;
   box-shadow: 5px 5px 5px 0 #c6c6c6;
@@ -2328,15 +2348,26 @@ tr.tr {
   top: 20px;
   right: 30px;
 }
+@media screen and (max-width: 1200px) {
+  .order__questions {
+    left: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .order__questions {
+    display: none;
+  }
+}
 
 .order__wrapper {
-  width: 86%;
+  width: 95%;
   display: flex;
-  border: 3px solid #ffd800;
-  border-radius: 5px;
-  padding: 60px;
-  background: #ffffff;
-  margin-right: 55px;
+}
+@media screen and (max-width: 768px) {
+  .order__wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 .order__title {
@@ -2412,7 +2443,7 @@ tr.tr {
 
 .horizontal-line {
   display: inline-block;
-  width: 370px;
+  width: 90%;
   height: 20px;
   background: transparent;
   border-bottom: 1px solid #c6c6c6;
@@ -2421,15 +2452,53 @@ tr.tr {
   margin-bottom: 15px;
 }
 
-.order__col-left {
+.order__right--border {
   border-right: 1px solid #c6c6c6;
   padding-right: 15px;
-  width: 72%;
+}
+@media screen and (max-width: 768px) {
+  .order__right--border {
+    border-right-color: transparent;
+    padding-right: 0;
+  }
 }
 
-.order__col-right {
-  width: 48%;
+.order__col {
+  border: 3px solid #ffd800;
+  border-radius: 5px;
+  padding: 60px;
+  background: #ffffff;
+}
+@media screen and (max-width: 992px) {
+  .order__col {
+    padding: 40px;
+  }
+}
+
+.order__col.order__col-left {
+  width: 72%;
+  border-right-color: transparent;
+  padding-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .order__col.order__col-left {
+    border-right-color: #ffd800;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 25px;
+  }
+}
+
+.order__col.order__col-right {
+  width: 55%;
   padding-left: 55px;
+  border-left-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  .order__col.order__col-right {
+    border-left-color: #ffd800;
+    width: 100%;
+  }
 }
 
 .order__col-right .order__btn--whatsapp {
@@ -2474,6 +2543,17 @@ tr.tr {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 992px) {
+  .order__phones {
+    padding: 15px 15px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .order__phones {
+    font-size: 15px;
+  }
+}
 
 .order__phones span {
   font-family: "Museo Cyrl Bold", "Arial", sans-serif;
@@ -2492,6 +2572,12 @@ tr.tr {
   line-height: 28px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 768px) {
+  .thanks__text-colored {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 
 .thanks__text-colored .bg--light-yellow {
   font-size: 20px;
@@ -2506,9 +2592,21 @@ tr.tr {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .thanks__wrapper {
+    flex-direction: column;
+  }
+}
 
 .thanks__text-wrapper {
   width: 25%;
+}
+@media screen and (max-width: 768px) {
+  .thanks__text-wrapper {
+    width: 100%;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 .thanks__text {
@@ -2537,6 +2635,7 @@ tr.tr {
 
 .thanks__carousel {
   width: 70%;
+  margin-left: 90px;
 }
 
 .thanks__carousel .carousel-indicators {
@@ -2545,7 +2644,7 @@ tr.tr {
 @media screen and (max-width: 768px) {
   .thanks__carousel .carousel-indicators {
     width: 100%;
-    left: 0;
+    left: 100px;
   }
 }
 

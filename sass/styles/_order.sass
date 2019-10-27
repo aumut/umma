@@ -13,14 +13,13 @@
 
 
 .order__questions
-	//flex:
 	width: 30%
 	padding: 30px 53px 5px 58px
 	background: #ffffff
 	border-radius: 5px
 	position: absolute
-	top: -255px
-	left: -180px
+	top: -270px
+	left: -130px
 	-webkit-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
 	-moz-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
 	box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
@@ -33,17 +32,19 @@
 		background: url("../images/ic/ic_close.svg")
 		top: 20px
 		right: 30px
+	+large_max
+		left: 20px
+	+medium_max
+		display: none
 
 
 .order__wrapper
-	//flex: 3
-	width: 86%
+	width: 95%
 	display: flex
-	border: 3px solid #ffd800
-	border-radius: 5px
-	padding: 60px
-	background: #ffffff
-	margin-right: 55px
+	//margin-right: 55px
+	+tablet_max
+		width: 100%
+		flex-direction: column
 
 .order__title
 	font-size: 20px
@@ -106,7 +107,7 @@
 
 .horizontal-line
 	display: inline-block
-	width: 370px
+	width: 90%
 	height: 20px
 	background: transparent
 	border-bottom: 1px solid #c6c6c6
@@ -114,16 +115,38 @@
 	left: 15px
 	margin-bottom: 15px
 
-.order__col-left
-	//flex: 2
+.order__right--border
 	border-right: 1px solid #c6c6c6
 	padding-right: 15px
-	width: 72%
+	+tablet_max
+		border-right-color: transparent
+		padding-right: 0
 
-.order__col-right
-	//flex: 1
-	width: 48%
+.order__col
+	border: 3px solid #ffd800
+	border-radius: 5px
+	padding: 60px
+	background: #ffffff
+	+medium_max
+		padding: 40px
+
+.order__col.order__col-left
+	width: 72%
+	border-right-color: transparent
+	padding-right: 0
+	+tablet_max
+		border-right-color: #ffd800
+		width: 100%
+		margin-bottom: 20px
+		padding: 25px
+
+.order__col.order__col-right
+	width: 55%
 	padding-left: 55px
+	border-left-color: transparent
+	+tablet_max
+		border-left-color: #ffd800
+		width: 100%
 
 .order__col-right .order__btn--whatsapp
 	margin-right: 5px
@@ -162,6 +185,11 @@
 	padding: 20px 30px
 	display: flex
 	justify-content: space-between
+	+medium_max
+		padding: 15px 15px
+		font-size: 13px
+	+tablet_max
+		font-size: 15px
 
 .order__phones span
 	font-family: $ff_bold
