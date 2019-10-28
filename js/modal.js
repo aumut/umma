@@ -1,33 +1,39 @@
 $(function() {
-   const thanksItemsList = document.querySelectorAll('.thanks-img');
+   const thanksItemsList = document.querySelectorAll('.thanks-item');
    const worksList = document.querySelectorAll('.work-item');
    const template = document.querySelector('#modal-template').innerHTML;
    const  modal = createModal();
 
     thanksItemsList.forEach(function (item) {
        item.addEventListener('click', e => {
-           let target = e.target;
-           let img = target.cloneNode();
-           modal.setContent(img);
+           let div = getContent(e);
+           div.classList.add('thanks__modal--card');
+           modal.setContent(div);
            modal.open();
        }) 
     });
 
     worksList.forEach(function (item) {
         item.addEventListener('click', e => {
-            let target = e.currentTarget;
-            console.log(target);
-
-            let div = target.cloneNode(true);
-            div.classList.remove('d-none');
-            div.classList.remove('clearfix');
-            div.classList.remove('col-md-4');
-            div.classList.remove('d-md-block');
-            div.classList.add('modal--card');
+            let div = getContent(e);
+            div.classList.add('works__modal--card');
             modal.setContent(div);
             modal.open();
         })
     });
+
+    function getContent(e) {
+        let target = e.currentTarget;
+        //console.log(target);
+        let div = target.cloneNode(true);
+        div.classList.remove('d-none');
+        div.classList.remove('clearfix');
+        div.classList.remove('col-md-4');
+        div.classList.remove('col-md-3');
+        div.classList.remove('d-md-block');
+
+        return div;
+    }
 
 
     

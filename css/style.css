@@ -2493,7 +2493,7 @@ tr.tr {
 }
 
 .indicators {
-  bottom: 10px;
+  bottom: -20px;
 }
 
 .indicators li {
@@ -2571,25 +2571,25 @@ tr.tr {
   top: 0;
 }
 
-.modal--card {
+.works__modal--card {
   min-width: 600px;
 }
 
-.modal--card .works__desc {
+.works__modal--card .works__desc {
   width: 100%;
 }
 
-.modal--card .works__card {
+.works__modal--card .works__card {
   background: #e7ecee;
   border-radius: 20px;
   color: #3c3c3c;
 }
 
-.modal--card .td:nth-child(even) {
+.works__modal--card .td:nth-child(even) {
   padding-left: 0;
 }
 
-.modal--card .td:nth-child(odd) {
+.works__modal--card .td:nth-child(odd) {
   max-width: 130px;
 }
 
@@ -2618,6 +2618,7 @@ tr.tr {
   -webkit-box-shadow: 5px 5px 5px 0 #c6c6c6;
   -moz-box-shadow: 5px 5px 5px 0 #c6c6c6;
   box-shadow: 5px 5px 5px 0 #c6c6c6;
+  z-index: 100;
 }
 @media screen and (max-width: 1200px) {
   .order__questions {
@@ -2626,7 +2627,7 @@ tr.tr {
 }
 @media screen and (max-width: 992px) {
   .order__questions {
-    display: none;
+    width: 65%;
   }
 }
 
@@ -2924,13 +2925,72 @@ tr.tr {
 }
 
 .thanks__carousel .carousel-indicators {
-  bottom: -15px;
+  bottom: -40px;
 }
 @media screen and (max-width: 768px) {
   .thanks__carousel .carousel-indicators {
     width: 100%;
     left: 100px;
   }
+}
+
+.thanks-img-inner {
+  width: 87%;
+  position: absolute;
+  top: 25px;
+  left: 11px;
+  height: 89%;
+  border-radius: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .thanks-img-inner {
+    width: 85%;
+    height: 88%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .thanks-img-inner {
+    width: 87%;
+    top: 11px;
+    left: 6px;
+    height: 91%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .thanks-img-inner {
+    width: 87%;
+    top: 45px;
+    left: 20px;
+    height: 89%;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .thanks-img-inner {
+    width: 85%;
+    top: 42px;
+    left: 20px;
+    height: 88%;
+    border-radius: 20px;
+  }
+}
+
+.thanks__modal--card {
+  width: 300px;
+}
+
+.thanks__modal--card .thanks-img-inner {
+  width: 87%;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  height: 91%;
+  border-radius: 15px;
+}
+
+.thanks__modal--card .card {
+  background: transparent;
+  border-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

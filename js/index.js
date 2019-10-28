@@ -1,6 +1,9 @@
 $(function() {
 // menu mobile
 
+    $(".phone_num").mask('(0999) 99-99-99');
+    console.log($(".phone_num"));
+
     $('#btn_gamburg').click(function () {
         $('.menu-nav-wrap').show('slow');
     });
