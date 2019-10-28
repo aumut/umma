@@ -305,32 +305,35 @@
 .guarant-label
 	+inline-flex
 	+align-items(center)
-	+justify-content(center)
+	+justify-content(flex-start)
 	+flex-direction(column)
 	position: absolute
-	width: 120px
-	height: 120px
-	bottom: -70px
-	right: 20px
+	width: 245px
+	height: 244px
+	bottom: -182px
+	right: -44px
 	color: $green_text
 	font-size: 14px
 	font-family: $ff_bold
 	line-height: 1
 	text-align: center
+	text-transform: initial
+	padding-top: 55px
 	background:
 		color: transparent
 		image: url('../images/content/date_bg.png')
-		size: 210%
-		position: 50% -12px
+		size: cover
+		position: 0 0
 		repeat: no-repeat
 	+phone_max
-		width: 112px
-		height: 112px
-		bottom: 30px
-		right: -112px
+		bottom: -85px
+		right: -165px
 
 .footer
 	font-size: 14px
+	position: relative
+	+phone_max
+		padding-bottom: 60px
 	&__logo
 		width: 300px
 		+tablet_max
@@ -351,6 +354,17 @@
 			width: 40%
 		+tablet_max
 			width: 33%
+		+phone_max
+			font-size: 12px
+			text-align: right
+			flex: 1
+	&__made
+		+phone_max
+			position: absolute
+			bottom: 0
+			width: 100%
+			text-align: center
+			padding-bottom: 20px
 
 .introduce
 	background-color: $col_bg_grey

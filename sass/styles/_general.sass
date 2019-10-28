@@ -417,6 +417,28 @@ b
   +phone_max
     font-size: 85px
 
+.logo_img
+  width: 530px
+  height: 320px
+  position: relative
+  +phone_max
+    width: 100%
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background:
+      image: url('../images/content/ceiling_stretch.png')
+      position: -15px 40px
+      repeat: no-repeat
+      size: 105%
+    +phone_max
+      background-size: contain
+      background-position: 0px 90px
+
 .fs20
   font-size: 20px
 
