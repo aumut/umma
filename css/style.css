@@ -1505,10 +1505,12 @@ b {
 
 .footer {
   font-size: 14px;
+}
+.footer .bl__inner {
   position: relative;
 }
 @media screen and (max-width: 576px) {
-  .footer {
+  .footer .bl__inner {
     padding-bottom: 60px;
   }
 }
