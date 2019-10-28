@@ -1,0 +1,44 @@
+
+/*** FOOTER BLOCK ***/
+
+.footer
+  font-size: 14px
+  .bl__inner
+    padding: $pTB_bl_in_header 0px
+    +flexbox
+    +justify-content(space-between)
+    +align-items(center)
+    position: relative
+    +phone_max
+      padding-bottom: 60px
+  &__logo
+    width: 300px
+    +tablet_max
+      width: 200px
+  .logo__ic
+    min-width: $w_logo_ic_white
+    width: $w_logo_ic_white
+    height: $h_logo_ic_white
+  .logo__text
+    color: #FFFFFF
+    border-left: 0px
+    font-size: 12px
+  &__copyright
+    width: 500px
+    text-align: center
+    line-height: 1.5
+    +medium_max
+      width: 40%
+    +tablet_max
+      width: 33%
+    +phone_max
+      font-size: 12px
+      text-align: right
+      flex: 1
+  &__made
+    +phone_max
+      position: absolute
+      bottom: 0
+      width: 100%
+      text-align: center
+      padding-bottom: 20px

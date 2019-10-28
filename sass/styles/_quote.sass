@@ -1,0 +1,70 @@
+.quote-box
+  font-size: 16px
+  font-family: $ff_roboto_thin_i
+  font-style: italic
+  line-height: 1.7
+  color: $col_quote-box
+  border: 1px solid #FFFFFF
+  +border_radius(10px)
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 0px
+    margin-top: calc(-#{$w_quote_dang}/2)
+    margin-right: calc(-#{$w_quote_dang}/2)
+    width: $w_quote_dang
+    height: $w_quote_dang
+    background:
+      color: transparent
+      repeat: no-repeat
+      size: contain
+  +phone_max
+    &::after
+      top: 0px
+      right: 60px
+  &--danger
+    &::after
+      +rotate(25)
+      background-image: url(../images/ic/ic_stop.png)
+  &--target
+    &::after
+      top: unset
+      bottom: 0px
+      margin-top: 0px
+      margin-bottom: calc(-#{$w_quote_ic}/2)
+      margin-right: -26px
+      background-image: url(../images/ic/ic_target.png)
+  p
+    margin-bottom: 10px
+  &__in
+    padding: 45px 40px
+  &--ic .quote-box__in
+    position: relative
+    &::before, &::after
+      content: ''
+      position: absolute
+      width: $w_quote_ic
+      height: $w_quote_ic
+      background:
+        color: $col_bg_grey
+        image: url(../images/ic/ic_right_quote.svg)
+        size: 70%
+        position: 50% 50%
+        repeat: no-repeat
+    &::before
+      bottom: unset
+      top: 0px
+      left: 0px
+      margin-top: 25px
+      margin-left: calc(-#{$w_quote_ic}/2)
+    &::after
+      top: unset
+      bottom: 0
+      right: 0
+      margin-right: 28%
+      margin-bottom: calc(-#{$w_quote_ic}/2)
+      +rotate(180)
+
+

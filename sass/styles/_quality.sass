@@ -1,0 +1,83 @@
+
+/*** QUALITY BLOCK ***/
+
+.quality
+  background-color: #FFFFFF
+  background:
+    image: url('../images/content/work.png')
+    size: 53%
+    position: top right
+    repeat: no-repeat
+  +large_max
+    background-size: contain
+  +tablet_max
+    background: #FFFFFF
+  .bl__inner
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: calc(-200px/2)
+      right: 0px
+      width: 200px
+      height: 200px
+      +rotate(-90)
+      background:
+        image: url('../images/content/light.png')
+        size: contain
+        repeat: no-repeat
+    +phone_max
+      &::before
+        display: none
+  &-item
+    width: 370px
+    padding: 60px 55px 25px
+    color: #FFFFFF
+    font-size: 16px
+    line-height: 1.5
+    position: relative
+    -webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+    -moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+    box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+    .title
+      font-size: 20px
+      font-family: $ff_bold
+      line-height: 2
+      text-align: left
+      letter-spacing: 0px
+    &::before
+      content: ''
+      position: absolute
+      top: -25px
+      left: 40px
+      width: 100px
+      height: 75px
+      background:
+        //image: url("../images/content/brain24.png")
+        size: contain
+        repeat: no-repeat
+    +tablet_max
+      width: 100%
+      margin-bottom: 40px
+  &-list
+    margin-left: 25px
+    +inline-flex
+    +tablet_max
+      +flex-direction(column)
+      +align-items(center)
+      margin-left: 0px
+      margin-bottom: 0px !important
+  .brain
+    &::before
+      background:
+        image: url("../images/content/brain24.png")
+  .hand
+    &::before
+      +rotate(-45)
+      background:
+        image: url("../images/content/hands.png")
+  .hard
+    &::before
+      background:
+        image: url("../images/content/ic_like.png")
+

@@ -51,6 +51,7 @@ a
     padding: $pTB_btn_medium $pLR_btn_medium
   &:hover
     opacity: 0.9
+    color: inherit
   &:active
     box-shadow: none
   &-gamburg
@@ -72,7 +73,6 @@ a
       position: 20px 20px
       size: 35%
       repeat: no-repeat
-
 
 .btn-close
   padding: 0px
@@ -146,9 +146,9 @@ a
     display: inline-block
     font-size: $fs_logo_text
     color: $col_font_main
-    line-height: 1.5
-    margin-left: 15px
-    padding: 15px
+    line-height: 1.4
+    margin-left: 10px
+    padding: 5px 15px
     border-left: 1px solid $grey
     +tablet_max
       margin-left: 0px
@@ -206,6 +206,13 @@ b
 
 .bold_roboto
   font-family: $ff_roboto_bold
+  font-weight: 700
+
+.reg_roboto
+  font-family: $ff_roboto
+
+.bold_main
+  font-family: $ff_bold
   font-weight: 700
 
 .bl
@@ -279,7 +286,7 @@ b
 .msg
   width: 100%
   font-size: 16px
-  font-family: $ff_roboto
+  font-family: $ff_roboto_lt
   line-height: 1.5
   letter-spacing: 1px
   background-color: #FFFFFF
@@ -292,6 +299,9 @@ b
   +flex-direction(column)
   //margin: 10px 0px
   position: relative
+  -webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  -moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
   +phone_max
     padding: 20px
   &::before
@@ -353,12 +363,12 @@ b
       width: 100%
       height: 100%
   &__owner
-    font-size: 16px
+    font-size: 14px
     margin-bottom: 10px
   &__text
     font-size: 16px
     font-style: italic
-    font-family: $ff_roboto_italic
+    font-family: $ff_roboto_thin_i
 
 
 .msg-wrap
@@ -373,24 +383,33 @@ b
   color: $col_green
 
 .bg--yellow
-  background-color: #E2BF00
+  background-color: #ffd700
   color: $col_font_main
 
 .bg--light-yellow
   background-color: #ffd800
+
 .bg--blue
-  //background-color: #599ECD
-  background: rgb(255,255,255)
-  background: radial-gradient(circle, rgba(255,255,255,.01) 0%, rgba(89, 158, 205,1) 100%)
+  background-image: radial-gradient(circle closest-corner at 70% 50%, #96B6CC, rgba(89, 158, 205,1))
 
 .bg--violet
-  background-color: #9233FF
+  background-image: radial-gradient(circle closest-corner at 70% 50%, #B070FF, #9233FF)
 
 .bg--red
-  background-color: #FF5C33
+  background-image: radial-gradient(circle closest-corner at 70% 50%, #FFAF9E, #FF5C33)
+
 
 .bg--ltgreen
   background-color: #ACE757
+
+.font_mus
+  font-family: $ff_body
+
+.sub
+  font-size: 32px
+
+.sub12
+  font-size: 12px
 
 .text-lt
   color: #d8a67a
@@ -439,8 +458,17 @@ b
       background-size: contain
       background-position: 0px 90px
 
+.fs14
+  font-size: 14px
+
 .fs20
   font-size: 20px
+
+.fs80
+  font-size: 80px
+
+.fs80
+  font-size: 80px
 
 .mb95
   margin-bottom: 95px
@@ -451,78 +479,51 @@ b
 .ml70
   margin-left: 70px
 
+.popup_form
+  width: 30%
+  padding: 15px
+  background: #ffffff
+  border-radius: 10px
+  position: absolute
+  top: 54px
+  right: -144px
+  -webkit-box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
+  -moz-box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
+  box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
+  font-size: 20px
+  color: $col_font_main
+  z-index: 999
+  &__title
+    font-size: 20px
+    line-height: 1.2
+    color: green
+    padding: 0px 50px
+  &__body
+    padding: 0px 35px
+  .form-control
+    border-radius: 4px
+    background-color: #FFFFFF
+    border: 1px solid #d9d9d9
+    padding: 5px 27px
+    box-shadow: none
+
+
+.popup_form--bordered
+  .popup_form__inner
+    padding: 20px
+    border-radius: 10px
+    -webkit-box-shadow: 0px 9px 18px rgba(128,128,128,0.23)
+    -moz-box-shadow: 0px 9px 18px rgba(128,128,128,0.23)
+    box-shadow: 0px 9px 18px rgba(128,128,128,0.23)
+    //background-image: linear-gradient(0deg, #fbf7af 0%, #ffe779 100%)
+    border: 2px solid #ffd700
+
+.sale_title
+  color: #f67577
+  line-height: 1.1
+  margin: 0px -50px
+
 .flow-img
   +phone_max
     margin-bottom: 40px
 
-.quote-box
-  font-size: 16px
-  font-family: $ff_roboto_italic
-  font-style: italic
-  line-height: 1.7
-  color: $col_quote-box
-  border: 1px solid #FFFFFF
-  +border_radius(10px)
-  position: relative
-  &::after
-    content: ''
-    position: absolute
-    top: 50%
-    right: 0px
-    margin-top: calc(-#{$w_quote_dang}/2)
-    margin-right: calc(-#{$w_quote_dang}/2)
-    width: $w_quote_dang
-    height: $w_quote_dang
-    background:
-      color: transparent
-      repeat: no-repeat
-      size: contain
-  +phone_max
-    &::after
-      top: 0px
-      right: 60px
-  &--danger
-    &::after
-      +rotate(25)
-      background-image: url(../images/ic/ic_stop.png)
-  &--target
-    &::after
-      top: unset
-      bottom: 0px
-      margin-top: 0px
-      margin-bottom: calc(-#{$w_quote_ic}/2)
-      margin-right: -26px
-      background-image: url(../images/ic/ic_target.png)
-  p
-    margin-bottom: 10px
-  &__in
-    padding: 50px 40px
-  &--ic .quote-box__in
-    position: relative
-    &::before, &::after
-      content: ''
-      position: absolute
-      width: $w_quote_ic
-      height: $w_quote_ic
-      background:
-        color: $col_bg_grey
-        image: url(../images/ic/ic_right_quote.svg)
-        size: 70%
-        position: 50% 50%
-        repeat: no-repeat
-    &::before
-      bottom: unset
-      top: 0px
-      left: 0px
-      margin-top: 25px
-      margin-left: calc(-#{$w_quote_ic}/2)
-    &::after
-      top: unset
-      bottom: 0
-      right: 0
-      margin-right: 28%
-      margin-bottom: calc(-#{$w_quote_ic}/2)
-      +rotate(180)
-
-
-      
