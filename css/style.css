@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
  * v2.0 | 20110126
  * License: none (public domain) */
 html, body, div, span, applet, object, iframe,
@@ -225,7 +225,7 @@ table {
     transform: rotate(0deg);
   }
 }
-/*** GENERAL STYLES ** */
+/*** GENERAL STYLES ***/
 *:focus, *:active {
   outline: none !important;
 }
@@ -558,6 +558,9 @@ b {
   background-image: url("../images/ic/ic_wink.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+.ic_smile:hover {
+  cursor: pointer;
 }
 
 .ic_present {
@@ -933,7 +936,7 @@ b {
   -webkit-transform-transform: rotate(180deg);
 }
 
-/*** CONTAINER BLOCK ** */
+/*** CONTAINER BLOCK ***/
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1230px;
@@ -946,7 +949,7 @@ b {
   width: 100%;
 }
 
-/*** HEADER BLOCK ** */
+/*** HEADER BLOCK ***/
 .wrap-header {
   width: 100%;
   min-height: 900px;
@@ -2523,6 +2526,73 @@ tr.tr {
   width: 31% !important;
 }
 
+.card-img-top {
+  border-radius: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.opened {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__container {
+  padding: 0;
+  border-radius: 30px;
+  background: transparent;
+  color: #ffffff;
+  position: relative;
+  min-width: 300px;
+}
+
+.popup__close {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal--card {
+  min-width: 600px;
+}
+
+.modal--card .works__desc {
+  width: 100%;
+}
+
+.modal--card .works__card {
+  background: #e7ecee;
+  border-radius: 20px;
+  color: #3c3c3c;
+}
+
+.modal--card .td:nth-child(even) {
+  padding-left: 0;
+}
+
+.modal--card .td:nth-child(odd) {
+  max-width: 130px;
+}
+
 .order {
   background-color: #e7ecee;
   background-image: url(../images/content/ruler.jpg);
@@ -2537,6 +2607,7 @@ tr.tr {
 }
 
 .order__questions {
+  display: none;
   width: 30%;
   padding: 30px 53px 5px 58px;
   background: #ffffff;
@@ -2548,16 +2619,6 @@ tr.tr {
   -moz-box-shadow: 5px 5px 5px 0 #c6c6c6;
   box-shadow: 5px 5px 5px 0 #c6c6c6;
 }
-.order__questions:after {
-  content: "";
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  position: absolute;
-  background: url("../images/ic/ic_close.svg");
-  top: 20px;
-  right: 30px;
-}
 @media screen and (max-width: 1200px) {
   .order__questions {
     left: 20px;
@@ -2567,6 +2628,20 @@ tr.tr {
   .order__questions {
     display: none;
   }
+}
+
+.closeBtn {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  background: url("../images/ic/ic_close.svg");
+  top: 20px;
+  right: 30px;
+}
+.closeBtn:hover {
+  cursor: pointer;
 }
 
 .order__wrapper {
@@ -2857,3 +2932,5 @@ tr.tr {
     left: 100px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

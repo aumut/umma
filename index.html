@@ -17,6 +17,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/js_mediaqueries.js"></script>
+    <script src="js/modal.js"></script>
 
     <script src="js/index.js"></script>
 
@@ -35,7 +36,7 @@
                         <h3 class="logo__text">Экологические натяжные потолки премиум класса с гарантией на 10 <br> в Бишкеке</h3>
                     </div>
                     <div class="quest">
-                        <div class="quest__text ic_smile">Задавайте вопросы это бесплатно</div>
+                        <div class="quest__text ic_smile" id="askQuestions">Задавайте вопросы это бесплатно</div>
                         <a href="#"><span class="btn quest__btn whatsapp"></span><span>WhatsApp</span></a>
                     </div>
                     <a href="#" class="ic_present"></a>
@@ -52,13 +53,13 @@
                     <div class="menu-nav-wrap">
                         <button type="button" class="btn btn-close" id="btn_close"></button>
                         <ul class="menu-nav">
-                            <li class="menu-nav-li"><a href="#" class="menu-nav-item">Главная</a></li>
-                            <li class="menu-nav-li"><a href="#" class="menu-nav-item">О нас </a></li>
+                            <li class="menu-nav-li"><a href="#main" class="menu-nav-item">Главная</a></li>
+                            <li class="menu-nav-li"><a href="#about" class="menu-nav-item">О нас </a></li>
                             <li class="menu-nav-li"><a href="#" class="menu-nav-item">Акции</a></li>
-                            <li class="menu-nav-li"><a href="#" class="menu-nav-item">Виды потолков</a></li>
-                            <li class="menu-nav-li"><a href="#" class="menu-nav-item">Наши работы</a></li>
-                            <li class="menu-nav-li"><a href="#" class="menu-nav-item">Отзывы</a></li>
-                            <li class="menu-nav-li"><a href="#" class="menu-nav-item">Контакты</a></li>
+                            <li class="menu-nav-li"><a href="#assortment" class="menu-nav-item">Виды потолков</a></li>
+                            <li class="menu-nav-li"><a href="#works" class="menu-nav-item">Наши работы</a></li>
+                            <li class="menu-nav-li"><a href="#thanks" class="menu-nav-item">Отзывы</a></li>
+                            <li class="menu-nav-li"><a href="#order" class="menu-nav-item">Контакты</a></li>
                         </ul>
                         <div class="btn-wrap">
                             <button type="button" class="btn btn-call"><span class="button__blik"></span>Заказать звонок</button>
@@ -70,7 +71,7 @@
     </header>
     <div class="main-banner">
         <div class="container">
-            <div class="bl__inner">
+            <div class="bl__inner" id="main">
                 <h2 class="main-banner__title">
                     Экологические НАТЯЖНЫЕ ПОТОЛКИ ПРЕМИУМ класса с гарантией <br> на 10 лет в бишкеке
                     <div class="guarant-label"><span>Гарантия</span><span class="fs20">10 лет</span></div>
@@ -95,7 +96,7 @@
     </div>
 </div>
 <!-- Знакомство -->
-<div class="bl introduce">
+<div class="bl introduce" id="about">
     <div class="container">
         <div class="bl__inner">
             <div class="introduce__side introduce__side--l">
@@ -298,7 +299,7 @@
     </div>
 </div>
 <!-- Блок с разновидностью -->
-<div class="bl assortment">
+<div class="bl assortment" id="assortment">
     <div class="container">
         <div class="bl__inner">
                 <div class="cells-wrapper">
@@ -932,7 +933,7 @@
     </div>
 </div>
 <!-- Наши работы -->
-<div class="bl our_works">
+<div class="bl our_works" id="works">
     <div class="container">
         <div class="bl__inner">
             <div class="works__info">
@@ -1218,7 +1219,7 @@
     </div>
 </div>
 <!-- Искренние слова благодарности от наших заказчиков -->
-<div class="bl thanks">
+<div class="bl thanks" id="thanks">
     <div class="container">
         <div class="bl__inner">
             <div class="text-colored-wrap ml70 thanks__text-colored">
@@ -1270,28 +1271,28 @@
                                 <div class="row">
                                     <div class="col-md-3 thanks-item">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
@@ -1306,28 +1307,28 @@
                                 <div class="row">
                                     <div class="col-md-3 thanks-item">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
@@ -1342,28 +1343,28 @@
                                 <div class="row">
                                     <div class="col-md-3 thanks-item">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 thanks-item clearfix d-none d-md-block">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="images/content/thanks/1.png"
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/1.png"
                                                  alt="Card image cap">
                                         </div>
                                     </div>
@@ -1383,10 +1384,11 @@
     </div>
 </div>
 <!-- Искренние слова благодарности от наших заказчиков -->
-<div class="bl order">
+<div class="bl order" id="order">
     <div class="container">
         <div class="bl__inner order__bl--inner">
-            <div class="order__questions">
+            <div class="order__questions" id="orderQuestions">
+                <span class="closeBtn" id="orderQuestionsCloseBtn"></span>
                 <div class="order__questions-title subtitle">
                     <span class="lines">Есть вопросы?</span>
                     <span class="lines">Наш специалист </span>
@@ -1485,5 +1487,15 @@
         </div>
     </div>
 </footer>
+
+<script type="template" id="modal-template">
+    <div class="overlay">
+        <div class="popup__container">
+            <a href="#" class="popup__close"></a>
+            <div class="popup__content">
+            </div>
+        </div>
+    </div>
+</script>
 </body>
 </html>

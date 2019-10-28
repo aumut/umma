@@ -90,3 +90,61 @@ tr.tr
 
 .works__slider_item
 	width: 31%!important
+
+.card-img-top
+	border-radius: 20px
+
+// popup style
+
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 100
+
+.opened
+	opacity: 1
+	transition: opacity .3s
+
+.overlay
+	background: rgba(00, 00, 00, .5)
+	display: flex
+	width: 100%
+	height: 100%
+	justify-content: center
+	align-items: center
+
+.popup__container
+	padding: 0
+	border-radius: 30px
+	background: transparent
+	color: #ffffff
+	position: relative
+	min-width: 300px
+
+.popup__close
+	display: inline-block
+	width: 10px
+	height: 10px
+	position: absolute
+	right: 0
+	top: 0
+
+.modal--card
+	min-width: 600px
+
+.modal--card .works__desc
+	width: 100%
+
+.modal--card .works__card
+	background: $col_bg_grey
+	border-radius: 20px
+	color: $col_bg_btn
+
+.modal--card .td:nth-child(even)
+	padding-left: 0
+
+.modal--card .td:nth-child(odd)
+	max-width: 130px

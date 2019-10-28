@@ -13,6 +13,7 @@
 
 
 .order__questions
+	display: none
 	width: 30%
 	padding: 30px 53px 5px 58px
 	background: #ffffff
@@ -23,20 +24,22 @@
 	-webkit-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
 	-moz-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
 	box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
-	&:after
-		content: ""
-		display: inline-block
-		width: 13px
-		height: 13px
-		position: absolute
-		background: url("../images/ic/ic_close.svg")
-		top: 20px
-		right: 30px
 	+large_max
 		left: 20px
 	+medium_max
 		display: none
 
+.closeBtn
+	content: ""
+	display: inline-block
+	width: 13px
+	height: 13px
+	position: absolute
+	background: url("../images/ic/ic_close.svg")
+	top: 20px
+	right: 30px
+	&:hover
+		cursor: pointer
 
 .order__wrapper
 	width: 95%
@@ -196,3 +199,4 @@
 
 .order .form-control
 	line-height: 1.5
+

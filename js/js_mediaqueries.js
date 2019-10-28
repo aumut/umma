@@ -7,7 +7,6 @@ $(function() {
 
     const thanks = document.querySelector('#thanks__carousel');
 
-
     const mql1200 = window.matchMedia("(max-width: 1200px)");
     const mql768 = window.matchMedia("(max-width: 768px)");
     const mql992 = window.matchMedia("(max-width: 992px)");
@@ -15,7 +14,6 @@ $(function() {
 
     function handlerForMediaQueries(x) {
         if (mql768.matches) { // If media query matches
-            console.log('768');
             makeStepNumsSlider();
             makeWorksSlider();
             makeAssortmentSlider();
@@ -25,10 +23,8 @@ $(function() {
             removeWorksSlider();
             removeThanksSlider();
             if (mql992.matches) { // If media query matches
-                console.log('992');
                 removeAssortmentSlider(45);
             } else if (mql1200.matches) {
-                console.log('1200');
                 removeAssortmentSlider(32);
             }
         }
