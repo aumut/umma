@@ -51,9 +51,11 @@ a
     padding: $pTB_btn_medium $pLR_btn_medium
   &:hover
     opacity: 0.9
-    color: inherit
+    color: $col_font_btn
   &:active
     box-shadow: none
+  &:active, &:focus
+    outline: none
   &-gamburg
     position: absolute
     top: 0px
@@ -270,6 +272,21 @@ b
     size: contain
     repeat: no-repeat
 
+
+.ic_box
+  position: relative
+  &::before
+    content: ''
+    width: 48px
+    height: 52px
+    position: absolute
+    bottom: 35px
+    right: 15px
+    background:
+      image: url('../images/content/present_big.png')
+      size: contain
+      repeat: no-repeat
+
 .form-control
   font-size: 14px
   font-family: $ff_roboto
@@ -372,9 +389,9 @@ b
     font-style: italic
     font-family: $ff_roboto_thin_i
 
-
 .msg-wrap
   +inline-flex
+
 
 //colors
 .red
@@ -495,10 +512,13 @@ b
   font-size: 20px
   color: $col_font_main
   z-index: 999
+  +phone_max
+    left: 0px
+    right: unset
   &__title
     font-size: 20px
     line-height: 1.2
-    color: green
+    color: $col_font_main
     padding: 0px 50px
   &__body
     padding: 0px 35px
@@ -519,6 +539,14 @@ b
     box-shadow: 0px 9px 18px rgba(128,128,128,0.23)
     //background-image: linear-gradient(0deg, #fbf7af 0%, #ffe779 100%)
     border: 2px solid #ffd700
+
+.ic_present_popup
+  opacity: 0
+  -webkit-transition: opacity 200ms ease-in
+  -moz-transition: opacity 200ms ease-in
+  transition: opacity 200ms ease-in
+  &.active
+    opacity: 1
 
 .sale_title
   color: #f67577

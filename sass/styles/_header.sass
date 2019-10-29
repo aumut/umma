@@ -169,6 +169,8 @@
 	+flexbox
 	+justify-content(center)
 	+phone_max
+		//display: none
+		opacity: 0
 		position: absolute
 		top: 115px
 		right: 0px
@@ -177,20 +179,28 @@
 		padding: 15px
 		background-color: #FFFFFF
 		width: 100%
-		z-index: 1
+		z-index: 999
 		+flexbox
 		+flex-direction(column)
-		display: none
 		text-align: center
 		+border_radius(4px)
 		-webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
 		-moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
 		box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+
+		-webkit-transition: opacity 200ms ease-in
+		-moz-transition: opacity 200ms ease-in
+		transition: opacity 200ms ease-in
 	.btn-close
 		display: none
 		+phone_max
 			display: block
 			+align-self(flex-end)
+
+.menu-nav-wrap.active
+	+phone_max
+		opacity: 1
+		//+flexbox
 
 .main-banner
 	height: 100%

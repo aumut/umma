@@ -5,12 +5,17 @@ $(function() {
     console.log($(".phone_num"));
 
     $('#btn_gamburg').click(function () {
-        $('.menu-nav-wrap').show('slow');
+        $('.menu-nav-wrap').toggleClass('active');
     });
     $('#btn_close').click(function () {
-        $('.menu-nav-wrap').hide();
+        $('.menu-nav-wrap').toggleClass('active');
     });
-
+    $('#ic_present').click(function () {
+        $('.ic_present_popup').toggleClass('active');
+    });
+    $('#btn_close_popup').click(function () {
+        $('.ic_present_popup').toggleClass('active');
+    });
     const askQuestions = document.querySelector('#askQuestions');
     const orderQuestions = document.querySelector('#orderQuestions');
     const orderQuestionsCloseBtn = document.querySelector('#orderQuestionsCloseBtn');
