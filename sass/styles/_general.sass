@@ -49,13 +49,12 @@ a
 
   +medium_max
     padding: $pTB_btn_medium $pLR_btn_medium
-  &:hover
+  &:active, &:focus, &:hover
     opacity: 0.9
-    color: $col_font_btn
-  &:active
-    box-shadow: none
-  &:active, &:focus
     outline: none
+    outline-offset: unset
+    color: $col_font_btn
+    box-shadow: none
   &-gamburg
     position: absolute
     top: 0px
