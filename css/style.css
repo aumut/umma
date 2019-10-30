@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
  * v2.0 | 20110126
  * License: none (public domain) */
 html, body, div, span, applet, object, iframe,
@@ -51,7 +51,7 @@ table {
 }
 
 /* font size/family */
-/*** FONT FACE ** */
+/*** FONT FACE ***/
 @font-face {
   font-family: "Museo Cyrl Reg";
   src: url("../fonts/Museo_Cyrillic/Museo_Cyrl_500.otf");
@@ -118,7 +118,7 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-/*** KEYFRAMES ** */
+/*** KEYFRAMES ***/
 @-webkit-keyframes sheens {
   0%, 79% {
     opacity: 0;
@@ -239,7 +239,7 @@ table {
     transform: rotate(0deg);
   }
 }
-/*** GENERAL STYLES ** */
+/*** GENERAL STYLES ***/
 *:focus, *:active {
   outline: none !important;
 }
@@ -977,7 +977,7 @@ b {
   }
 }
 
-/*** CONTAINER BLOCK ** */
+/*** CONTAINER BLOCK ***/
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1230px;
@@ -991,7 +991,7 @@ b {
   width: 100%;
 }
 
-/*** HEADER BLOCK ** */
+/*** HEADER BLOCK ***/
 .wrap-header {
   width: 100%;
   min-height: 900px;
@@ -1543,7 +1543,7 @@ b {
   width: 342px;
 }
 
-/*** INTRODUCE BLOCK ** */
+/*** INTRODUCE BLOCK ***/
 .introduce {
   background-color: #e7ecee;
 }
@@ -1692,7 +1692,7 @@ b {
   }
 }
 
-/*** QUALITY BLOCK ** */
+/*** QUALITY BLOCK ***/
 .quality {
   background-color: #FFFFFF;
   background-image: url("../images/content/work.png");
@@ -1808,7 +1808,7 @@ b {
   background-image: url("../images/content/ic_like.png");
 }
 
-/*** PROPERTY BLOCK ** */
+/*** PROPERTY BLOCK ***/
 .property {
   background-color: #e7ecee;
 }
@@ -1925,7 +1925,7 @@ b {
   }
 }
 
-/*** NOSMELL BLOCK ** */
+/*** NOSMELL BLOCK ***/
 .nosmell {
   background-color: #e7ecee;
 }
@@ -2161,7 +2161,7 @@ b {
   -webkit-transform-transform: rotate(180deg);
 }
 
-/*** ASSORTMENT BLOCK ** */
+/*** ASSORTMENT BLOCK ***/
 .assortment {
   background: #e7ecee;
 }
@@ -2335,7 +2335,7 @@ b {
   bottom: 50px;
 }
 
-/*** STEPS BLOCK ** */
+/*** STEPS BLOCK ***/
 .steps {
   background: #e7ecee;
 }
@@ -2347,6 +2347,11 @@ b {
 .steps__quest--wrapper {
   display: flex;
   padding-left: 55px;
+}
+@media screen and (max-width: 768px) {
+  .steps__quest--wrapper {
+    padding-left: 0;
+  }
 }
 
 .steps__circle {
@@ -2465,7 +2470,7 @@ b {
   padding-top: 30px;
 }
 
-/*** WORKS BLOCK ** */
+/*** WORKS BLOCK ***/
 .our_works {
   background: #e7ecee;
 }
@@ -2663,7 +2668,7 @@ tr.tr {
   max-width: 130px;
 }
 
-/*** ORDER BLOCK ** */
+/*** ORDER BLOCK ***/
 .order {
   background-color: #e7ecee;
   background-image: url(../images/content/ruler.jpg);
@@ -2920,7 +2925,7 @@ tr.tr {
   line-height: 1.5;
 }
 
-/*** THANKS BLOCK ** */
+/*** THANKS BLOCK ***/
 .thanks {
   background: #e7ecee;
 }
@@ -2934,6 +2939,7 @@ tr.tr {
   .thanks__text-colored {
     width: 100%;
     margin-bottom: 10px;
+    margin-left: 0;
   }
 }
 
@@ -3065,7 +3071,7 @@ tr.tr {
   border-color: transparent;
 }
 
-/*** FOOTER BLOCK ** */
+/*** FOOTER BLOCK ***/
 .footer {
   font-size: 14px;
 }
@@ -3142,3 +3148,5 @@ tr.tr {
     padding-bottom: 20px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
