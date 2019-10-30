@@ -169,6 +169,8 @@ a
     padding: 5px 15px
     +phone_max
       font-size: 20px
+    +phoneMin_max
+      font-size: 17px
 
 
 .btn-wrap
@@ -383,10 +385,15 @@ b
   &__owner
     font-size: 14px
     margin-bottom: 10px
+    text-align: center
   &__text
     font-size: 16px
     font-style: italic
     font-family: $ff_roboto_thin_i
+    +phoneMin_max
+      position: relative
+      left: -130px
+      top: -90px
 
 .msg-wrap
   +inline-flex
@@ -460,6 +467,7 @@ b
   position: relative
   +phone_max
     width: 100%
+    height: 156px
   &::before
     content: ''
     position: absolute
@@ -474,7 +482,7 @@ b
       size: 105%
     +phone_max
       background-size: contain
-      background-position: 0px 90px
+      background-position: 0px 0px
 
 .fs14
   font-size: 14px
@@ -544,7 +552,9 @@ b
   -webkit-transition: opacity 200ms ease-in
   -moz-transition: opacity 200ms ease-in
   transition: opacity 200ms ease-in
+  display: none
   &.active
+    display: block
     opacity: 1
 
 .sale_title
@@ -556,3 +566,7 @@ b
   +phone_max
     margin-bottom: 40px
 
+.alignL
+  align-items: flex-start
+  justify-content: left
+  text-align: left

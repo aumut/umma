@@ -138,9 +138,11 @@ tr.tr
 	top: 0
 
 .works__modal--card
-	min-width: 450px
+	min-width: 600px
 	+phone_max
 		min-width: 370px
+	+phoneMin_max
+		min-width: 340px
 
 .works__modal--card .works__desc
 	width: 100%
@@ -159,3 +161,15 @@ tr.tr
 .nosmell-item-4 .msg
 	+phone_max
 		font-size: 16px
+	+phoneMin_max
+		font-size: 14px
+
+.results
+	+phone_max
+		display: none
+
+.results--mobile
+	display: none
+	+phone_max
+		display: block
+		padding-left: 55px

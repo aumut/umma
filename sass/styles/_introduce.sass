@@ -31,7 +31,7 @@
   .msg-wrap
     margin-bottom: 50px
     +phone_max
-      margin-bottom: 40px
+      margin-bottom: 0
       +flex-direction(column)
   .text-lt-wrap
     margin-left: 50px
@@ -47,6 +47,7 @@
   .msg-ava__pict
     +phone_max
       +align-self(flex-end)
+      margin-right: 15px
   .msg--left
     +phone_max
       width: 100%
@@ -63,4 +64,6 @@
       &::before
         border-color: transparent
         border-top-color: $col_bg_green
+    +phoneMin_max
+      font-size: 13px
 
