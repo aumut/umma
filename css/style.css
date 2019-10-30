@@ -1384,7 +1384,7 @@ b {
 @media screen and (max-width: 576px) {
   .main-banner__title {
     font-size: 20px;
-    width: 270px;
+    width: 256px;
   }
 }
 .main-banner__subtitle {
@@ -1536,7 +1536,9 @@ b {
 @media screen and (max-width: 576px) {
   .guarant-label {
     bottom: -85px;
-    right: -165px;
+    right: -153px;
+    width: 200px;
+    background-position: -21px 0p;
   }
 }
 
