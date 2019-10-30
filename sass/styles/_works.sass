@@ -11,6 +11,7 @@
 	margin-bottom: 61px
 	+medium_max
 		flex-direction: column
+		padding: 0 10px
 
 .works__col
 	width: 45%
@@ -44,6 +45,7 @@
 	max-height: 100px
 	+tablet_max
 		font-size: 15px
+		max-height: 150px
 	&:after
 		content: ''
 		display: inline-block
@@ -137,6 +139,8 @@ tr.tr
 
 .works__modal--card
 	min-width: 450px
+	+phone_max
+		min-width: 370px
 
 .works__modal--card .works__desc
 	width: 100%
@@ -151,3 +155,7 @@ tr.tr
 
 .works__modal--card .td:nth-child(odd)
 	max-width: 130px
+
+.nosmell-item-4 .msg
+	+phone_max
+		font-size: 16px

@@ -82,6 +82,8 @@ $large-width: 1200px
 $medium-width: 992px
 $tablet-width: 768px
 $phone-width: 576px
+$phone-min-width: 425px
+
 
 =extra_large
     @media screen and (min-width: $extra_large-width)
@@ -98,6 +100,9 @@ $phone-width: 576px
 =phone
     @media screen and (min-width: $phone-width)
         @content
+=phoneMin
+    @media screen and (min-width: $phone-min-width)
+        @content
 
 =extra_large_max
     @media screen and (max-width: $extra_large-width)
@@ -113,6 +118,9 @@ $phone-width: 576px
         @content
 =phone_max
     @media screen and (max-width: $phone-width)
+        @content
+=phoneMin_max
+    @media screen and (max-width: $phone-min-width)
         @content
 
 

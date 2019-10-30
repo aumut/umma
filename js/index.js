@@ -27,5 +27,14 @@ $(function() {
 
     orderQuestionsCloseBtn.addEventListener('click', () => {
         orderQuestions.style.display = 'none';
-    })
+    });
+
+    let orderBtns = document.querySelectorAll('.cells_order-btn');
+    let orderForm = document.querySelector('#orderForm');
+
+    orderBtns.forEach(function (item) {
+       item.addEventListener('click', e => {
+           orderForm.scrollIntoView({block: "center", behavior: "smooth"});
+       })
+    });
 }); 

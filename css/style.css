@@ -250,7 +250,7 @@ html {
 
 body {
   height: 100vh;
-  min-width: 425px;
+  min-width: 355px;
   margin: 0;
   padding: 0;
   font-family: "Museo Cyrl Light", "Arial", sans-serif;
@@ -1535,10 +1535,10 @@ b {
 }
 @media screen and (max-width: 576px) {
   .guarant-label {
-    bottom: -85px;
-    right: -153px;
-    width: 200px;
-    background-position: -21px 0px;
+    bottom: -55px;
+    right: -105px;
+    width: 130px;
+    background-position: -57px 0px;
   }
 }
 
@@ -1979,7 +1979,7 @@ b {
   -ms-flex-item-align: center;
   align-self: center;
   width: 380px;
-  min-width: 380px;
+  min-width: 340px;
   margin-left: 100px;
 }
 @media screen and (max-width: 992px) {
@@ -2495,6 +2495,7 @@ b {
 @media screen and (max-width: 992px) {
   .works__info {
     flex-direction: column;
+    padding: 0 10px;
   }
 }
 
@@ -2548,6 +2549,7 @@ b {
 @media screen and (max-width: 768px) {
   .works__col--right {
     font-size: 15px;
+    max-height: 150px;
   }
 }
 .works__col--right:after {
@@ -2660,6 +2662,11 @@ tr.tr {
 .works__modal--card {
   min-width: 450px;
 }
+@media screen and (max-width: 576px) {
+  .works__modal--card {
+    min-width: 370px;
+  }
+}
 
 .works__modal--card .works__desc {
   width: 100%;
@@ -2677,6 +2684,12 @@ tr.tr {
 
 .works__modal--card .td:nth-child(odd) {
   max-width: 130px;
+}
+
+@media screen and (max-width: 576px) {
+  .nosmell-item-4 .msg {
+    font-size: 16px;
+  }
 }
 
 /*** ORDER BLOCK ***/
@@ -2957,6 +2970,16 @@ tr.tr {
 .thanks__text-colored .bg--light-yellow {
   font-size: 20px;
 }
+@media screen and (max-width: 768px) {
+  .thanks__text-colored .bg--light-yellow {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .thanks__text-colored .bg--light-yellow {
+    font-size: 16px;
+  }
+}
 
 .thanks__carousel .card {
   background: transparent;
@@ -3056,11 +3079,19 @@ tr.tr {
 }
 @media screen and (max-width: 576px) {
   .thanks-img-inner {
-    width: 85%;
+    width: 88%;
     top: 42px;
     left: 20px;
-    height: 88%;
+    height: 90%;
     border-radius: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .thanks-img-inner {
+    width: 87%;
+    top: 37px;
+    left: 14px;
+    height: 88%;
   }
 }
 
