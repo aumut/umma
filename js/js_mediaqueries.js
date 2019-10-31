@@ -16,17 +16,17 @@ $(function() {
         if (mql768.matches) { // If media query matches
             makeStepNumsSlider();
             makeWorksSlider();
-            makeAssortmentSlider();
+            //makeAssortmentSlider();
             makeThanksSlider();
         } else {
             removeStepNumsSlider();
             removeWorksSlider();
             removeThanksSlider();
-            if (mql992.matches) { // If media query matches
+            /*if (mql992.matches) { // If media query matches
                 removeAssortmentSlider(45);
             } else if (mql1200.matches) {
                 removeAssortmentSlider(32);
-            }
+            }*/
         }
     }
 
@@ -55,7 +55,7 @@ $(function() {
         createCarouselRow(rowList, thanks, 'thanks__carousel');
     }
 
-    function removeAssortmentSlider(width) {
+    /*function removeAssortmentSlider(width) {
         assortment.classList.remove('slider');
         cellsTypes.forEach(function (cell) {
             cell.style.width = `${width}%`;
@@ -80,7 +80,7 @@ $(function() {
         assortment.insertBefore(indicators, cells);
         indicators.addEventListener('click', slideToHandler)
 
-    }
+    }*/
     
     function slideToHandler(event) {
         let target = event.target;
