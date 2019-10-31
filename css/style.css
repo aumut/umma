@@ -776,7 +776,7 @@ b {
   font-style: italic;
   font-family: "Roboto ThinItalic", "Arial", sans-serif;
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 576px) {
   .msg-ava__text {
     position: relative;
     left: -130px;
@@ -1452,6 +1452,12 @@ b {
 }
 .main-banner .btn-wrap {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 576px) {
+  .main-banner .phone_num {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 }
 
 .advantage {
