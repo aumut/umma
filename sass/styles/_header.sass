@@ -149,7 +149,7 @@
 		border-top: 3px solid transparent
 		padding: 11px 0px
 		margin: 0px 21px
-		+tablet_max
+		+medium_l_max
 			font-size: 12px
 			margin: 0px 10px
 		+phone_max
@@ -339,11 +339,6 @@
 		position: 0 0
 		repeat: no-repeat
 	+phone_max
-		bottom: -80px
-		right: -125px
-		width: 130px
-		background-position: -57px 0px
-	+phoneMin_max
 		font-size: 13px
 		line-height: 1.2
 		bottom: -82px
@@ -353,10 +348,17 @@
 		background-size: 200%
 	&__last
 		font-size: 20px
-		+phoneMin_max
+		+phone_max
 			font-size: 14px
 			font-family: $ff_extraBold
 
 .ic_present_wrap
 	.popup_form
 		width: 342px
+
+
+//+phone_max
+    bottom: -80px
+    right: -125px
+    width: 130px
+    background-position: -57px 0px
