@@ -99,6 +99,10 @@
 		position: absolute
 		right: 25px
 		top: 25px
+	.container
+		+phoneMin_max
+			padding-left: 0px
+			padding-right: 0px
 
 .contacts
 	+flexbox
@@ -262,6 +266,7 @@
 			width: 155px
 			line-height: 1.5
 			padding-top: 10px
+			margin-bottom: 20px
 		&::after
 			content: ''
 			position: absolute
@@ -330,12 +335,23 @@
 		position: 0 0
 		repeat: no-repeat
 	+phone_max
-		bottom: -55px
-		right: -105px
+		bottom: -80px
+		right: -125px
 		width: 130px
 		background-position: -57px 0px
 	+phoneMin_max
+		font-size: 13px
+		line-height: 1.2
 		bottom: -82px
+		right: -94px
+		width: 100px
+		background-position: -50px 10px
+		background-size: 200%
+	&__last
+		font-size: 20px
+		+phoneMin_max
+			font-size: 14px
+			font-family: $ff_extraBold
 
 .ic_present_wrap
 	.popup_form

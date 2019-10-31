@@ -23,7 +23,7 @@
     +tablet_max
       width: 90%
     +phone_max
-      margin-left: 20px
+      //margin-left: 20px
       width: calc(100% - 20px)
     &--ic
       &::before
@@ -63,6 +63,7 @@
     & .msg.alignL
       +phoneMin_max
         font-size: 15px
+        +justify-content(center)
     & .msg
       +phoneMin_max
         font-size: 13px
@@ -90,3 +91,12 @@
     min-width: 100%
     width: 100%
     height: auto
+
+
+.flow-img
+  img
+    width: 100%
+    height: 100%
+  +phone_max
+    width: 200px
+    margin-bottom: 30px

@@ -63,7 +63,8 @@
 	letter-spacing: 0
 	+phone_max
 		font-size: 16px
-		margin-left: 16px
+		margin-left: 0px
+
 
 .extraBold
 	font-family: $ff_bold
@@ -115,6 +116,8 @@
 	font-size: 14px
 	line-height: 38px
 	text-align: center
+	+phoneMin_max
+		font-size: 13px
 
 .horizontal-line
 	display: inline-block
@@ -146,6 +149,9 @@
 	background: #ffffff
 	+medium_max
 		padding: 40px
+	.phone_num
+		+phoneMin_max
+			margin-bottom: 25px
 
 .order__col.order__col-left
 	width: 83%
@@ -168,6 +174,8 @@
 	+tablet_max
 		border-left-color: #ffd800
 		width: 100%
+	+phoneMin_max
+		padding-bottom: 20px
 
 .order__col-right .order__btn--whatsapp
 	margin-right: 5px
