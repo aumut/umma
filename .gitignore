@@ -1,4 +1,5 @@
 __source
+node_modules/
 .idea
 *.iml
 *.xml

@@ -54,67 +54,67 @@ table {
 /*** FONT FACE ** */
 @font-face {
   font-family: "Museo Cyrl Reg";
-  src: url("../fonts/Museo_Cyrillic/Museo_Cyrl_500.otf");
+  src: url("dist/fonts/Museo_Cyrillic/Museo_Cyrl_500.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Museo Cyrl Bold";
-  src: url("../fonts/Museo_Cyrillic/Museo_Cyrl_700.otf");
+  src: url("dist/fonts/Museo_Cyrillic/Museo_Cyrl_700.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Museo Cyrl ExtraBold";
-  src: url("../fonts/Museo_Cyrillic/Museo_Cyrl_900.otf");
+  src: url("dist/fonts/Museo_Cyrillic/Museo_Cyrl_900.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Museo Cyrl Light";
-  src: url("../fonts/Museo_Cyrillic/Museo_Cyrl_300.otf");
+  src: url("dist/fonts/Museo_Cyrillic/Museo_Cyrl_300.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto Light";
-  src: url("../fonts/Roboto/Roboto-Light.ttf");
+  src: url("dist/fonts/Roboto/Roboto-Light.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto Reg";
-  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+  src: url("dist/fonts/Roboto/Roboto-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto Bold";
-  src: url("../fonts/Roboto/Roboto-Bold.ttf");
+  src: url("dist/fonts/Roboto/Roboto-Bold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto Black";
-  src: url("../fonts/Roboto/Roboto-Black.ttf");
+  src: url("dist/fonts/Roboto/Roboto-Black.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto Italic";
-  src: url("../fonts/Roboto/Roboto-Italic.ttf");
+  src: url("dist/fonts/Roboto/Roboto-Italic.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto ThinItalic";
-  src: url("../fonts/Roboto/Roboto-ThinItalic.ttf");
+  src: url("dist/fonts/Roboto/Roboto-ThinItalic.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto LightItalic.ttf";
-  src: url("../fonts/Roboto/Roboto-LightItalic.ttf");
+  src: url("dist/fonts/Roboto/Roboto-LightItalic.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -319,7 +319,7 @@ a:hover {
   border-radius: 0;
   box-shadow: none;
   color: #3c3c3c;
-  background-image: url(../images/ic/ic_gamburg.svg);
+  background-image: url(dist/images/ic/ic_gamburg.svg);
   background-position: 20px 20px;
   background-size: 35%;
   background-repeat: no-repeat;
@@ -335,7 +335,7 @@ a:hover {
   opacity: 0.8;
   box-shadow: none;
   background-color: transparent;
-  background-image: url(../images/ic/ic_close.svg);
+  background-image: url(dist/images/ic/ic_close.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -574,7 +574,7 @@ b {
   -moz-border-radius: 0;
   border-radius: 0;
   box-shadow: none;
-  background-image: url("../images/ic/ic_wapp_num.png");
+  background-image: url("dist/images/ic/ic_wapp_num.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -590,7 +590,7 @@ b {
   right: calc(-16px - 3px);
   width: 16px;
   height: 16px;
-  background-image: url("../images/ic/ic_wink.svg");
+  background-image: url("dist/images/ic/ic_wink.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -608,7 +608,7 @@ b {
   padding: 0px;
   margin: 0px;
   animation: shake 1.5s infinite;
-  background-image: url("../images/ic/ic_box.png");
+  background-image: url("dist/images/ic/ic_box.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -623,7 +623,7 @@ b {
   position: absolute;
   bottom: 35px;
   right: 15px;
-  background-image: url("../images/content/present_big.png");
+  background-image: url("dist/images/content/present_big.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -892,7 +892,7 @@ b {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/content/ceiling_stretch.png");
+  background-image: url("dist/images/content/ceiling_stretch.png");
   background-position: -15px 40px;
   background-repeat: no-repeat;
   background-size: 105%;
@@ -1028,7 +1028,7 @@ b {
   width: 100%;
   min-height: 900px;
   background-color: #C6D9D0;
-  background-image: url(../images/content/banner_bg_1.jpg);
+  background-image: url(dist/images/content/banner_bg_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -1123,7 +1123,7 @@ b {
   left: 0px;
   width: 130px;
   height: 190px;
-  background-image: url("../images/content/bg_3.png");
+  background-image: url("dist/images/content/bg_3.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1148,7 +1148,7 @@ b {
   -moz-transform--ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -webkit-transform-transform: rotate(90deg);
-  background-image: url("../images/content/bg_3.png");
+  background-image: url("dist/images/content/bg_3.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1503,7 +1503,7 @@ b {
   margin-left: calc(-90px/2);
   margin-top: -20px;
   background-color: transparent;
-  background-image: url("../images/content/ellipse.png");
+  background-image: url("dist/images/content/ellipse.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1523,18 +1523,18 @@ b {
 }
 .advantage .mount::before {
   background-position: 16px 0px;
-  background-image: url("../images/content/clock.png");
+  background-image: url("dist/images/content/clock.png");
 }
 .advantage .guarant::before {
   background-position: 16px 0px;
-  background-image: url("../images/content/guarantee.png");
+  background-image: url("dist/images/content/guarantee.png");
 }
 .advantage .depart::before {
-  background-image: url("../images/content/tape_measure.png");
+  background-image: url("dist/images/content/tape_measure.png");
   background-position: 0px 16px;
 }
 .advantage .prepayment::before {
-  background-image: url("../images/content/wallet.png");
+  background-image: url("dist/images/content/wallet.png");
 }
 
 .guarant-label {
@@ -1572,7 +1572,7 @@ b {
   text-transform: initial;
   padding-top: 55px;
   background-color: transparent;
-  background-image: url("../images/content/date_bg.png");
+  background-image: url("dist/images/content/date_bg.png");
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1768,7 +1768,7 @@ b {
 /*** QUALITY BLOCK ** */
 .quality {
   background-color: #FFFFFF;
-  background-image: url("../images/content/work.png");
+  background-image: url("dist/images/content/work.png");
   background-size: 70%;
   background-position: top right;
   background-repeat: no-repeat;
@@ -1798,7 +1798,7 @@ b {
   -moz-transform--ms-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -webkit-transform-transform: rotate(-90deg);
-  background-image: url("../images/content/light.png");
+  background-image: url("dist/images/content/light.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1878,7 +1878,7 @@ b {
   }
 }
 .quality .brain::before {
-  background-image: url("../images/content/brain24.png");
+  background-image: url("dist/images/content/brain24.png");
 }
 .quality .hand::before {
   -moz-transform: rotate(-45deg);
@@ -1886,10 +1886,10 @@ b {
   -moz-transform--ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -webkit-transform-transform: rotate(-45deg);
-  background-image: url("../images/content/hands.png");
+  background-image: url("dist/images/content/hands.png");
 }
 .quality .hard::before {
-  background-image: url("../images/content/ic_like.png");
+  background-image: url("dist/images/content/ic_like.png");
 }
 
 /*** PROPERTY BLOCK ** */
@@ -1908,7 +1908,7 @@ b {
   width: 180px;
   height: 135px;
   background-color: transparent;
-  background-image: url("../images/ic/ic_check.png");
+  background-image: url("dist/images/ic/ic_check.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1982,7 +1982,7 @@ b {
   left: 0px;
   width: 20px;
   height: 20px;
-  background-image: url("../images/ic/ic_check.png");
+  background-image: url("dist/images/ic/ic_check.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -2229,7 +2229,7 @@ b {
   -moz-transform--ms-transform: rotate(25deg);
   -webkit-transform: rotate(25deg);
   -webkit-transform-transform: rotate(25deg);
-  background-image: url(../images/ic/ic_stop.png);
+  background-image: url(dist/images/ic/ic_stop.png);
 }
 .quote-box--target::after {
   top: unset;
@@ -2237,7 +2237,7 @@ b {
   margin-top: 0px;
   margin-bottom: calc(-40px/2);
   margin-right: -26px;
-  background-image: url(../images/ic/ic_target.png);
+  background-image: url(dist/images/ic/ic_target.png);
 }
 @media screen and (max-width: 370px) {
   .quote-box--target::after {
@@ -2265,7 +2265,7 @@ b {
   width: 40px;
   height: 40px;
   background-color: #e7ecee;
-  background-image: url(../images/ic/ic_right_quote.svg);
+  background-image: url(dist/images/ic/ic_right_quote.svg);
   background-size: 70%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -2371,7 +2371,7 @@ b {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background-image: url("../images/ic/ic_arrow.svg");
+  background-image: url("dist/images/ic/ic_arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -2700,7 +2700,7 @@ b {
   height: 39px;
   bottom: -8px;
   right: -28px;
-  background: url("../images/ic/ic_warning.svg") no-repeat;
+  background: url("dist/images/ic/ic_warning.svg") no-repeat;
 }
 @media screen and (max-width: 576px) {
   .works__col--right:after {
@@ -2866,7 +2866,7 @@ tr.tr {
 /*** ORDER BLOCK ** */
 .order {
   background-color: #e7ecee;
-  background-image: url(../images/content/ruler.jpg);
+  background-image: url(dist/images/content/ruler.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2908,7 +2908,7 @@ tr.tr {
   width: 13px;
   height: 13px;
   position: absolute;
-  background: url("../images/ic/ic_close.svg");
+  background: url("dist/images/ic/ic_close.svg");
   top: 20px;
   right: 30px;
 }
@@ -3132,7 +3132,7 @@ tr.tr {
   left: 0;
   top: 5px;
   background-color: transparent;
-  background-image: url("../images/ic/ic_check.png");
+  background-image: url("dist/images/ic/ic_check.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -3294,7 +3294,7 @@ tr.tr {
   bottom: -6px;
   right: -9px;
   background-color: #e7ecee;
-  background-image: url("../images/ic/ic_like.svg");
+  background-image: url("dist/images/ic/ic_like.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
