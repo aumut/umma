@@ -1,0 +1,358 @@
+
+/*** HEADER BLOCK ***/
+
+.wrap-header
+	width: 100%
+	min-height: 900px
+	background:
+		color: #C6D9D0
+		image: url(../images/content/banner_bg_1.jpg)
+		repeat: no-repeat
+		size: cover
+		//size: 650px
+		//position: 84% 47px
+	+flexbox
+	+flex-direction(column)
+	position: relative
+	+phoneMin_max
+		background-position: -400px 0
+
+.header
+	width: 100%
+	color: $col_font_main
+	position: relative
+	&__logo
+		width: $w_header_logo
+		+align-self(flex-start)
+		+phone_max
+			width: 180px
+	.logo__text
+		+align-self(flex-start)
+		margin-top: 10px
+	.quest
+		margin-left: auto
+		margin-top: 10px
+		+align-self(flex-start)
+		+phone_max
+			position: absolute
+			bottom: 0px
+			right: 20px
+	.ic_present_wrap
+		position: relative
+		margin-right: 7%
+		margin-left: 6%
+		margin-top: 1.5%
+		+align-self(flex-start)
+		+phone_max
+			position: absolute
+			bottom: 0px
+			left: 0px
+	&__nav
+		margin-top: -20px
+		padding: 0
+		z-index: 999
+		+medium_max
+			margin-top: 0px
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0px
+		left: 0px
+		width: 130px
+		height: 190px
+		background:
+			image: url('../images/content/bg_3.png')
+			repeat: no-repeat
+			size: contain
+	+large_max
+		&::before
+			content: none
+	.bl__inner
+		position: relative
+		padding: $pTB_bl_in_header 0px
+		&::after
+			content: ''
+			position: absolute
+			top: 0px
+			right: -100px
+			width: 100px
+			height: 80px
+			+rotate(90)
+			background:
+				image: url('../images/content/bg_3.png')
+				repeat: no-repeat
+				size: contain
+		+large_max
+			&::after
+				left: 70px
+				width: 70px
+				height: 50px
+		+phone_max
+			height: 170px
+
+	.btn-gamburg
+		display: none
+		+phone_max
+			display: block
+	.btn-close
+		position: absolute
+		right: 25px
+		top: 25px
+	.container
+		+phoneMin_max
+			padding-left: 0px
+			padding-right: 0px
+
+.contacts
+	+flexbox
+	+flex-direction(column)
+	+align-self(end)
+	&__text
+		font-family: $ff_roboto
+		font-size: 12px
+		line-height: 2
+	&__phone
+		font-family: $ff_body
+		font-size: 20px
+		line-height: 1.2
+
+.quest
+	font-family: $ff_roboto
+	font-size: 14px
+	line-height: 2
+	text-align: right
+	.whatsapp
+		margin-right: 3px
+
+.menu-nav
+	+flexbox
+	padding: 0px 80px
+	background-color: $col_menu_nav_bg
+	+border_radius(4px)
+	+tablet_max
+		padding: 0px 20px
+	+phone_max
+		+flex-direction(column)
+		+justify-content(center)
+		+align-items(flex-start)
+		background-color: #FFFFFF
+		padding: 0px 20px
+		margin: 20px 0px
+	&-item
+		display: inline-block
+		font-family: $ff_nav
+		font-size: 14px
+		line-height: 2
+		text-transform: uppercase
+		color: $col_nav_menu
+		border-top: 3px solid transparent
+		padding: 11px 0px
+		margin: 0px 21px
+		+tablet_max
+			font-size: 12px
+			margin: 0px 10px
+		+phone_max
+			font-size: 14px
+			line-height: 1
+			padding: 8px 0px 3px
+			border-top: none
+			border-bottom: 3px solid transparent
+	&-li
+		background-color: $col_menu_nav_bg
+		+phone_max
+			background-color: #FFFFFF
+		&:hover, &:active, &.active
+			.menu-nav-item
+				border-top-color: $green
+				color: $col_font_main
+				+phone_max
+
+					border-bottom-color: $green
+					color: $col_font_main
+
+.menu-nav-wrap
+	+flexbox
+	+justify-content(center)
+	+phone_max
+		//opacity: 0
+		position: absolute
+		top: 115px
+		right: 0
+		width: calc(244px - 15px)
+		height: calc(344px - 20px)
+		padding: 15px
+		background-color: #FFFFFF
+		width: 100%
+		z-index: 999
+		+flexbox
+		+flex-direction(column)
+		text-align: center
+		+border_radius(4px)
+		-webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+		-moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+		box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+		display: none
+		//-webkit-transition: opacity 200ms ease-in
+		//-moz-transition: opacity 200ms ease-in
+		//transition: opacity 200ms ease-in
+	.btn-close
+		display: none
+		+phone_max
+			display: block
+			+align-self(flex-end)
+
+.menu-nav-wrap.active
+	+phone_max
+		//opacity: 1
+		+flexbox
+
+.main-banner
+	height: 100%
+	+flexbox
+	flex: 1
+	+align-items(center)
+	position: relative
+	.bl__inner
+		max-width: 700px
+		+flexbox
+		+flex-direction(column)
+		+align-items(flex-start)
+		+justify-content(center)
+	&__title
+		font-size: $fs_main_banner_title
+		font-family: $ff_bold
+		letter-spacing: 1px
+		line-height: 1.5
+		text-align: left
+		text-transform: uppercase
+		margin-bottom: $mB_main_banner
+		position: relative
+		margin-top: -10px
+		+phone_max
+			font-size: 20px
+			width: 256px
+	&__subtitle
+		font-size: $fs_main_banner_subtitle
+		font-family: $ff_roboto_lt
+		line-height: 1.5
+		text-align: left
+		margin-bottom: 15px
+		+phone_max
+			font-size: 16px
+	.form-group
+		margin-right: 10px
+		+phone_max
+			flex: 1
+	.btn-wrap
+		margin-bottom: 30px
+
+.advantage
+	+flexbox
+	+flex-wrap(wrap)
+	+justify-content(space-between)
+	width: $w_adv
+	+phone_max
+		width: 100%
+	&-item
+		font-size: 16px
+		line-height: 3
+		font-family: $ff_roboto
+		margin-top: 100px
+		width: $w_adv_it
+		text-align: center
+		position: relative
+		+phone_max
+			width: 155px
+			line-height: 1.5
+			padding-top: 10px
+			margin-bottom: 20px
+		&::after
+			content: ''
+			position: absolute
+			top: -#{$h_ellips}
+			left: 50%
+			width: $w_ellips
+			height: $h_ellips
+			margin-left: calc(-#{$w_ellips}/2)
+			margin-top: -20px
+			background:
+				color: transparent
+				image: url('../images/content/ellipse.png')
+				size: contain
+				repeat: no-repeat
+		&::before
+			content: ''
+			position: absolute
+			top: -#{$h_adv_ic}
+			left: 50%
+			width: $w_adv_ic
+			height: $h_adv_ic
+			margin-left: calc(-#{$w_adv_ic}/2)
+			z-index: 1
+			background:
+				color: transparent
+				image: url('../images/content/quarantee.png')
+				size: contain
+				repeat: no-repeat
+	.mount
+		&::before
+			background-position: 16px 0px
+			background-image: url('../images/content/clock.png')
+	.guarant
+		&::before
+			background-position: 16px 0px
+			background-image: url('../images/content/guarantee.png')
+	.depart
+		&::before
+			background-image: url('../images/content/tape_measure.png')
+			background-position: 0px 16px
+	.prepayment
+		&::before
+			background-image: url('../images/content/wallet.png')
+
+.guarant-label
+	+inline-flex
+	+align-items(center)
+	+justify-content(flex-start)
+	+flex-direction(column)
+	position: absolute
+	width: 245px
+	height: 244px
+	bottom: -182px
+	right: -44px
+	color: $green_text
+	font-size: 14px
+	font-family: $ff_bold
+	line-height: 1
+	text-align: center
+	text-transform: initial
+	padding-top: 55px
+	background:
+		color: transparent
+		image: url('../images/content/date_bg.png')
+		size: cover
+		position: 0 0
+		repeat: no-repeat
+	+phone_max
+		bottom: -80px
+		right: -125px
+		width: 130px
+		background-position: -57px 0px
+	+phoneMin_max
+		font-size: 13px
+		line-height: 1.2
+		bottom: -82px
+		right: -94px
+		width: 100px
+		background-position: -50px 10px
+		background-size: 200%
+	&__last
+		font-size: 20px
+		+phoneMin_max
+			font-size: 14px
+			font-family: $ff_extraBold
+
+.ic_present_wrap
+	.popup_form
+		width: 342px

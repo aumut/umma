@@ -1,0 +1,110 @@
+
+/*** STEPS BLOCK ***/
+
+.steps
+	background: $col_bg_grey
+
+.steps__inner
+	padding-top: 28px
+
+.steps__quest--wrapper
+	display: flex
+	padding-left: 55px
+	+tablet_max
+		padding-left: 0
+
+.steps__circle
+	width: 70px
+	height: 70px
+	background: #fff
+	border-radius: 50%
+
+.steps__quest
+	margin-left: 35px
+	font-family: $ff_btn
+	font-weight: 500
+	font-size: 20px
+	//line-height: 16px
+	width: auto
+	+medium_max
+		font-size: 18px
+		padding: 15px 25px
+		line-height: 1.5
+	+phone_max
+		font-size: 16px
+		padding: 10px 20px
+		line-height: 1.5
+
+.steps__nums
+	display: flex
+	padding-top: 53px
+
+.step
+	//width: 25%
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.step__img--wrapper
+	//width: auto
+	min-height: 78px
+	margin-bottom: -16px
+	position: relative
+	&:after
+		content: attr(data-stepNum)
+		position: absolute
+		top: -10px
+		right: -10px
+		font-size: 50px
+		color: #ffffff
+		font-family: $ff_roboto_black
+		//font-weight: 900
+	&[data-stepNum="01"]
+		width: 65px
+	&[data-stepNum="02"]
+		width: 85px
+	&[data-stepNum="03"]
+		width: 150px
+	&[data-stepNum="04"]
+		width: 74px
+		top: -9px
+
+.step__img--wrapper[data-stepNum="02"] .step__img
+	top: -10px
+	left: -20px
+
+.step__img--wrapper[data-stepNum="03"] .step__img
+	top: -18px
+	left: -10px
+
+.step__img--wrapper[data-stepNum="04"] .step__img
+	top: -17px
+	left: -28px
+
+.step__img
+	width: 100%
+	height: auto
+	position: relative
+	z-index: 100
+
+.step__title
+	font-size: 15px
+	margin-bottom: 17px
+	text-transform: uppercase
+
+.step__desc
+	font-size: 15px
+	line-height: 1.5
+	text-align: center
+	font-family: $ff_roboto
+
+.steps-inner
+	display: flex
+
+.steps__nums .carousel-indicators
+	bottom: -20px
+	+phoneMin_max
+		bottom: -40px
+
+.steps__nums .carousel-inner
+	padding-top: 30px

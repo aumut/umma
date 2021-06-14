@@ -1,0 +1,126 @@
+
+/*** THANKS BLOCK ***/
+
+.thanks
+	background: $col_bg_grey
+
+.thanks__text-colored
+	width: 42%
+	line-height: 28px
+	margin-bottom: 50px
+	+tablet_max
+		width: 100%
+		margin-bottom: 10px
+		margin-left: 0
+	+phoneMin_max
+		margin-bottom: 20px
+
+.thanks__text-colored .bg--light-yellow
+	font-size: 25px
+	+tablet_max
+		font-size: 18px
+	+tablet_max
+		font-size: 16px
+
+.thanks__carousel .card
+	background: transparent
+	border: transparent
+
+.thanks__wrapper
+	display: flex
+	justify-content: space-between
+	+tablet_max
+		flex-direction: column
+
+.thanks__text-wrapper
+	width: 25%
+	+tablet_max
+		width: 100%
+		padding-left: 30px
+		margin-bottom: 20px
+	+phoneMin_max
+		padding-bottom: 30px
+
+.thanks__text
+	font-family: $ff_roboto_thin_i
+	font-size: 16px
+	line-height: 25px
+	color: #3c3c3c
+	padding: 40px 30px 50px 30px
+	border: 1px solid #FFFFFF
+	border-radius: 9px
+	position: relative
+	&:after
+		position: absolute
+		display: inline-block
+		content: ''
+		width: 55px
+		height: 65px
+		bottom: -6px
+		right: -9px
+		background:
+			color: $col_bg_grey
+			image: url("../images/ic/ic_like.svg")
+			repeat: no-repeat
+			size: cover
+
+
+.thanks__carousel
+	width: 70%
+	margin-left: 90px
+
+.thanks__carousel .carousel-indicators
+	bottom: -40px
+	+tablet_max
+		width: 100%
+		left: 100px
+	+phoneMin_max
+		left: 70px
+
+.thanks-img-inner
+	width: 87%
+	position: absolute
+	top: 25px
+	left: 11px
+	height: 89%
+	border-radius: 15px
+	+large_max
+		width: 85%
+		height: 88%
+	+medium_max
+		width: 87%
+		top: 11px
+		left: 6px
+		height: 91%
+	+tablet_max
+		width: 87%
+		top: 45px
+		left: 20px
+		height: 89%
+		border-radius: 20px
+	+phone_max
+		width: 88%
+		top: 42px
+		left: 20px
+		height: 90%
+		border-radius: 20px
+	+phoneMin_max
+		width: 87%
+		top: 37px
+		left: 14px
+		height: 88%
+
+.thanks__modal--card
+	width: 300px
+
+.thanks__modal--card .thanks-img-inner
+	width: 87%
+	position: absolute
+	top: 30px
+	left: 20px
+	height: 91%
+	border-radius: 15px
+
+.thanks__modal--card .card
+	background: transparent
+	border-color: transparent

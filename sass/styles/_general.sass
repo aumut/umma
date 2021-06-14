@@ -1,3 +1,6 @@
+
+/*** GENERAL STYLES ***/
+
 *
   &:focus, &:active
     outline: none !important
@@ -5,17 +8,17 @@ html
   overflow: hidden
 
 body
+  height: $h_body
+  min-width: $w_minBody
+  margin: 0
+  padding: 0
   font:
     family: $ff_body
     size: $fs_body
     weight: $fw_body
   color: $col_font_main
   line-height: 1
-  min-width: $w_minBody
-  margin: 0
-  padding: 0
-  height: $h_body
-  background: $col_bg
+  background-color: $col_bg_main
   overflow-y: scroll
 
 a
@@ -23,3 +26,549 @@ a
   &:hover
     text-decoration: unset
     color: inherit
+.btn
+  position: relative
+  display: inline-block
+  +border-radius($rad_btn)
+  font-family: $ff_btn
+  font-size: $fs_btn
+  color: $col_font_btn
+  letter-spacing: 0
+  line-height: 2
+  padding: $pTB_btn $pLR_btn
+  border: none
+  text-align: center
+  cursor: pointer
+
+  background: rgb(247,133,0)
+  background: linear-gradient(165deg, rgba(247,133,0,1) 0%, rgba(243,31,21,1) 100%)
+
+  -webkit-box-shadow: 0px 9px 18px 0px rgba(128,128,128,0.23)
+  -moz-box-shadow: 0px 9px 18px 0px rgba(128,128,128,0.23)
+  box-shadow: 0px 9px 18px 0px rgba(128,128,128,0.23)
+
+  +medium_max
+    padding: $pTB_btn_medium $pLR_btn_medium
+  &:active, &:focus, &:hover
+    opacity: 0.9
+    outline: none
+    outline-offset: unset
+    color: $col_font_btn
+    box-shadow: none
+  &-gamburg
+    position: absolute
+    top: 0px
+    left: 50%
+    margin: 0px
+    margin-top: calc(62px/2)
+    margin-left: -20px
+    background-color: #FFFFFF
+    width: 60px
+    height: auto
+    padding: 34px 0px 0px 0px
+    +border-radius(0)
+    box-shadow: none
+    color: $col_font_main
+    background:
+      image: url(../images/ic/ic_gamburg.svg)
+      position: 20px 20px
+      size: 35%
+      repeat: no-repeat
+
+.btn-close
+  padding: 0px
+  width: 13px
+  height: 13px
+  +border_radius(0)
+  opacity: 0.8
+  box-shadow: none
+  background:
+    color: transparent
+    image: url(../images/ic/ic_close.svg)
+    repeat: no-repeat
+    size: cover
+
+.btn-call
+  width: 200px
+  +align-self(center)
+  display: none
+  +phone_max
+    display: block
+
+.button__blik
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  border-radius: 7px
+  overflow: hidden
+  &::after
+    content: ""
+    position: absolute
+    top: -50%
+    right: -50%
+    bottom: -50%
+    left: -50%
+    background: -webkit-gradient(linear,left top,left bottom,from(#e5ac8e),color-stop(50%,#fff),color-stop(50%,#e5ac8e))
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(229,172,142,0)),color-stop(50%,rgba(255,255,255,.7)),color-stop(50%,rgba(229,172,142,0)))
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(229,172,142,0)),color-stop(50%,rgba(255,255,255,.7)),to(rgba(229,172,142,0)))
+    background: -webkit-linear-gradient(top,rgba(229,172,142,0),rgba(255,255,255,.7) 50%,rgba(229,172,142,0))
+    background: -moz- oldlinear-gradient(top,rgba(229,172,142,0),rgba(255,255,255,.7) 50%,rgba(229,172,142,0))
+    background: linear-gradient(to bottom,rgba(229,172,142,0),rgba(255,255,255,.7) 50%,rgba(229,172,142,0))
+    -webkit-transform: rotateZ(60deg) translate(-5em,7.5em)
+    -ms-transform: rotate(60deg) translate(-5em,7.5em)
+    -moz-transform: rotateZ(60deg) translate(-5em,7.5em)
+    -o-transform: rotateZ(60deg) translate(-5em,7.5em)
+    transform: rotateZ(60deg) translate(-5em,7.5em)
+    opacity: 0
+    filter: alpha(opacity=0)
+    -webkit-animation: sheens 3s infinite
+    -moz-animation: sheens 3s infinite
+    animation: sheens 3s infinite
+    z-index: 1
+
+.logo
+  +flexbox
+  +justify-content(space-between)
+  +align-items(center)
+  &__ic
+    min-width: $w_logo_ic
+    width: $w_logo_ic
+    height: $h_logo_ic
+    img
+      width: 100%
+      height: 100%
+    +phone_max
+      min-width: 50px
+      height: 70px
+      margin-right: 5px
+  &__text
+    display: inline-block
+    font-size: $fs_logo_text
+    color: $col_font_main
+    line-height: 1.4
+    margin-left: 10px
+    padding: 5px 15px
+    border-left: 1px solid $grey
+    +tablet_max
+      margin-left: 0px
+    +phone_max
+      font-size: 10px
+      padding: 5px
+
+
+.w100
+  width: 100%
+
+.w100-sm
+  +phone_max
+    width: 100%
+
+.text-colored
+  +flexbox
+  margin-bottom: 3px
+  &__in
+    font-size: 25px
+    padding: 5px 15px
+    +phone_max
+      font-size: 20px
+    +phoneMin_max
+      font-size: 17px
+
+
+.btn-wrap
+  +flexbox
+  +justify-content(flex-start)
+  +align-items(center)
+  +phone_max
+    width: 100%
+    +justify-content(center)
+
+.uppercase
+  text-transform: uppercase
+
+.title
+  font-size: $fs_title
+  font-weight: $fw_title
+  //font-family: $ff_submit_appl_info__title
+  line-height: 1.1
+  text-align: center
+  letter-spacing: 1px
+  &_color-white
+    color: #ffffff
+
+.subtitle
+  font-size: 1rem
+  font-weight: normal
+  line-height: 2    
+  text-align: center
+
+.break
+  flex-basis: 100%
+  height: 0
+    
+b
+  font-weight: 700
+
+.bold_roboto
+  font-family: $ff_roboto_bold
+  font-weight: 700
+
+.reg_roboto
+  font-family: $ff_roboto
+
+.bold_main
+  font-family: $ff_bold
+  font-weight: 700
+
+.bl
+  &__inner
+    padding-top: $pTB_bl_in
+    padding-bottom: $pTB_bl_in
+    +phone_max
+      padding-top: 40px
+      padding-bottom: 40px
+  &--dark
+    background-color: $col_bg_dark
+    color: $col_font_darkBg
+
+
+.whatsapp
+  display: inline-block
+  width: 30px
+  height: 30px
+  padding: 0px
+  margin: 0px
+  +border_radius(0)
+  box-shadow: none
+  background:
+    image: url('../images/ic/ic_wapp_num.png')
+    size: contain
+    repeat: no-repeat
+
+.ic_smile
+  position: relative
+  &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 6px
+    right: calc(-#{$w_ic_smile} - 3px)
+    width: $w_ic_smile
+    height: $w_ic_smile
+    background:
+      image: url('../images/ic/ic_wink.svg')
+      size: contain
+      repeat: no-repeat
+  &:hover
+    cursor: pointer
+
+.ic_present
+  display: inline-block
+  width: 35px
+  height: 35px
+  +border_radius(0)
+  padding: 0px
+  margin: 0px
+  animation: shake 1.5s infinite
+  background:
+    image: url('../images/ic/ic_box.png')
+    size: contain
+    repeat: no-repeat
+
+
+.ic_box
+  position: relative
+  &::before
+    content: ''
+    width: 48px
+    height: 52px
+    position: absolute
+    bottom: 35px
+    right: 15px
+    background:
+      image: url('../images/content/present_big.png')
+      size: contain
+      repeat: no-repeat
+
+.form-control
+  font-size: 14px
+  font-family: $ff_roboto
+  padding: 10px 45px 10px 30px
+  line-height: 2
+  height: auto
+  color: #838383
+  background-color: #E2E2E2
+  +border_radius(4px)
+  border: none
+  background-color: #ffffff
+  -webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  -moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+
+.msg
+  width: 100%
+  font-size: 16px
+  font-family: $ff_roboto_lt
+  line-height: 1.5
+  letter-spacing: 1px
+  background-color: #FFFFFF
+  color: $col_font_main
+  padding: $pTB_msg $pRL_msg
+  +border_radius($rad_msg)
+  min-width: 100px
+  +inline-flex
+  +align-items(center)
+  +flex-direction(column)
+  //margin: 10px 0px
+  position: relative
+  -webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  -moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+  box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
+  +phone_max
+    padding: 20px
+    +align-self(center)
+  &::before
+    position: absolute
+    content: ''
+    top: 20px
+    width: 0
+    height: 0
+    border-style: solid
+    line-height: 0px
+    border-color: transparent
+  &--left
+    margin-right: 30px
+    &::before
+      right: -12px
+      border-width: $w_msg_triangle 0 $w_msg_triangle 17.3px
+      border-left-color: #FFFFFF
+  &--right
+    margin-left: 30px
+    &::before
+      left: -12px
+      border-width: $w_msg_triangle 17.3px $w_msg_triangle 0
+      border-right-color: #FFFFFF
+  &--down
+    margin-bottom: 30px
+    &::before
+      top: unset
+      bottom: -12px
+      right: 30px
+      border-width: 17.3px $w_msg_triangle 0 $w_msg_triangle
+      border-top-color: #FFFFFF
+
+  &.msg--left.bg--green
+    &::before
+      border-left-color: $col_bg_green
+  &.msg--right.bg--green
+    &::before
+      border-right-color: $col_bg_green
+  &.msg--down.bg--green
+    &::before
+      border-top-color: $col_bg_green
+
+.msg-ava
+  +inline-flex
+  +flex-direction(column)
+  &__pict
+    width: 70px
+    height: 70px
+    +border_radius(50%)
+    background-color: #FFFFFF
+    margin-bottom: 10px
+    overflow: hidden
+    background-color: #ffffff
+    -webkit-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+    -moz-box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+    box-shadow: 0px 12px 32px 0px rgba(39,39,39,0.06)
+    img
+      //clip-path: circle(70px)
+      width: 100%
+      height: 100%
+  &__owner
+    font-size: 14px
+    margin-bottom: 10px
+    text-align: center
+  &__text
+    font-size: 16px
+    font-style: italic
+    font-family: $ff_roboto_thin_i
+    +phoneMin_max
+      position: relative
+      left: -130px
+      top: -90px
+
+.msg-wrap
+  +inline-flex
+
+
+//colors
+.red
+  color: $red
+
+.bg--green
+  background-color: $col_bg_green
+  color: $col_green
+
+.bg--yellow
+  background-color: #ffd700
+  color: $col_font_main
+
+.bg--light-yellow
+  background-color: #ffd800
+
+.bg--blue
+  background-image: radial-gradient(circle closest-corner at 70% 50%, #96B6CC, rgba(89, 158, 205,1))
+
+.bg--violet
+  background-image: radial-gradient(circle closest-corner at 70% 50%, #B070FF, #9233FF)
+
+.bg--red
+  background-image: radial-gradient(circle closest-corner at 70% 50%, #FFAF9E, #FF5C33)
+
+
+.bg--ltgreen
+  background-color: #ACE757
+
+.font_mus
+  font-family: $ff_body
+
+.sub
+  font-size: 32px
+
+.sub12
+  font-size: 12px
+
+.text-lt
+  color: #d8a67a
+  &--m
+    font-size: 50px
+    font-family: $ff_bold
+    +phone_max
+      font-size: 30px
+  &--l
+    font-size: 60px
+    font-family: $ff_bold
+    font-weight: 700
+  &--sm
+    font-size: 32px
+  &--xl
+    font-size: 139px
+    font-family: $ff_bold
+    font-weight: 700
+
+
+.text-logo
+  font-size: 162px
+  font-family: $ff_bold
+  +phone_max
+    font-size: 85px
+
+.logo_img
+  width: 530px
+  height: 320px
+  position: relative
+  +phone_max
+    width: 100%
+    height: 156px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background:
+      image: url('../images/content/ceiling_stretch.png')
+      position: -15px 40px
+      repeat: no-repeat
+      size: 105%
+    +phone_max
+      background-size: contain
+      background-position: 0px 0px
+
+.fs14
+  font-size: 14px
+
+.fs20
+  font-size: 20px
+
+.fs80
+  font-size: 80px
+
+.fs80
+  font-size: 80px
+
+.mb95
+  margin-bottom: 95px
+
+.ml55
+  margin-left: 55px
+
+.ml70
+  margin-left: 70px
+
+.popup_form
+  width: 30%
+  padding: 15px
+  background: #ffffff
+  border-radius: 10px
+  position: absolute
+  top: 54px
+  right: -144px
+  -webkit-box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
+  -moz-box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
+  box-shadow: 0px 12px 32px rgba(39,39,39,0.06)
+  font-size: 20px
+  color: $col_font_main
+  z-index: 999
+  +phone_max
+    left: -7px
+    right: unset
+  &__title
+    font-size: 20px
+    line-height: 1.2
+    color: $col_font_main
+    padding: 0px 50px
+  &__body
+    padding: 0px 35px
+  .form-control
+    border-radius: 4px
+    background-color: #FFFFFF
+    border: 1px solid #d9d9d9
+    padding: 5px 27px
+    box-shadow: none
+
+
+.popup_form--bordered
+  .popup_form__inner
+    padding: 20px
+    border-radius: 10px
+    -webkit-box-shadow: 0px 9px 18px rgba(128,128,128,0.23)
+    -moz-box-shadow: 0px 9px 18px rgba(128,128,128,0.23)
+    box-shadow: 0px 9px 18px rgba(128,128,128,0.23)
+    //background-image: linear-gradient(0deg, #fbf7af 0%, #ffe779 100%)
+    border: 2px solid #ffd700
+
+.ic_present_popup
+  opacity: 0
+  -webkit-transition: opacity 200ms ease-in
+  -moz-transition: opacity 200ms ease-in
+  transition: opacity 200ms ease-in
+  display: none
+  &.active
+    display: block
+    opacity: 1
+
+.sale_title
+  color: #f67577
+  line-height: 1.1
+  margin: 0px -50px
+
+
+.alignL
+  align-items: flex-start
+  justify-content: left
+  text-align: left

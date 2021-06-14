@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/js_mediaqueries.js"></script>
+    <script src="js/modal.js"></script>
 
     <script src="js/index.js"></script>
 
@@ -24,15 +30,133 @@
     <header class="header bl">
         <div class="container">
             <div class="bl__inner">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="logo header__logo">
+                        <a href="#" class="logo__ic"><img src="images/content/logo.png" alt="Umma"></a>
+                        <h3 class="logo__text">Экологические натяжные потолки премиум класса с гарантией на 10 <br> в Бишкеке</h3>
+                    </div>
+                    <div class="quest">
+                        <div class="quest__text ic_smile" id="askQuestions">Задавайте вопросы это бесплатно</div>
+                        <a href="#"><span class="btn quest__btn whatsapp"></span><span>WhatsApp</span></a>
+                    </div>
+                    <div class="ic_present_wrap">
+                        <a href="#" class="ic_present" id="ic_present"></a>
+                        <div class="popup_form popup_form--bordered ic_present_popup">
+                            <div class="popup_form__inner">
+                                <button type="button" class="btn btn-close" id="btn_close_popup"></button>
+                                <div class="subtitle popup_form__title mb-3">
+                                    <div class="lines ">Только в этом  месяце</div>
+                                    <div class="lines ic_box sale_title mb-3"><div class="fs80">10%</div><div>на все виды потолков</div></div>
+                                    <div class="lines fs14 reg_roboto">Введите ваши данные и вы получите скидку</div>
+                                </div>
+                                <div class="popup_form__body">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Ваше имя" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control phone_num" placeholder="Ваш телефон" />
+                                    </div>
+                                    <button type="button" class="btn w100 mb-2 uppercase"><span class="button__blik"></span>Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contacts header__contacts">
+                        <div class="contacts__text">Есть вопрос? Звоните</div>
+                        <div class="contacts__phone">
+                            <p>0552 700 709</p>
+                            <p>0708 303 095</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__nav">
+                    <button type="button" class="btn btn-gamburg" id="btn_gamburg">Меню</button>
+                    <div class="menu-nav-wrap">
+                        <button type="button" class="btn btn-close" id="btn_close"></button>
+                        <ul class="menu-nav">
+                            <li class="menu-nav-li"><a href="#main" class="menu-nav-item">Главная</a></li>
+                            <li class="menu-nav-li"><a href="#about" class="menu-nav-item">О нас </a></li>
+                            <li class="menu-nav-li"><a href="#" class="menu-nav-item">Акции</a></li>
+                            <li class="menu-nav-li"><a href="#assortment" class="menu-nav-item">Виды потолков</a></li>
+                            <li class="menu-nav-li"><a href="#works" class="menu-nav-item">Наши работы</a></li>
+                            <li class="menu-nav-li"><a href="#thanks" class="menu-nav-item">Отзывы</a></li>
+                            <li class="menu-nav-li"><a href="#order" class="menu-nav-item">Контакты</a></li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn btn-call"><span class="button__blik"></span>Заказать звонок</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    <div class="main-banner">
+        <div class="container">
+            <div class="bl__inner" id="main">
+                <h2 class="main-banner__title">
+                    Экологические НАТЯЖНЫЕ ПОТОЛКИ ПРЕМИУМ класса с гарантией <br class="br"> на 10 лет в бишкеке
+                    <div class="guarant-label"><span>Гарантия</span><span class="fs20 guarant-label__last">10 лет</span></div>
+                </h2>
+                <h3 class="main-banner__subtitle">Оставьте свой номер <span class="red bold_roboto">прямо сейчас</span> и я перезвоню <br class="br"> вам <span class="bold_roboto">в течении 10 минут</span>. И все обсудим</h3>
+
+                <div class="btn-wrap">
+                    <div class="form-group mb-0">
+                        <input type="text" id="phone-number" class="phone_num form-control phone-number" placeholder="Ваш номер">
+                    </div>
+                    <button type="button" class="btn"><span class="button__blik"></span>Отправить</button>
+
+                </div>
+                <div class="advantage">
+                    <div class="advantage-item mount">Монтаж в течение 24 часов</div>
+                    <div class="advantage-item guarant">Гарантия на полотно 10 лет</div>
+                    <div class="advantage-item depart">Бесплатный выезд замерщика</div>
+                    <div class="advantage-item prepayment">Отсутствие предоплаты</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Знакомство -->
-<div class="bl introduce">
+<div class="bl introduce" id="about">
     <div class="container">
         <div class="bl__inner">
-            <div class="container">
+            <div class="introduce__side introduce__side--l">
+                <div class="text-colored-wrap">
+                    <div class="text-colored"><span class="w100-sm text-colored__in bg--green">Давайте знакомиться</span></div>
+                    <div class="text-colored"><span class="text-colored__in bg--yellow">Надо же знать, <span class="bold_main">кого будете пускать</class></span></div>
+                    <div class="text-colored"><span class="text-colored__in bg--yellow"><span class="bold_main">в свой дом</span></span></div>
+                </div>
+                <div class="msg-wrap">
+                    <div class="msg msg--left bg--green align-items-start">
+                        <p class="mb-4">Во первых поздравляю Вас с предстоящим</p>
+                        <p>Меня зовут Кубаныч. В переводе означает "Радость"). И это действительно так. Так после каждой
+                        сдачи работы заказчикам, я вижу свое отражение, т.е. радость на их лице)))</p>
+                    </div>
+                    <div class="msg-ava">
+                        <div class="msg-ava__pict"></div>
+                        <div class="msg-ava__owner">Основатель компании</div>
+                        <div class="msg-ava__text">На замер приеду лично</div>
+                    </div>
+                </div>
+                <div class="text-lt-wrap results">
+                    <p class="text-lt text-lt--l d-inline-flex">51 000 м<span class="sub align-self-start">2</span></p>
+                    <p class="text-lt text-lt--sm">было установлено</p>
+                </div>
+            </div>
+            <div class="introduce__side introduce__side--r">
+                <div class="logo_img"></div>
+                <div class="text-lt-wrap d-inline-flex align-items-center">
+                    <span class="text-lt text-lt--xl">5</span>
+                    <div>
+                        <p class="text-lt text-lt--m">Дарим радость</p>
+                        <p class="text-lt text-lt--m text-white">уже более лет</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-lt-wrap results--mobile">
+                <p class="text-lt text-lt--l d-inline-flex">51 000 м<span class="sub align-self-start">2</span></p>
+                <p class="text-lt text-lt--sm">было установлено</p>
             </div>
         </div>
     </div>
@@ -41,7 +165,29 @@
 <div class="bl quality">
     <div class="container">
         <div class="bl__inner">
-            <div class="container">
+            <div class="text-colored-wrap mb-5">
+                <div class="text-colored"><span class="text-colored__in bg--yellow">Вам сделают потолки</span></div>
+                <div class="text-colored"><span class="text-colored__in bg--yellow"><span class="bold_main">команда:</span> которая -</span></div>
+            </div>
+            <div class="quality-list mb-5">
+                <div class="quality-item bg--blue brain">
+                    <h4 class="title">Думает головой</h4>
+                    <p>Подскажем какой цвет куда подойдет. Какие купить люстры, где лучше всего будут смотреться софиты. А остальное при встречи</p>
+                </div>
+                <div class="quality-item bg--violet hand">
+                    <h4 class="title">Работает руками</h4>
+                    <p>Наши сотрудники постоянно обучаются, за их работой ведется постоянный контроль качества</p>
+                </div>
+            </div>
+            <div class="quality-list">
+                <div class="quality-item bg--red hard">
+                    <h4 class="title">Чувствует сердцем</h4>
+                    <p>Мы ценим наши с вами отношения. И прежде всего стараемся найти решение вашим потребностям</p>
+                </div>
+                <div class="text-colored-wrap ml-4">
+                    <div class="text-colored"><span class="text-colored__in bg--green fs20">И конечно же которая умеем</span></div>
+                    <div class="text-colored"><span class="text-colored__in bg--green fs20">договариваться :)</span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -50,55 +196,1341 @@
 <div class="bl property">
     <div class="container">
         <div class="bl__inner">
-            <div class="container">
+            <div class="text-colored-wrap mb-5">
+                <div class="text-colored"><span class="text-colored__in bg--yellow">Уверены что <span class="bold_main">вас уже посещали</span></span></div>
+                <div class="text-colored"><span class="text-colored__in bg--yellow"><span class="bold_main">мысли</span> на подобии</span></div>
+            </div>
+            <div class="property-wrap">
+                <div class="property-side property-side--left">
+                    <div class="msg-wrap mb-5">
+                        <div class="msg-ava">
+                            <div class="msg-ava__pict"><img src="images/content/girl_thinking.jpg" alt=""></div>
+                        </div>
+                        <div class="msg msg--right fs20 font_mus">
+                            <p>Почему все так прицепились к этим натяжным потолкам. Что в них такого?</p>
+                        </div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg-ava">
+                            <div class="msg-ava__pict bg--ltgreen"></div>
+                        </div>
+                        <div class="msg msg--right bg--green">
+                            <p>У них очень много преимуществ. Приведем лишь несколько. Этого более чем достаточно</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-side property-side--right property-list">
+                    <div class="property-item">
+                        <h4 class="title">Любые эксперименты</h4>
+                        <p>Может быть <span class="bold_main">любых форм и цветов, многоуровневый, текстурный...</span> Какой только пожелаете!</p>
+                    </div>
+                    <div class="property-item">
+                        <h4 class="title">Чистота и практичность</h4>
+                        <p>Не дает накапливаться пыли и грязи, <span class="bold_main">легко моется</span> при необходимости</p>
+                    </div>
+                    <div class="property-item">
+                        <h4 class="title">Быстрый монтаж</h4>
+                        <p>Установка потолочной системы от <span class="bold_main">1 часа до 3-х дней</span></p>
+                    </div>
+                    <div class="property-item">
+                        <h4 class="title">Затопить не выйдет</h4>
+                        <p><span class="bold_main d-inline-flex">1 м<span class="sub12 align-self-start">2</span></span> пленки натяжого потолка выдерживает <span class="bold_main">100л воды</span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Блок с разновидностью видов -->
-<div class="bl assortment">
+<!-- Без запаха -->
+<div class="bl nosmell">
+    <div class="container">
+        <div class="bl__inner pb-0">
+            <div class="nosmell-item nosmell-item-1">
+                <div class="text-colored-wrap ml70">
+                    <div class="text-colored"><span class="text-colored__in bg--yellow">Можете смело жарить боорсоки,</span></div>
+                    <div class="text-colored"><span class="text-colored__in bg--yellow">куурдаки, пирожки. <span class="bold_main">Наши потолки не</span></span></div>
+                    <div class="text-colored"><span class="text-colored__in bg--yellow"><span class="bold_main">впитывают запахи.</span> Встречать гостей</span></div>
+                    <div class="text-colored"><span class="text-colored__in bg--yellow">теперь одно удовольствие</span></div>
+                </div>
+                <div class="nosmell-img">
+                    <img src="images/content/plov.png" alt="Плов">
+                </div>
+            </div>
+            <div class="nosmell-item nosmell-item-2">
+                <div class="room-img">
+                    <img src="images/content/room.png" alt="Приходите в гости">
+                </div>
+                <div class="d-block align-self-center">
+                    <div class="msg-wrap mb-5 w-100">
+                        <div class="msg-ava">
+                            <div class="msg-ava__pict"></div>
+                        </div>
+                        <div class="msg msg--right fs20 font_mus alignL">
+                            <p>Тогда всех ждем в гости)</p>
+                        </div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg-ava">
+                            <div class="msg-ava__pict bg--ltgreen"></div>
+                        </div>
+                        <div class="msg msg--right bg--green font_mus">
+                            <p>Согласитесь, ведь классно готовить, радовать семью и встречать гостей в теплой уютной кухне с шикарными потолками)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="justify-content-around align-items-center nosmell-item nosmell-item-3">
+                <div class="flow-img">
+                    <img src="images/content/sortir.png" alt="Совет">
+                </div>
+                <div class="quote-box quote-box--ic quote-box--danger">
+                    <div class="quote-box__in">
+                        <p><span class="bold_roboto">Позвольте дать искренний совет.</span> Какой бы шикарный ремонт вы не сделали,
+                            если промахнуться с цветом или качеством натяжки потолков, весь ремонт
+                            будет к коту в одно место)). Отсюда <span class="bold_roboto">потраченные деньги и испорченное
+                                настроение.</span> А это вам надо?</p>
+                        <p>Еще потолки можно сравнить с прической. <span class="bold_roboto">Представьте,</span> вы (если вы мужчина,
+                            то ваша жена) сделали мейкап и пошли к криворукому парикмахеру, <span class="bold_roboto">а тот испортил прическу.</span> Какой толк от двух часового...</p>
+                        <p><span class="red">“Оу-оу-оу, хватит, остановитесь, не надо так пугать. Все, понятно”</span></p>
+                        <p>Хорошо, просто мы хотим вас от всего этого обезопасить)</p>
+                    </div>
+                </div>
+                <!--<div class="quote-box quote-box&#45;&#45;target"></div>-->
+            </div>
+            <div class="nosmell-item nosmell-item-4">
+                <div class="">
+                    <div class="msg-wrap mb-5 ml55">
+                        <div class="msg-ava">
+                            <div class="msg-ava__pict"><img src="images/content/person.jpg" alt=""></div>
+                        </div>
+                        <div class="msg msg--right fs20 font_mus">
+                            <p>А какие виды есть потолков. И подойдут ли они под наши обои? Как их подобрать?</p>
+                        </div>
+                    </div>
+                    <div class="msg-wrap">
+                        <div class="msg msg--left bg--green fs20 font_mus">
+                            <p>Спокойствие и только спокойствие))Подберем под любое помещение и любые стены</p>
+                        </div>
+                        <div class="msg-ava">
+                            <div class="msg-ava__pict"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-box quote-box--target">
+                    <div class="quote-box__in">
+                        <p>Да кстати, я чуть не забыл. <span class="bold_roboto">Даже если ваши стены кривые</span> - это не беда. После наших потолков все дефекты будут незаметны. Все будет ровно</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Блок с разновидностью -->
+<div class="bl assortment" id="assortment">
     <div class="container">
         <div class="bl__inner">
-            <div class="container">
-            </div>
+                <div class="cells-wrapper">
+                    <div class="cells">
+                        <div class="cells__card">
+                            <!-- Wrapper for slides -->
+                            <!--Carousel Wrapper-->
+                            <div id="cell__slider1" class="carousel slide carousel-multi-item cell__slider" data-ride="carousel">
+
+                                <!--Controls-->
+                                <div class="controls-top">
+                                    <a class="carousel-arrow arrow-left" href="#cell__slider1" data-slide="prev"></a>
+                                    <a class="carousel-arrow arrow-right" href="#cell__slider1" data-slide="next"></a>
+
+                                </div>
+                                <!--/.Controls-->
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell1.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <!--/.First slide-->
+
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card mb-12">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell1.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Second slide-->
+
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell1.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Third slide-->
+
+                                </div>
+                                <!--/.Slides-->
+
+                            </div>
+                            <!--/.Carousel Wrapper-->
+
+                            <div class="cells__desc">
+                                <h3 class="cells__title title">Матовые натяжные потолки</h3>
+                                <div class="cells__text">Матовые потолки это классический выбор, который подойдет к любому интерьеру и помещению. Они выглядят как идеально выравненный и покрашенный потолок. Матовые потолки не создают бликов и не отражают свет</div>
+                                <div class="cells__footer">
+                                    <div class="cells_price">
+                                        от 150 сом/м<span class="upperText">2</span>
+                                    </div>
+                                    <button type="button" class="cells_order-btn btn"><span class="button__blik"></span>Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cells__card">
+                            <!-- Wrapper for slides -->
+                            <!--Carousel Wrapper-->
+                            <div id="cell__slider2" class="carousel slide carousel-multi-item cell__slider" data-ride="carousel">
+
+                                <!--Controls-->
+                                <div class="controls-top">
+                                    <a class="carousel-arrow arrow-left" href="#cell__slider2" data-slide="prev"></a>
+                                    <a class="carousel-arrow arrow-right" href="#cell__slider2" data-slide="next"></a>
+
+                                </div>
+                                <!--/.Controls-->
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell2.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <!--/.First slide-->
+
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card mb-12">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell2.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Second slide-->
+
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell2.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Third slide-->
+
+                                </div>
+                                <!--/.Slides-->
+
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                            <div class="cells__desc">
+                                <h3 class="cells__title title">Глянцевые натяжные потолки</h3>
+                                <div class="cells__text">Один из самых популярных вариантов для небольших комнат и комнат с невысокими потолками. Зрительно увеличивает объём помещения за счет чего комната кажется больше. Глянцевые потолки имеют самую широкую палитру цветов и оттенков</div>
+                                <div class="cells__footer">
+                                    <div class="cells_price">
+                                        от 150 сом/м<span class="upperText">2</span>
+                                    </div>
+                                    <button type="button" class="cells_order-btn btn"><span class="button__blik"></span>Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cells__card">
+                            <!-- Wrapper for slides -->
+                            <!--Carousel Wrapper-->
+                            <div id="cell__slider3" class="carousel slide carousel-multi-item cell__slider" data-ride="carousel">
+
+                                <!--Controls-->
+                                <div class="controls-top">
+                                    <a class="carousel-arrow arrow-left" href="#cell__slider3" data-slide="prev"></a>
+                                    <a class="carousel-arrow arrow-right" href="#cell__slider3" data-slide="next"></a>
+
+                                </div>
+                                <!--/.Controls-->
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell3.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <!--/.First slide-->
+
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card mb-12">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell3.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Second slide-->
+
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell3.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Third slide-->
+
+                                </div>
+                                <!--/.Slides-->
+
+                            </div>
+                            <!--/.Carousel Wrapper-->
+
+                            <div class="cells__desc">
+                                <h3 class="cells__title title">Сатиновые натяжные потолки</h3>
+                                <div class="cells__text">Сатиновые потолки идеально подходят для спален, так как у них нет зеркального отражения, но они имеют легкий "шелковый" блеск.</div>
+                                <div class="cells__footer">
+                                    <div class="cells_price">
+                                        от 150 сом/м<span class="upperText">2</span>
+                                    </div>
+                                    <button type="button" class="cells_order-btn btn"><span class="button__blik"></span>Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--</div>-->
+
+
+                        <!--<div class="cells__row">-->
+                        <div class="cells__card">
+                            <!-- Wrapper for slides -->
+                            <!--Carousel Wrapper-->
+                            <div id="cell__slider4" class="carousel slide carousel-multi-item cell__slider" data-ride="carousel">
+
+                                <!--Controls-->
+                                <div class="controls-top">
+                                    <a class="carousel-arrow arrow-left" href="#cell__slider4" data-slide="prev"></a>
+                                    <a class="carousel-arrow arrow-right" href="#cell__slider4" data-slide="next"></a>
+
+                                </div>
+                                <!--/.Controls-->
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell4.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <!--/.First slide-->
+
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card mb-12">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell4.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Second slide-->
+
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell4.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Third slide-->
+
+                                </div>
+                                <!--/.Slides-->
+
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                            <div class="cells__desc">
+                                <h3 class="cells__title title">Натяжные потолки “Небо”</h3>
+                                <div class="cells__text">Матовые потолки это классический выбор, который подойдет к любому интерьеру и помещению. Они выглядят как идеально выравненный и покрашенный потолок. Матовые потолки не создают бликов и не отражают свет</div>
+                                <div class="cells__footer">
+                                    <div class="cells_price">
+                                        от 150 сом/м<span class="upperText">2</span>
+                                    </div>
+                                    <button type="button" class="cells_order-btn btn"><span class="button__blik"></span>Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="cells__card">
+                            <!-- Wrapper for slides -->
+                            <!--Carousel Wrapper-->
+                            <div id="cell__slider5" class="carousel slide carousel-multi-item cell__slider" data-ride="carousel">
+
+                                <!--Controls-->
+                                <div class="controls-top">
+                                    <a class="carousel-arrow arrow-left" href="#cell__slider5" data-slide="prev"></a>
+                                    <a class="carousel-arrow arrow-right" href="#cell__slider5" data-slide="next"></a>
+
+                                </div>
+                                <!--/.Controls-->
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell5.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <!--/.First slide-->
+
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card mb-12">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell5.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Second slide-->
+
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell5.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Third slide-->
+
+                                </div>
+                                <!--/.Slides-->
+
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                            <div class="cells__desc">
+                                <h3 class="cells__title title">Фактурные натяжные потолки</h3>
+                                <div class="cells__text">Фактурные потолки это классический выбор, который подойдет к любому интерьеру и помещению. Они выглядят как идеально выравненный и покрашенный потолок. Матовые потолки не создают бликов и не отражают свет</div>
+                                <div class="cells__footer">
+                                    <div class="cells_price">
+                                        от 150 сом/м<span class="upperText">2</span>
+                                    </div>
+                                    <button type="button" class="cells_order-btn btn"><span class="button__blik"></span>Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cells__card">
+                            <!-- Wrapper for slides -->
+                            <!--Carousel Wrapper-->
+                            <div id="cell__slider6" class="carousel slide carousel-multi-item cell__slider" data-ride="carousel">
+
+                                <!--Controls-->
+                                <div class="controls-top">
+                                    <a class="carousel-arrow arrow-left" href="#cell__slider6" data-slide="prev"></a>
+                                    <a class="carousel-arrow arrow-right" href="#cell__slider6" data-slide="next"></a>
+
+                                </div>
+                                <!--/.Controls-->
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell6.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <!--/.First slide-->
+
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card mb-12">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell6.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Second slide-->
+
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="images/content/cellTypes/cell6.jpg"  alt="Матовые натяжные потолки">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Third slide-->
+
+                                </div>
+                                <!--/.Slides-->
+
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                            <div class="cells__desc">
+                                <h3 class="cells__title title">Натяжные потолки “Фотопечать”</h3>
+                                <div class="cells__text">Каждый раз создает в ней особенное настроение. Детскую комнату, например, можно украсить облаками или звездным небом, в спальню подойдет легкий штрих в виде нежной орхидеи, а в гостиную интересная абстракция</div>
+                                <div class="cells__footer">
+                                    <div class="cells_price">
+                                        от 150 сом/м<span class="upperText">2</span>
+                                    </div>
+                                    <button type="button" class="cells_order-btn btn"><span class="button__blik"></span>Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
         </div>
     </div>
 </div>
 <!-- Что будет после того как вызову мастера? -->
 <div class="bl steps">
     <div class="container">
-        <div class="bl__inner">
-            <div class="container">
+        <div class="bl__inner steps__inner">
+            <div class="steps__quest--wrapper">
+                <div class="msg-ava">
+                    <div class="msg-ava__pict"></div>
+                </div>
+                <div class="steps__quest msg msg--right">Что будет после того как вызову мастера?</div>
             </div>
+           <!-- <div id="stepsNums" class="steps__nums">-->
+            <!-- Wrapper for slides -->
+            <!--Carousel Wrapper-->
+            <div id="stepsNums" class="steps__nums " > <!--carousel slide carousel-multi-item cell__slider--> <!--data-ride="carousel"-->
+
+                <!--Indicators-->
+                <ol class="carousel-indicators indicators">
+                    <li data-target="#stepsNums" data-slide-to="0" class="active"></li>
+                    <li data-target="#stepsNums" data-slide-to="1"></li>
+                    <li data-target="#stepsNums" data-slide-to="2"></li>
+                    <li data-target="#stepsNums" data-slide-to="3"></li>
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="steps-inner" > <!--carousel-inner--> <!--role="listbox"-->
+
+                    <!--First slide-->
+                    <div class="item w-25"> <!--carousel-item active-->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class=" step steps__01">
+                                    <div class="step__img--wrapper" data-stepNum="01">
+                                        <img src="images/content/tape_measure.png" alt="БЕСПЛАТНЫЙ ЗАМЕР" class="step__img">
+                                    </div>
+                                    <h3 class="step__title title">БЕСПЛАТНЫЙ ЗАМЕР</h3>
+                                    <div class="step__desc">
+                                        Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="item w-25"> <!--carousel-item-->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class=" step steps__02">
+                                    <div class="step__img--wrapper" data-stepNum="02">
+                                        <img src="images/content/contract.png" alt="ЗАКЛЮЧЕНИЕ ДОГОВОРА" class="step__img">
+                                    </div>
+                                    <h3 class="step__title title">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
+                                    <div class="step__desc">
+                                        После принятого Вами решения заключается договор. Оплата осуществляется удобным для Вас способом
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Second slide-->
+
+                    <!--Third slide-->
+                    <div class="item w-25">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="step steps__03">
+                                    <div class=" step__img--wrapper" data-stepNum="03">
+                                        <img src="images/content/helmet.png" alt="ДОСТАВКА И МОНТАЖ" class="step__img">
+                                    </div>
+                                    <h3 class="step__title title">ДОСТАВКА И МОНТАЖ</h3>
+                                    <div class="step__desc">
+                                        Приезжает монтажная бригада, устанавливает натяжные потолки и элементы освещения
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Third slide-->
+
+                    <!--4th slide-->
+                    <div class="item w-25">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class=" step steps__04">
+                                <div class="step__img--wrapper" data-stepNum="04">
+                                    <img src="images/content/like-hands.png" alt="Счастливые хозяева" class="step__img">
+                                </div>
+                                <h3 class="step__title title">Счастливые хозяева</h3>
+                                <div class="step__desc">
+                                    Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    <!--/.4th slide-->
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+
+                   <!-- <div class="step steps__01">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="01">
+                            <img src="images/content/tape_measure.png" alt="БЕСПЛАТНЫЙ ЗАМЕР" class="step__img">
+                        </div>
+                        <h3 class="step__title title">БЕСПЛАТНЫЙ ЗАМЕР</h3>
+                        <div class="step__desc">
+                            Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                        </div>
+                    </div>
+
+                    <div class="step steps__02">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="02">
+                            <img src="images/content/contract.png" alt="ЗАКЛЮЧЕНИЕ ДОГОВОРА" class="step__img">
+                        </div>
+                        <h3 class="step__title title">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
+                        <div class="step__desc">
+                            После принятого Вами решения заключается договор. Оплата осуществляется удобным для Вас способом
+                        </div>
+                    </div>
+
+                    <div class="step steps__03">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="03">
+                            <img src="images/content/helmet.png" alt="ДОСТАВКА И МОНТАЖ" class="step__img">
+                        </div>
+                        <h3 class="step__title title">ДОСТАВКА И МОНТАЖ</h3>
+                        <div class="step__desc">
+                            Приезжает монтажная бригада, устанавливает натяжные потолки и элементы освещения
+                        </div>
+                    </div>
+
+                    <div class="step steps__04">
+                        <div class="step__img&#45;&#45;wrapper" data-stepNum="04">
+                            <img src="images/content/like-hands.png" alt="Счастливые хозяева" class="step__img">
+                        </div>
+                        <h3 class="step__title title">Счастливые хозяева</h3>
+                        <div class="step__desc">
+                            Согласовывается удобное для Вас время замера потолка. Приезжает мастер. Делает замер и озвучивает стоимость натяжного потолка
+                        </div>
+                    </div>-->
+
+         <!--   </div>-->
         </div>
     </div>
 </div>
 <!-- Наши работы -->
-<div class="bl our_works">
+<div class="bl our_works" id="works">
     <div class="container">
         <div class="bl__inner">
-            <div class="container">
+            <div class="works__info">
+                <div class="works__col works__col--left">
+                    <div class="text-colored ">
+                        <span class=" text-colored__in bg--light-yellow">Давайте покажем вам наши</span>
+                    </div>
+                    <div class="text-colored ">
+                        <span class=" text-colored__in bg--light-yellow">работы. <span class="bold_roboto">Вот так может</span></span>
+                    </div>
+                    <div class="text-colored ">
+                        <span class=" text-colored__in bg--light-yellow"><span class="bold_roboto">преобразиться ваша дом.</span></span>
+                    </div>
+                </div>
+                <div class="works__col works__col--right">
+                    <span class="bold_roboto">Разрешите напомнить</span>, что фотографии не могут
+                    передать всю красоту. <span class="bold_roboto">В живую потолки
+                    смотряться в 100 раз лучше!</span>
+
+                </div>
+            </div>
+
+            <div class="works__slider">
+                <!--Carousel Wrapper-->
+                <div id="works__multi-item" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                    <!--Controls-->
+                    <div class="controls-top">
+                        <a class="btn-floating" href="#works__multi-item" data-slide="prev"><span class="carousel-arrow arrow-right"></span></i></a>
+                        <a class="btn-floating" href="#works__multi-item" data-slide="next"><span class="carousel-arrow arrow-left"></span></i></a>
+                    </div>
+                    <!--/.Controls-->
+
+                    <!--Indicators-->
+                    <ol class="carousel-indicators indicators">
+                        <li data-target="#works__multi-item" data-slide-to="0" class="active"></li>
+                        <li data-target="#works__multi-item" data-slide-to="1"></li>
+                        <li data-target="#works__multi-item" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+
+                        <!--First slide-->
+                        <div class="carousel-item active">
+
+                            <div class="row">
+                                <div class="col-md-4 work-item">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/1.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 1</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 work-item clearfix d-none d-md-block">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/2.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 2</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 work-item clearfix d-none d-md-block">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/3.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 3</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.First slide-->
+
+                        <!--Second slide-->
+                        <div class="carousel-item">
+
+                            <div class="row">
+                                <div class="col-md-4 work-item">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/1.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 4</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 work-item clearfix d-none d-md-block">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/1.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 5</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 work-item clearfix d-none d-md-block">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/1.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 6</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Second slide-->
+
+                        <!--Third slide-->
+                        <div class="carousel-item">
+
+                            <div class="row">
+                                <div class="col-md-4 work-item">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/1.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 7</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 work-item clearfix d-none d-md-block">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/1.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 8</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 work-item clearfix d-none d-md-block">
+                                    <div class="works__card card">
+                                        <img class="card-img-top" src="images/content/works/1.jpg"
+                                             alt="Card image cap">
+                                        <div class="works__car-body card-body">
+                                            <table class="works__desc">
+                                                <tr class="tr">
+                                                    <td class="td">Цвет 9</td>
+                                                    <td class="td">Небесный</td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Квадратура</td>
+                                                    <td class="td">120 м<span class="upperText">2</span></td>
+                                                </tr>
+                                                <tr class="tr">
+                                                    <td class="td">Срок выполнение</td>
+                                                    <td class="td">2 дня</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Third slide-->
+
+                    </div>
+                    <!--/.Slides-->
+
+                </div>
+                <!--/.Carousel Wrapper-->
             </div>
         </div>
     </div>
 </div>
 <!-- Искренние слова благодарности от наших заказчиков -->
-<div class="bl thanks">
+<div class="bl thanks" id="thanks">
     <div class="container">
         <div class="bl__inner">
-            <div class="container">
+            <div class="text-colored-wrap ml70 thanks__text-colored">
+                <div class="text-colored">
+                <span class="text-colored__in bg--light-yellow ">
+                    <b class="extraBold">Искренние слова благодарности</b>
+                </span>
+                </div>
+                <div class="text-colored">
+                <span class="text-colored__in bg--light-yellow ">
+                    от наших заказчиков
+                </span>
+                </div>
+            </div>
+            <div class="thanks__wrapper">
+                <div class="thanks__text-wrapper">
+                    <div class="thanks__text">
+                        Именно такие теплые слова
+                        мотивирует нас работать еще
+                        лучше с каждым заказаом
+                    </div>
+                </div>
+
+                <div class="thanks__carousel">
+                    <!--Carousel Wrapper-->
+                    <div id="thanks__carousel" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                        <!--Controls-->
+                        <div class="controls-top">
+                            <a class="btn-floating" href="#thanks__carousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                            <a class="btn-floating" href="#thanks__carousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+                        <!--/.Controls-->
+
+                        <!--Indicators-->
+                        <ol class="carousel-indicators indicators">
+                            <li data-target="#thanks__carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#thanks__carousel" data-slide-to="1"></li>
+                            <li data-target="#thanks__carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!--/.Indicators-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+
+                            <!--First slide-->
+                            <div class="carousel-item active">
+
+                                <div class="row">
+                                    <div class="col-md-3 thanks-item">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                            <img src="images/content/thanks/1.png" alt="thanks-img-inner" class="thanks-img-inner">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                            <img src="images/content/thanks/2.png" alt="thanks-img-inner" class="thanks-img-inner">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                            <img src="images/content/thanks/3.png" alt="thanks-img-inner" class="thanks-img-inner">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                            <img src="images/content/thanks/4.png" alt="thanks-img-inner" class="thanks-img-inner">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/.First slide-->
+
+                            <!--Second slide-->
+                            <div class="carousel-item">
+
+                                <div class="row">
+                                    <div class="col-md-3 thanks-item">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/.Second slide-->
+
+                            <!--Third slide-->
+                            <div class="carousel-item">
+
+                                <div class="row">
+                                    <div class="col-md-3 thanks-item">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 thanks-item clearfix d-none d-md-block">
+                                        <div class="card">
+                                            <img class="card-img-top thanks-img" src="images/content/thanks/wrapper.png"
+                                                 alt="Card image cap">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--/.Third slide-->
+
+                        </div>
+                        <!--/.Slides-->
+
+                    </div>
+                    <!--/.Carousel Wrapper-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Искренние слова благодарности от наших заказчиков -->
+<div class="bl order" id="order">
+    <div class="container">
+        <div class="bl__inner order__bl--inner">
+            <div class="order__questions" id="orderQuestions">
+                <span class="closeBtn" id="orderQuestionsCloseBtn"></span>
+                <div class="order__questions-title subtitle">
+                    <span class="lines">Есть вопросы?</span>
+                    <span class="lines">Наш специалист </span>
+                    <span class="lines">Вас <b class="extraBold">бесплатно</b></span>
+                    <span class="lines">
+                        <b class="extraBold">проконсультирует</b>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Ваше имя" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control phone_num" placeholder="Ваш телефон" />
+                </div>
+                <button type="button" class="btn order__btn order__btn--send"><span class="button__blik"></span>Отправить</button>
+                <div class="order__btn-social">
+                    <button type="button" class="btn btn--colored btn order__btn order__btn--whatsapp">WhatsApp</button>
+                    <button type="button" class="btn btn--colored order__btn order__btn--telegram">Telegram</button>
+                </div>
+                <div class="order__ps">
+                    Обещаем не спамить
+                </div>
+            </div>
+            <div class="order__wrapper">
+                <div class="order__col order__col-left">
+                    <div class="order__right--border">
+                        <div class="order__title title">Вы можете свазу вызать нашего замерщика
+                            <b class="uppercase extraBold">абсолютно бесплатно</b> в удобное для
+                            Вас время, который:
+                        </div>
+                        <span class="horizontal-line"></span>
+                        <ul class="order__task-list">
+                            <li class="order__task-item">Приведет и сделает точную смету на месте <span class="uppercase">бесплатно</span></li>
+                            <li class="order__task-item">Замер и смета вас ни к чемуее не принуждает</li>
+                            <li class="order__task-item">Покажет вам наши проделанные работы</li>
+                        </ul>
+                        <span class="horizontal-line"></span>
+                        <div class="text-colored w-100">
+                        <span class="w-100 text-colored__in bg--light-yellow order__text-colored">
+                            <b class="extraBold">Если все понравится -</b> сразу заключим договор и уже на слудующий
+                            день, натянем вам шикарный потолок <b class="extraBold uppercase">без продоплаты</b>
+                        </span>
+                        </div>
+                        <span class="horizontal-line"></span>
+                        <div class="order__phones">
+                            <span>Прямой номер</span>
+                            <div class="phone">
+                                <span>0552 700 709</span>
+                                <span>0708 303 095</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__col order__col-right" id="orderForm">
+                    <div class="order__title title order__title--light">
+                        <span class="lines">Замерщик будет у вас</span>
+                        <span class="lines">дома уже через</span>
+                        <span class="lines"><b class="extraBold">30 минут</b></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваше имя" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control phone_num" placeholder="Ваш телефон" />
+                    </div>
+                    <button type="button" class="btn order__btn order__btn--send"><span class="button__blik"></span>Заказать</button>
+                    <div class="order__ps">
+                        Или свяжитесь через мессенджеры
+                    </div>
+
+                    <div class="order__btn-social">
+                        <button type="button" class="btn btn--colored btn order__btn order__btn--whatsapp">WhatsApp</button>
+                        <button type="button" class="btn btn--colored order__btn order__btn--telegram">Telegram</button>
+                    </div>
+                    <div class="order__ps">
+                        Обещаем не спамить
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
 <!-- Footer -->
-<footer class="bl">
+<footer class="footer bl bl--dark">
     <div class="container">
         <div class="bl__inner">
-            <div class="container">
+            <div class="logo footer__logo">
+                <a href="#" class="logo__ic"><img src="images/content/logo_white.png" alt="Umma"></a>
+                <h3 class="logo__text">Экологические натяжные потолки премиум класса с гарантией на 10 <br> в Бишкеке</h3>
             </div>
+            <p class="copyright footer__copyright">
+                © 2015-2019. “UmmaDesign”. Все права защищены. При копировании материалов ссылка на сайт обязательна
+            </p>
+            <p class="footer__made">
+                Сайт сделан с любовь в <span class="red">IDEA.KG</span>
+            </p>
         </div>
     </div>
 </footer>
+
+<script type="template" id="modal-template">
+    <div class="overlay">
+        <div class="popup__container">
+            <a href="#" class="popup__close"></a>
+            <div class="popup__content">
+            </div>
+        </div>
+    </div>
+</script>
 </body>
 </html>

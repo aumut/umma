@@ -1,0 +1,102 @@
+
+/*** NOSMELL BLOCK ***/
+
+
+.nosmell
+  background-color: $col_bg_grey
+  &-img
+    width: 463px
+    height: 368px
+    margin-top: -100px
+    img
+      width: 100%
+      height: 100%
+    +tablet_max
+      margin-top: 0px
+    +phone_max
+      width: 100%
+
+  .quote-box--danger
+    width: 670px
+    +medium_max
+      width: 55%
+    +tablet_max
+      width: 90%
+    +phone_max
+      //margin-left: 20px
+      width: calc(100% - 20px)
+    &--ic
+      &::before
+        background-color: $col_bg_grey
+  .quote-box--target
+    +align-self(center)
+    width: 380px
+    min-width: 340px
+    margin-left: 100px
+    +medium_max
+      margin-left: 50px
+    +tablet_max
+      margin-top: 50px
+      width: 90%
+    +phone_max
+      width: 100%
+      margin-left: 0px
+    .quote-box__in
+      padding: 20px 35px
+  &-item
+    +flexbox
+    +justify-content(space-between)
+    +tablet_max
+      +flex-direction(column)
+      +align-items(center)
+  &-item-1
+    //margin-bottom: -50px
+    +tablet_max
+      margin-bottom: 0px
+    .text-colored-wrap
+      margin-left: 70px
+      +tablet_max
+        margin-left: 0px
+        margin-bottom: -70px
+  &-item-2
+    margin-bottom: 95px
+    & .msg.alignL
+      +phoneMin_max
+        font-size: 15px
+        +justify-content(center)
+    & .msg
+      +phoneMin_max
+        font-size: 13px
+  &-item-3
+    margin-bottom: 95px
+    +tablet_max
+      margin-bottom: 50px
+  &-item-4
+    .msg-wrap
+      margin-left: 0px
+      margin-right: 0px
+
+.room-img
+  min-width: 600px
+  width: 600px
+  height: 350px
+  margin-right: 40px
+  img
+    width: 100%
+    height: 100%
+  +tablet_max
+    margin-right: 0px
+    margin-bottom: 50px
+  +phone_max
+    min-width: 100%
+    width: 100%
+    height: auto
+
+
+.flow-img
+  img
+    width: 100%
+    height: 100%
+  +phone_max
+    width: 200px
+    margin-bottom: 30px

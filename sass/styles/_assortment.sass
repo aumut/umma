@@ -1,0 +1,156 @@
+
+/*** ASSORTMENT BLOCK ***/
+
+.assortment
+	background: $col_bg_grey
+.cells
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: stretch
+
+.cells__row
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: stretch
+	margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+
+.cells__card
+	width: 32%
+	background: #FFFFFF
+	border-radius: 10px
+	+medium_max
+		width: 45%
+
+.cells__card:nth-child(-n+3)
+	margin-bottom: 28px
+
+
+.cell__slider
+	border-radius: 5px
+	margin-bottom: 52px
+
+.cell__slider .card-img-top
+	border-radius: 5px
+
+.cell__slider .item
+	border-radius: 5px
+
+.cell_img, .carousel-inner
+	border-radius: 5px
+
+.arrow-left
+	left: 10px
+
+.arrow-right
+	right: 10px
+
+.carousel-arrow
+	width: 25px
+	height: 25px
+	background: #ffd800
+	display: inline-block
+	position: absolute
+	top: 46%
+	border-radius: 50%
+	border: 1px solid #fff
+	z-index: 10
+
+.carousel-arrow:before
+	content: ''
+	display: inline-block
+	width: 12px
+	height: 12px
+	background:
+		image: url("../images/ic/ic_arrow.svg")
+		size: contain
+		repeat: no-repeat
+		position: right
+	position: absolute
+	top: 5px
+	left: 5px
+	transform: rotate(270deg)
+
+.carousel-arrow.arrow-left:before
+	transform: rotate(90deg)
+
+.cells__desc
+	padding: 0 35px 25px
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	min-height: 278px
+
+.cells__title
+	font-size: 18px
+	margin-bottom: 18px
+	text-align: left
+
+.cells__text
+	font-size: 14px
+	color: #868686
+	line-height: 1.5
+
+.cells__footer
+	display: flex
+	margin-top: auto
+	padding: 0 34px 0 20px
+
+.cells_price
+	font-family: $ff_extraBold
+	font-size: 14px
+	line-height: 16px
+	font-weight: 900
+	padding: 10px 15px
+	border: 4px solid #ffea80
+	border-radius: 2px 2px 0 10px
+	border-right-color: transparent
+	border-right-width: 0
+	+large_max
+		padding: 10px
+	+medium_max
+		padding: $pLR_btn_medium
+		font-size: 12px
+		font-weight: 700
+
+.cells_order-btn
+	flex-grow: 1
+	font-family: $ff_body
+
+.upperText
+	vertical-align: super
+	font-size: 12px
+
+.assortment .bl__inner
+	position: relative
+
+.cells-wrapper.slider
+	overflow: hidden
+
+.slider .cells
+	flex-wrap: nowrap
+	justify-content: flex-start
+	width: 10000px
+	position: relative
+	left: 0
+
+.slider .indicators
+	position: absolute
+	left: 50%
+	z-index: 15
+	width: 60%
+	padding-left: 0
+	margin-left: -30%
+	text-align: center
+	list-style: none
+	right: 0
+	display: flex
+	justify-content: center
+	margin-right: 15%
+	bottom: 50px
+	+phoneMin_max
+		bottom: 23px

@@ -1,0 +1,256 @@
+
+/*** ORDER BLOCK ***/
+
+.order
+	//background: $col_bg_grey url("/images/content/ruler.jpg") no-repeat 0 0
+	background:
+		color: $col_bg_grey
+		image: url(../images/content/ruler.jpg)
+		repeat: no-repeat
+		size: cover
+
+.order__bl--inner
+	display: flex
+	justify-content: flex-end
+	position: relative
+
+
+.order__questions
+	display: none
+	width: 30%
+	padding: 30px 53px 5px 58px
+	background: #ffffff
+	border-radius: 5px
+	position: absolute
+	top: -270px
+	left: -130px
+	-webkit-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
+	-moz-box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
+	box-shadow: 5px 5px 5px 0 rgba(198,198,198,1)
+	z-index: 100
+	+large_max
+		left: 20px
+	+medium_max
+		width: 65%
+
+.closeBtn
+	content: ""
+	display: inline-block
+	width: 13px
+	height: 13px
+	position: absolute
+	background: url("../images/ic/ic_close.svg")
+	top: 20px
+	right: 30px
+	&:hover
+		cursor: pointer
+
+.order__wrapper
+	width: 84%
+	display: flex
+	//margin-right: 55px
+	+tablet_max
+		width: 100%
+		flex-direction: column
+
+.order__title
+	font-size: 20px
+	line-height: 29px
+	text-align: left
+	font-weight: 500
+	border-left: 3px solid #ffd800
+	padding-left: 14px
+	letter-spacing: 0
+	+phone_max
+		font-size: 16px
+		margin-left: 0px
+
+
+.extraBold
+	font-family: $ff_bold
+
+.uppercase
+	text-transform: uppercase
+
+.order__questions-title
+	font-weight: 100
+	text-align: left
+	font-size: 20px
+	line-height: 25px
+
+.lines
+	display: block
+
+.order .form-control
+	background: transparent
+	border-bottom: 1px solid #c6c6c6
+	box-shadow: none
+	padding: 10px 32px 5px 10px
+
+.order__btn--send
+	margin-bottom: 30px
+	width: 100%
+
+.order__btn--whatsapp
+	background: #43c32e
+	margin-right: 26px
+
+.order__btn--telegram
+	background: #44abe6
+
+.btn--colored
+	font-size: 14px
+	line-height: 38px
+	font-weight: 100
+	font-family: $ff_body
+	padding: 0 15px
+
+.order__btn-social
+	margin-bottom: 15px
+	display: flex
+	justify-content: space-between
+
+.order__ps
+	font-weight: 100
+	font-style: italic
+	font-size: 14px
+	line-height: 38px
+	text-align: center
+	+phoneMin_max
+		font-size: 13px
+
+.horizontal-line
+	display: inline-block
+	width: 90%
+	height: 18px
+	background: transparent
+	border-bottom: 1px solid #c6c6c6
+	position: relative
+	left: 15px
+	margin-bottom: 6px
+	+phone_max
+		left: 25px
+
+.horizontal-line:last-child
+	+phone_max
+		display: none
+
+.order__right--border
+	border-right: 1px solid #c6c6c6
+	padding-right: 15px
+	+tablet_max
+		border-right-color: transparent
+		padding-right: 0
+
+.order__col
+	border: 3px solid #ffd800
+	border-radius: 5px
+	padding: 56px 60px 0 73px
+	background: #ffffff
+	+medium_max
+		padding: 40px
+	.phone_num
+		+phoneMin_max
+			margin-bottom: 25px
+
+.order__col.order__col-left
+	width: 83%
+	border-right-color: transparent
+	padding-right: 0
+	padding-bottom: 0
+	+tablet_max
+		border-right-color: #ffd800
+		width: 100%
+		margin-bottom: 20px
+		padding: 25px
+	+phone_max
+		padding: 15px 10px
+
+.order__col.order__col-right
+	width: 45%
+	padding: 39px 54px 0 66px
+	border-left-color: transparent
+	padding-bottom: 0
+	+tablet_max
+		border-left-color: #ffd800
+		width: 100%
+	+phoneMin_max
+		padding-bottom: 20px
+
+.order__col-right .order__btn--whatsapp
+	margin-right: 5px
+
+.order__task-list
+	+phone_max
+		margin-left: 10px
+
+.order__title--light
+	font-size: 20px
+	line-height: 27px
+	text-align: center
+	border: none
+	margin-bottom: 13px
+
+.order__task-item
+	padding-left: 30px
+	font-size: 14px
+	line-height: 2.1
+	color: #8e8e8e
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		display: inline-block
+		width: 21px
+		height: 16px
+		left: 0
+		top: 5px
+		background:
+			color: transparent
+			image: url('../images/ic/ic_check.png')
+			size: contain
+			repeat: no-repeat
+
+.order__text-colored
+	font-size: 15px
+	line-height: 23px
+
+.order__phones
+	padding: 20px 30px
+	display: flex
+	justify-content: space-between
+	font-size: 18px
+	text-align: center
+	+medium_max
+		padding: 15px 15px
+		font-size: 13px
+	+tablet_max
+		font-size: 15px
+	+phone_max
+		flex-direction: column
+
+.order__phones span
+	font-family: $ff_bold
+	+phone_max
+		margin-bottom: 15px
+
+.order__phones .phone
+	font-size: 20px
+	flex: 1
+	display: flex
+	justify-content: space-evenly
+	+phone_max
+		font-size: 15px
+
+.order .form-control
+	line-height: 1.5
+
+.order__wrapper .text-colored__in
+	position: relative
+	left: -17px
+	+phone_max
+		left: 0
+
+.br
+	+phone_max
+		display: none

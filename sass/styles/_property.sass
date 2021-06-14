@@ -1,0 +1,74 @@
+
+/*** PROPERTY BLOCK ***/
+
+.property
+  background-color: $col_bg_grey
+  .bl__inner
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 60px
+      right: 0
+      margin-right: -180px
+      width: 180px
+      height: 135px
+      background:
+        color: transparent
+        image: url('../images/ic/ic_check.png')
+        size: contain
+        repeat: no-repeat
+    +large_max
+      &::after
+        margin-right: 0px
+    +phone_max
+      &::after
+        display: none
+  &-side
+    +flexbox
+  &-side--left
+    +flex-direction(column)
+    flex: 1
+    margin-left: 20px
+    +medium_max
+      margin-bottom: 50px
+    +phone_max
+      margin-left: 0px
+  &-list
+    +flex-wrap(wrap)
+    width: 630px
+    margin-left: 30px
+    +phone_max
+      width: 100%
+      margin-left: 0px
+      +justify-content(flex-end)
+  &-item
+    font-size: 16px
+    width: 315px
+    line-height: 1.5
+    padding: 0px 20px 20px 30px
+    //background-color: #0c5460
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 20px
+      left: 0px
+      width: 20px
+      height: 20px
+      background:
+        image: url("../images/ic/ic_check.png")
+        size: contain
+        repeat: no-repeat
+    .title
+      font-size: 20px
+      line-height: 2.5
+      text-align: left
+    p
+      color: #a3a5a5
+  &-wrap
+    +flexbox
+    +medium_max
+      +flex-direction(column)
+
+
